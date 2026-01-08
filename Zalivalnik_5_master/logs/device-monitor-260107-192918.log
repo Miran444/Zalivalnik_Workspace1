@@ -1,0 +1,519 @@
+19:29:22.872 > ets Jun  8 2016 00:22:57
+19:29:22.872 > 
+19:29:22.872 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+19:29:22.872 > configsip: 188777542, SPIWP:0xee
+19:29:22.872 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+19:29:22.872 > mode:DIO, clock div:2
+19:29:22.872 > load:0x3fff0030,len:1184
+19:29:22.872 > load:0x40078000,len:13232
+19:29:22.872 > load:0x40080400,len:3028
+19:29:22.872 > entry 0x400805e4
+19:29:22.872 > Connecting to Wi-Fi.
+19:29:22.872 > Connected with IP: 192.168.64.105
+19:29:22.872 > 
+19:29:22.872 > Cakam na NTP sinhronizacijo... 
+19:29:22.874 > NTP sinhronizacija uspesna!
+19:29:22.874 > Wednesday, January 07 2026 19:29:22
+19:29:22.874 > Trenutni čas: 1767810562
+19:29:22.874 > Free Heap BEFORE Firebase: 243600
+19:29:22.874 > Firebase Client v2.2.7
+19:29:22.874 > Initializing app...
+19:29:22.874 > Free Heap: 243600
+19:29:22.874 > Event task: 🔐 authTask, msg: authenticating, code: 7
+19:29:22.874 > Debug task: 🔐 authTask, msg: Connecting to server...
+19:29:22.874 > Event task: 🔐 authTask, msg: auth request sent, code: 8
+19:29:22.874 > Setup končan.
+19:29:23.607 > Event task: 🔐 authTask, msg: auth response received, code: 9
+19:29:23.613 > Debug task: 🔐 authTask, msg: Terminating the server connection...
+19:29:23.619 > Event task: 🔐 authTask, msg: ready, code: 10
+19:29:23.620 > User UID: 68TA11sAdOaFnIdmqzDtkx3QIBC2
+19:29:24.045 > Free Heap: 225240
+19:29:29.057 > Minimum Free Heap: 228492
+19:29:29.057 > Debug task: streamTask, msg: Connecting to server... [Heap: 228492]
+19:29:29.062 > ----------------------------
+19:29:29.062 > task: streamTask
+19:29:29.068 > event: put
+19:29:29.068 > path: /
+19:29:29.068 > data: [null,{"ms":2040102,"rand":29608},169287]
+19:29:29.072 > type: 7
+19:29:29.072 > Free Heap: 228428
+19:29:33.572 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:29:38.970 > Minimum Free Heap: 213976
+19:29:38.970 > ----------------------------
+19:29:38.970 > task: streamTask
+19:29:38.976 > event: put
+19:29:38.976 > path: /1
+19:29:38.976 > data: {"ms":20001,"rand":19461}
+19:29:38.976 > type: 6
+19:29:38.978 > Free Heap: 213976
+19:29:38.996 > Debug task: setTask1, msg: Connecting to server... [Heap: 214768]
+19:29:39.002 > ----------------------------
+19:29:39.002 > task: setTask1, payload: {"ms":20001,"rand":19461}
+19:29:39.006 > Free Heap: 214768
+19:29:39.117 > ----------------------------
+19:29:39.117 > task: streamTask
+19:29:39.117 > event: put
+19:29:39.117 > path: /2
+19:29:39.121 > data: 151266
+19:29:39.121 > type: 1
+19:29:39.121 > Free Heap: 215528
+19:29:39.131 > ----------------------------
+19:29:39.131 > task: setTask2, payload: 151266
+19:29:39.131 > Free Heap: 216460
+19:29:48.720 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:29:58.631 > Minimum Free Heap: 213960
+19:29:58.631 > ----------------------------
+19:29:58.631 > task: streamTask
+19:29:58.637 > event: put
+19:29:58.637 > path: /1
+19:29:58.637 > data: {"ms":40002,"rand":24877}
+19:29:58.637 > type: 6
+19:29:58.638 > Free Heap: 213960
+19:29:58.658 > ----------------------------
+19:29:58.658 > task: setTask1, payload: {"ms":40002,"rand":24877}
+19:29:58.661 > Free Heap: 214772
+19:29:58.764 > ----------------------------
+19:29:58.764 > task: streamTask
+19:29:58.764 > event: put
+19:29:58.764 > path: /2
+19:29:58.768 > data: 104659
+19:29:58.768 > type: 1
+19:29:58.768 > Free Heap: 215512
+19:29:58.778 > ----------------------------
+19:29:58.778 > task: setTask2, payload: 104659
+19:29:58.778 > Free Heap: 216444
+19:30:03.796 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:30:18.627 > ----------------------------
+19:30:18.627 > task: streamTask
+19:30:18.627 > event: put
+19:30:18.627 > path: /1
+19:30:18.634 > data: {"ms":60003,"rand":21000}
+19:30:18.634 > type: 6
+19:30:18.634 > Free Heap: 213960
+19:30:18.644 > ----------------------------
+19:30:18.644 > task: setTask1, payload: {"ms":60003,"rand":21000}
+19:30:18.648 > Free Heap: 214772
+19:30:18.747 > ----------------------------
+19:30:18.747 > task: streamTask
+19:30:18.747 > event: put
+19:30:18.747 > path: /2
+19:30:18.751 > data: 152112
+19:30:18.751 > type: 1
+19:30:18.751 > Free Heap: 215512
+19:30:18.763 > ----------------------------
+19:30:18.764 > task: setTask2, payload: 152112
+19:30:18.764 > Free Heap: 216436
+19:30:18.872 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:30:33.947 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:30:38.630 > ----------------------------
+19:30:38.630 > task: streamTask
+19:30:38.630 > event: put
+19:30:38.630 > path: /1
+19:30:38.636 > data: {"ms":80004,"rand":23041}
+19:30:38.636 > type: 6
+19:30:38.636 > Free Heap: 213960
+19:30:38.648 > ----------------------------
+19:30:38.648 > task: setTask1, payload: {"ms":80004,"rand":23041}
+19:30:38.652 > Free Heap: 214804
+19:30:38.754 > ----------------------------
+19:30:38.754 > task: streamTask
+19:30:38.754 > event: put
+19:30:38.754 > path: /2
+19:30:38.758 > data: 164763
+19:30:38.758 > type: 1
+19:30:38.758 > Free Heap: 215512
+19:30:38.766 > ----------------------------
+19:30:38.766 > task: setTask2, payload: 164763
+19:30:38.766 > Free Heap: 216428
+19:30:49.022 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:30:58.633 > ----------------------------
+19:30:58.633 > task: streamTask
+19:30:58.633 > event: put
+19:30:58.633 > path: /1
+19:30:58.639 > data: {"ms":100005,"rand":27590}
+19:30:58.639 > type: 6
+19:30:58.639 > Free Heap: 213960
+19:30:58.648 > ----------------------------
+19:30:58.649 > task: setTask1, payload: {"ms":100005,"rand":27590}
+19:30:58.652 > Free Heap: 214804
+19:30:58.754 > ----------------------------
+19:30:58.754 > task: streamTask
+19:30:58.754 > event: put
+19:30:58.754 > path: /2
+19:30:58.758 > data: 101347
+19:30:58.758 > type: 1
+19:30:58.758 > Free Heap: 215512
+19:30:58.771 > ----------------------------
+19:30:58.771 > task: setTask2, payload: 101347
+19:30:58.771 > Free Heap: 216428
+19:31:04.097 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:31:18.636 > ----------------------------
+19:31:18.637 > task: streamTask
+19:31:18.637 > event: put
+19:31:18.637 > path: /1
+19:31:18.642 > data: {"ms":120006,"rand":19356}
+19:31:18.642 > type: 6
+19:31:18.642 > Free Heap: 213960
+19:31:18.653 > ----------------------------
+19:31:18.653 > task: setTask1, payload: {"ms":120006,"rand":19356}
+19:31:18.657 > Free Heap: 214780
+19:31:18.755 > ----------------------------
+19:31:18.755 > task: streamTask
+19:31:18.755 > event: put
+19:31:18.755 > path: /2
+19:31:18.759 > data: 191240
+19:31:18.759 > type: 1
+19:31:18.759 > Free Heap: 215512
+19:31:18.772 > ----------------------------
+19:31:18.772 > task: setTask2, payload: 191240
+19:31:18.772 > Free Heap: 216428
+19:31:19.174 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:31:23.623 > 🔄 FORCING RE-AUTH [Heap before: 218392]
+19:31:23.623 > Event task: 🔐 authTask, msg: authenticating, code: 7
+19:31:23.628 > Debug task: 🔐 authTask, msg: Connecting to server...
+19:31:23.634 > Event task: 🔐 authTask, msg: auth request sent, code: 8
+19:31:28.060 > Event task: 🔐 authTask, msg: auth response received, code: 9
+19:31:28.066 > Debug task: 🔐 authTask, msg: Terminating the server connection...
+19:31:28.072 > Event task: 🔐 authTask, msg: ready, code: 10
+19:31:28.589 > Debug task: streamTask, msg: Connecting to server... [Heap: 226824]
+19:31:28.595 > ----------------------------
+19:31:28.595 > task: streamTask
+19:31:28.595 > event: put
+19:31:28.595 > path: /
+19:31:28.600 > data: [null,{"ms":120006,"rand":19356},191240]
+19:31:28.600 > type: 7
+19:31:28.600 > Free Heap: 226824
+19:31:34.314 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:31:39.760 > Minimum Free Heap: 213452
+19:31:39.760 > ----------------------------
+19:31:39.760 > task: streamTask
+19:31:39.765 > event: put
+19:31:39.765 > path: /1
+19:31:39.765 > data: {"ms":140007,"rand":14275}
+19:31:39.765 > type: 6
+19:31:39.768 > Free Heap: 213656
+19:31:39.786 > Debug task: setTask1, msg: Connecting to server... [Heap: 214500]
+19:31:39.791 > ----------------------------
+19:31:39.791 > task: setTask1, payload: {"ms":140007,"rand":14275}
+19:31:39.795 > Free Heap: 214500
+19:31:39.913 > ----------------------------
+19:31:39.913 > task: streamTask
+19:31:39.913 > event: put
+19:31:39.913 > path: /2
+19:31:39.917 > data: 159140
+19:31:39.917 > type: 1
+19:31:39.917 > Free Heap: 215256
+19:31:39.925 > ----------------------------
+19:31:39.925 > task: setTask2, payload: 159140
+19:31:39.925 > Free Heap: 216172
+19:31:49.356 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:31:58.622 > ----------------------------
+19:31:58.622 > task: streamTask
+19:31:58.622 > event: put
+19:31:58.622 > path: /1
+19:31:58.627 > data: {"ms":160008,"rand":10879}
+19:31:58.627 > type: 6
+19:31:58.627 > Free Heap: 213704
+19:31:58.636 > ----------------------------
+19:31:58.636 > task: setTask1, payload: {"ms":160008,"rand":10879}
+19:31:58.640 > Free Heap: 214544
+19:31:58.729 > ----------------------------
+19:31:58.729 > task: streamTask
+19:31:58.729 > event: put
+19:31:58.729 > path: /2
+19:31:58.733 > data: 191199
+19:31:58.733 > type: 1
+19:31:58.733 > Free Heap: 215256
+19:31:58.745 > ----------------------------
+19:31:58.746 > task: setTask2, payload: 191199
+19:31:58.746 > Free Heap: 216196
+19:32:04.431 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:32:18.629 > ----------------------------
+19:32:18.629 > task: streamTask
+19:32:18.629 > event: put
+19:32:18.629 > path: /1
+19:32:18.635 > data: {"ms":180009,"rand":19071}
+19:32:18.635 > type: 6
+19:32:18.635 > Free Heap: 213692
+19:32:18.644 > ----------------------------
+19:32:18.645 > task: setTask1, payload: {"ms":180009,"rand":19071}
+19:32:18.648 > Free Heap: 214532
+19:32:18.729 > ----------------------------
+19:32:18.729 > task: streamTask
+19:32:18.729 > event: put
+19:32:18.729 > path: /2
+19:32:18.733 > data: 166757
+19:32:18.733 > type: 1
+19:32:18.733 > Free Heap: 215244
+19:32:18.746 > ----------------------------
+19:32:18.747 > task: setTask2, payload: 166757
+19:32:18.747 > Free Heap: 216180
+19:32:19.506 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:32:34.582 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:32:38.624 > ----------------------------
+19:32:38.624 > task: streamTask
+19:32:38.624 > event: put
+19:32:38.624 > path: /1
+19:32:38.630 > data: {"ms":200010,"rand":18403}
+19:32:38.630 > type: 6
+19:32:38.630 > Free Heap: 213696
+19:32:38.641 > ----------------------------
+19:32:38.641 > task: setTask1, payload: {"ms":200010,"rand":18403}
+19:32:38.645 > Free Heap: 214512
+19:32:38.731 > ----------------------------
+19:32:38.731 > task: streamTask
+19:32:38.731 > event: put
+19:32:38.731 > path: /2
+19:32:38.735 > data: 148955
+19:32:38.735 > type: 1
+19:32:38.735 > Free Heap: 215256
+19:32:38.748 > ----------------------------
+19:32:38.748 > task: setTask2, payload: 148955
+19:32:38.748 > Free Heap: 216192
+19:32:49.657 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:32:58.626 > ----------------------------
+19:32:58.626 > task: streamTask
+19:32:58.626 > event: put
+19:32:58.626 > path: /1
+19:32:58.632 > data: {"ms":220011,"rand":15263}
+19:32:58.632 > type: 6
+19:32:58.632 > Free Heap: 213696
+19:32:58.643 > ----------------------------
+19:32:58.643 > task: setTask1, payload: {"ms":220011,"rand":15263}
+19:32:58.647 > Free Heap: 214512
+19:32:58.733 > ----------------------------
+19:32:58.733 > task: streamTask
+19:32:58.733 > event: put
+19:32:58.733 > path: /2
+19:32:58.737 > data: 110074
+19:32:58.737 > type: 1
+19:32:58.737 > Free Heap: 215248
+19:32:58.750 > ----------------------------
+19:32:58.750 > task: setTask2, payload: 110074
+19:32:58.750 > Free Heap: 216184
+19:33:04.732 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:33:18.630 > ----------------------------
+19:33:18.630 > task: streamTask
+19:33:18.630 > event: put
+19:33:18.630 > path: /1
+19:33:18.636 > data: {"ms":240012,"rand":25068}
+19:33:18.636 > type: 6
+19:33:18.636 > Free Heap: 213708
+19:33:18.646 > ----------------------------
+19:33:18.646 > task: setTask1, payload: {"ms":240012,"rand":25068}
+19:33:18.650 > Free Heap: 214548
+19:33:18.737 > ----------------------------
+19:33:18.737 > task: streamTask
+19:33:18.737 > event: put
+19:33:18.737 > path: /2
+19:33:18.741 > data: 140872
+19:33:18.741 > type: 1
+19:33:18.741 > Free Heap: 215260
+19:33:18.752 > ----------------------------
+19:33:18.752 > task: setTask2, payload: 140872
+19:33:18.752 > Free Heap: 216196
+19:33:19.808 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:33:23.625 > 🔄 FORCING RE-AUTH [Heap before: 218140]
+19:33:23.625 > Event task: 🔐 authTask, msg: authenticating, code: 7
+19:33:23.631 > Debug task: 🔐 authTask, msg: Connecting to server...
+19:33:23.637 > Event task: 🔐 authTask, msg: auth request sent, code: 8
+19:33:24.491 > Event task: 🔐 authTask, msg: auth response received, code: 9
+19:33:24.496 > Debug task: 🔐 authTask, msg: Terminating the server connection...
+19:33:24.502 > Event task: 🔐 authTask, msg: ready, code: 10
+19:33:25.026 > Debug task: streamTask, msg: Connecting to server... [Heap: 226380]
+19:33:25.031 > ----------------------------
+19:33:25.031 > task: streamTask
+19:33:25.031 > event: put
+19:33:25.031 > path: /
+19:33:25.037 > data: [null,{"ms":240012,"rand":25068},140872]
+19:33:25.037 > type: 7
+19:33:25.037 > Free Heap: 226380
+19:33:34.968 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:33:38.973 > ----------------------------
+19:33:38.973 > task: streamTask
+19:33:38.973 > event: put
+19:33:38.973 > path: /1
+19:33:38.978 > data: {"ms":260013,"rand":21129}
+19:33:38.978 > type: 6
+19:33:38.978 > Free Heap: 213636
+19:33:38.989 > Debug task: setTask1, msg: Connecting to server... [Heap: 214476]
+19:33:38.994 > ----------------------------
+19:33:38.994 > task: setTask1, payload: {"ms":260013,"rand":21129}
+19:33:38.998 > Free Heap: 214476
+19:33:39.094 > ----------------------------
+19:33:39.094 > task: streamTask
+19:33:39.094 > event: put
+19:33:39.094 > path: /2
+19:33:39.098 > data: 138051
+19:33:39.098 > type: 1
+19:33:39.098 > Free Heap: 214648
+19:33:39.113 > ----------------------------
+19:33:39.113 > task: setTask2, payload: 138051
+19:33:39.113 > Free Heap: 216180
+19:33:50.130 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:33:58.632 > Minimum Free Heap: 213068
+19:33:58.632 > ----------------------------
+19:33:58.632 > task: streamTask
+19:33:58.638 > event: put
+19:33:58.638 > path: /1
+19:33:58.638 > data: {"ms":280014,"rand":17260}
+19:33:58.638 > type: 6
+19:33:58.640 > Free Heap: 213068
+19:33:58.663 > ----------------------------
+19:33:58.664 > task: setTask1, payload: {"ms":280014,"rand":17260}
+19:33:58.667 > Free Heap: 214516
+19:33:58.759 > ----------------------------
+19:33:58.759 > task: streamTask
+19:33:58.759 > event: put
+19:33:58.759 > path: /2
+19:33:58.763 > data: 151871
+19:33:58.763 > type: 1
+19:33:58.763 > Free Heap: 215228
+19:33:58.774 > ----------------------------
+19:33:58.774 > task: setTask2, payload: 151871
+19:33:58.774 > Free Heap: 216164
+19:34:05.205 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:34:18.638 > ----------------------------
+19:34:18.638 > task: streamTask
+19:34:18.638 > event: put
+19:34:18.638 > path: /1
+19:34:18.643 > data: {"ms":300015,"rand":16122}
+19:34:18.643 > type: 6
+19:34:18.643 > Free Heap: 213676
+19:34:18.657 > ----------------------------
+19:34:18.657 > task: setTask1, payload: {"ms":300015,"rand":16122}
+19:34:18.660 > Free Heap: 214508
+19:34:18.750 > ----------------------------
+19:34:18.750 > task: streamTask
+19:34:18.750 > event: put
+19:34:18.750 > path: /2
+19:34:18.754 > data: 127095
+19:34:18.754 > type: 1
+19:34:18.754 > Free Heap: 215228
+19:34:18.768 > ----------------------------
+19:34:18.769 > task: setTask2, payload: 127095
+19:34:18.769 > Free Heap: 216156
+19:34:20.281 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:34:35.356 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:34:38.632 > ----------------------------
+19:34:38.632 > task: streamTask
+19:34:38.632 > event: put
+19:34:38.632 > path: /1
+19:34:38.637 > data: {"ms":320016,"rand":14225}
+19:34:38.637 > type: 6
+19:34:38.637 > Free Heap: 213068
+19:34:38.653 > ----------------------------
+19:34:38.655 > task: setTask1, payload: {"ms":320016,"rand":14225}
+19:34:38.657 > Free Heap: 214516
+19:34:38.744 > ----------------------------
+19:34:38.745 > task: streamTask
+19:34:38.745 > event: put
+19:34:38.745 > path: /2
+19:34:38.749 > data: 129712
+19:34:38.749 > type: 1
+19:34:38.749 > Free Heap: 214640
+19:34:38.763 > ----------------------------
+19:34:38.763 > task: setTask2, payload: 129712
+19:34:38.763 > Free Heap: 216164
+19:34:50.431 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:34:58.634 > ----------------------------
+19:34:58.634 > task: streamTask
+19:34:58.634 > event: put
+19:34:58.634 > path: /1
+19:34:58.640 > data: {"ms":340017,"rand":28420}
+19:34:58.640 > type: 6
+19:34:58.640 > Free Heap: 213088
+19:34:58.654 > ----------------------------
+19:34:58.654 > task: setTask1, payload: {"ms":340017,"rand":28420}
+19:34:58.658 > Free Heap: 214548
+19:34:58.746 > ----------------------------
+19:34:58.746 > task: streamTask
+19:34:58.746 > event: put
+19:34:58.746 > path: /2
+19:34:58.750 > data: 148850
+19:34:58.750 > type: 1
+19:34:58.750 > Free Heap: 215260
+19:34:58.763 > ----------------------------
+19:34:58.763 > task: setTask2, payload: 148850
+19:34:58.763 > Free Heap: 216172
+19:35:05.506 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:35:18.637 > ----------------------------
+19:35:18.637 > task: streamTask
+19:35:18.637 > event: put
+19:35:18.637 > path: /1
+19:35:18.643 > data: {"ms":360018,"rand":10719}
+19:35:18.643 > type: 6
+19:35:18.643 > Free Heap: 213708
+19:35:18.655 > ----------------------------
+19:35:18.655 > task: setTask1, payload: {"ms":360018,"rand":10719}
+19:35:18.658 > Free Heap: 214548
+19:35:18.746 > ----------------------------
+19:35:18.746 > task: streamTask
+19:35:18.746 > event: put
+19:35:18.746 > path: /2
+19:35:18.750 > data: 128989
+19:35:18.750 > type: 1
+19:35:18.750 > Free Heap: 215260
+19:35:18.763 > ----------------------------
+19:35:18.763 > task: setTask2, payload: 128989
+19:35:18.763 > Free Heap: 216172
+19:35:20.582 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:35:23.628 > 🔄 FORCING RE-AUTH [Heap before: 218376]
+19:35:23.628 > Event task: 🔐 authTask, msg: authenticating, code: 7
+19:35:23.634 > Debug task: 🔐 authTask, msg: Connecting to server...
+19:35:23.639 > Event task: 🔐 authTask, msg: auth request sent, code: 8
+19:35:24.609 > Event task: 🔐 authTask, msg: auth response received, code: 9
+19:35:24.615 > Debug task: 🔐 authTask, msg: Terminating the server connection...
+19:35:24.621 > Event task: 🔐 authTask, msg: ready, code: 10
+19:35:25.100 > Debug task: streamTask, msg: Connecting to server... [Heap: 226848]
+19:35:25.105 > ----------------------------
+19:35:25.105 > task: streamTask
+19:35:25.105 > event: put
+19:35:25.105 > path: /
+19:35:25.111 > data: [null,{"ms":360018,"rand":10719},128989]
+19:35:25.111 > type: 7
+19:35:25.111 > Free Heap: 226848
+19:35:35.651 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:35:38.974 > ----------------------------
+19:35:38.974 > task: streamTask
+19:35:38.974 > event: put
+19:35:38.974 > path: /1
+19:35:38.979 > data: {"ms":380019,"rand":13686}
+19:35:38.979 > type: 6
+19:35:38.979 > Free Heap: 213668
+19:35:38.991 > Debug task: setTask1, msg: Connecting to server... [Heap: 214488]
+19:35:38.997 > ----------------------------
+19:35:38.997 > task: setTask1, payload: {"ms":380019,"rand":13686}
+19:35:39.000 > Free Heap: 214488
+19:35:39.102 > ----------------------------
+19:35:39.102 > task: streamTask
+19:35:39.102 > event: put
+19:35:39.102 > path: /2
+19:35:39.106 > data: 137204
+19:35:39.106 > type: 1
+19:35:39.106 > Free Heap: 215268
+19:35:39.119 > ----------------------------
+19:35:39.119 > task: setTask2, payload: 137204
+19:35:39.119 > Free Heap: 216208
+19:35:50.745 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+19:35:58.653 > ----------------------------
+19:35:58.653 > task: streamTask
+19:35:58.653 > event: put
+19:35:58.653 > path: /1
+19:35:58.659 > data: {"ms":400020,"rand":24744}
+19:35:58.659 > type: 6
+19:35:58.659 > Free Heap: 213680
+19:35:58.669 > ----------------------------
+19:35:58.669 > task: setTask1, payload: {"ms":400020,"rand":24744}
+19:35:58.672 > Free Heap: 214520
+19:35:58.767 > ----------------------------
+19:35:58.767 > task: streamTask
+19:35:58.767 > event: put
+19:35:58.767 > path: /2
+19:35:58.771 > data: 138499
+19:35:58.771 > type: 1
+19:35:58.771 > Free Heap: 215244
+19:35:58.782 > ----------------------------
+19:35:58.782 > task: setTask2, payload: 138499
+19:35:58.782 > Free Heap: 216184
+19:36:05.819 > [F_DEBUG] Active tasks: 1, Stream SSL connected: 1, Auth ready: 0

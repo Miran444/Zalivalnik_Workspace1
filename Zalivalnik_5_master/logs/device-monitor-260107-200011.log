@@ -1,0 +1,995 @@
+20:00:11.133 > ets Jun  8 2016 00:22:57
+20:00:11.133 > 
+20:00:11.133 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+20:00:11.138 > configsip: 188777542, SPIWP:0xee
+20:00:11.138 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+20:00:11.149 > mode:DIO, clock div:2
+20:00:11.149 > load:0x3fff0030,len:1184
+20:00:11.149 > load:0x40078000,len:13232
+20:00:11.248 > load:0x40080400,len:3028
+20:00:11.248 > entry 0x400805e4
+20:00:11.693 > Connecting to Wi-Fi.
+20:00:11.997 > Connected with IP: 192.168.64.105
+20:00:11.997 > 
+20:00:11.997 > Cakam na NTP sinhronizacijo... 
+20:00:14.090 > NTP sinhronizacija uspesna!
+20:00:14.090 > Wednesday, January 07 2026 20:00:14
+20:00:14.095 > Trenutni čas: 1767812414
+20:00:14.095 > Free Heap BEFORE Firebase: 243568
+20:00:14.101 > Firebase Client v2.2.7
+20:00:14.101 > Initializing app...
+20:00:14.101 > Free Heap: 243568
+20:00:14.101 > ************************************
+20:00:14.106 > [F_HEAP] Free Heap pred RESPONSE: 242784
+20:00:14.112 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:14.117 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:00:14.123 > [F_RESPONSE] KLIC #1, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:00:14.128 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+20:00:14.134 > [F_READY] Avtentikacija v teku...
+20:00:14.140 > ************************************
+20:00:14.140 > [F_HEAP] Free Heap pred RESPONSE: 241516
+20:00:14.146 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:14.151 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 0, Auth ready: 0
+20:00:14.156 > [F_RESPONSE] KLIC #2, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:00:14.161 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+20:00:14.168 > ************************************
+20:00:14.173 > [F_HEAP] Free Heap pred RESPONSE: 241252
+20:00:14.173 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:14.178 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 0, Auth ready: 0
+20:00:14.184 > [F_RESPONSE] KLIC #3, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:00:14.196 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+20:00:14.199 > Setup končan.
+20:00:15.030 > ************************************
+20:00:15.030 > [F_HEAP] Free Heap pred RESPONSE: 237240
+20:00:15.035 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:15.041 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:00:15.046 > [F_RESPONSE] KLIC #4, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+20:00:15.052 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+20:00:15.057 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+20:00:15.068 > [F_RESPONSE] Task: 🔐 authTask
+20:00:15.068 > [F_RESPONSE] Payload length: 511
+20:00:15.074 > -------------Neznan task---------------
+20:00:15.074 > task: 🔐 authTask, payload: {
+20:00:15.081 >   "kind": "identitytoolkit#VerifyPasswordResponse",
+20:00:15.081 >   "localId": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+20:00:15.085 >   "email": "miranbudal@gmail.com",
+20:00:15.091 >   "displayName": "",
+20:00:15.091 >   "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNDE0LCJleHAiOjE3Njc4MTYwMTQsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.QZGwr1d6z1GBYvo5THJwt-CmBd3BElSgrOal1RaFLDRdEFxyguODejrVXMXcLH02AZ4PILY8oYEAhpBFPFcQ9YUJCKVvpXcz-pa80vBIQIXTGuI6bNP1UrO5-Y2yoKoP1Ag-ZYIlXmXMSkHw0jWB9A0Tb25-lYVVJ0G8WufWOoF0AjDTT96nVDGj-rnhsHGMlb0CXt4avSWvxnT_aejfvX6ZpJhwmBW_KjlFKW6P4R3_5LtPZq4Ja37WHfIUN2dp3YCUPfaas7NEMP8ikzwsw27Xe604zNZL-HG8FA_CcM1OtHNkkI0P-NkLLYjrfWnolO3_GuZ4ocM6goJAFnrFew",
+20:00:15.174 >   "registered": true,
+20:00:15.174 >   "refreshToken": "AMf-vBy6ObUwzXrYVHaltwnIKu9aJv09UKUk3HxdG_rxQOCrVV95IQJdftvmCYNh1_TLwx8arBCWHuKhwG_R7_TEqvURq9r-8h2PNPh6Qb6eG3Kr1dG4YuE6zq-XzKFp5he69eLL0mphI8ZbD9ncAa2YwSrJUJcWr79kn8SpIJZYFK63imA_CB69d4MF0IJBfsM6RCeiNncXbORidc2v69FotLPCDQm2og",
+20:00:15.197 >   "expiresIn": "3600"
+20:00:15.197 > }
+20:00:15.197 > 
+20:00:15.197 > [F_RESPONSE] Free Heap po RESPONSE: 237592
+20:00:15.202 > ************************************
+20:00:15.208 > [F_HEAP] Free Heap pred RESPONSE: 236440
+20:00:15.208 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:15.213 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:00:15.219 > [F_RESPONSE] KLIC #5, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:00:15.225 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+20:00:15.230 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:00:15.236 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:00:15.241 > User UID: 68TA11sAdOaFnIdmqzDtkx3QIBC2
+20:00:15.567 > Free Heap: 226488
+20:00:20.665 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+20:00:20.668 > [STREAM] event: put
+20:00:30.416 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:30.416 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:00:31.976 > [STREAM] event: put
+20:00:31.995 > ************************************
+20:00:31.995 > [F_HEAP] Free Heap pred RESPONSE: 214836
+20:00:32.001 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:32.006 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:00:32.012 > [F_RESPONSE] KLIC #6, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+20:00:32.017 > [F_RESPONSE] Debug task: setTask1, msg: Connecting to server...
+20:00:32.022 > [F_RESPONSE] Task: setTask1
+20:00:32.022 > [F_RESPONSE] Payload length: 25
+20:00:32.027 > -------------Neznan task---------------
+20:00:32.033 > task: setTask1, payload: {"ms":20001,"rand":12392}
+20:00:32.033 > [F_RESPONSE] Free Heap po RESPONSE: 214836
+20:00:32.039 > ************************************
+20:00:32.045 > [F_HEAP] Free Heap pred RESPONSE: 214836
+20:00:32.045 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:32.050 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:00:32.056 > [F_RESPONSE] KLIC #7, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:00:32.157 > [STREAM] event: put
+20:00:32.171 > ************************************
+20:00:32.171 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:00:32.176 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:32.182 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:00:32.188 > [F_RESPONSE] KLIC #8, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:00:32.194 > [F_RESPONSE] Task: setTask2
+20:00:32.194 > [F_RESPONSE] Payload length: 6
+20:00:32.199 > -------------Neznan task---------------
+20:00:32.204 > task: setTask2, payload: 159979
+20:00:32.204 > [F_RESPONSE] Free Heap po RESPONSE: 216532
+20:00:32.210 > ************************************
+20:00:32.210 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:00:32.215 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:32.221 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:00:32.226 > [F_RESPONSE] KLIC #9, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:00:47.371 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:47.371 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:00:51.650 > [STREAM] event: put
+20:00:51.667 > ************************************
+20:00:51.667 > [F_HEAP] Free Heap pred RESPONSE: 214876
+20:00:51.672 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:51.678 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:00:51.684 > [F_RESPONSE] KLIC #10, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:00:51.689 > [F_RESPONSE] Task: setTask1
+20:00:51.689 > [F_RESPONSE] Payload length: 25
+20:00:51.694 > -------------Neznan task---------------
+20:00:51.700 > task: setTask1, payload: {"ms":40002,"rand":14226}
+20:00:51.700 > [F_RESPONSE] Free Heap po RESPONSE: 214716
+20:00:51.705 > ************************************
+20:00:51.710 > [F_HEAP] Free Heap pred RESPONSE: 214876
+20:00:51.710 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:51.717 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:00:51.723 > [F_RESPONSE] KLIC #11, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:00:51.833 > [STREAM] event: put
+20:00:51.846 > ************************************
+20:00:51.846 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:00:51.852 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:51.858 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:00:51.863 > [F_RESPONSE] KLIC #12, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:00:51.868 > [F_RESPONSE] Task: setTask2
+20:00:51.868 > [F_RESPONSE] Payload length: 6
+20:00:51.874 > -------------Neznan task---------------
+20:00:51.880 > task: setTask2, payload: 179740
+20:00:51.880 > [F_RESPONSE] Free Heap po RESPONSE: 216532
+20:00:51.886 > ************************************
+20:00:51.886 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:00:51.891 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:00:51.897 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:00:51.902 > [F_RESPONSE] KLIC #13, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:07.069 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:07.069 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:01:11.649 > [STREAM] event: put
+20:01:11.661 > ************************************
+20:01:11.661 > [F_HEAP] Free Heap pred RESPONSE: 214880
+20:01:11.667 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:11.673 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:11.678 > [F_RESPONSE] KLIC #14, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:11.684 > [F_RESPONSE] Task: setTask1
+20:01:11.684 > [F_RESPONSE] Payload length: 25
+20:01:11.689 > -------------Neznan task---------------
+20:01:11.695 > task: setTask1, payload: {"ms":60003,"rand":28219}
+20:01:11.695 > [F_RESPONSE] Free Heap po RESPONSE: 214880
+20:01:11.701 > ************************************
+20:01:11.706 > [F_HEAP] Free Heap pred RESPONSE: 214880
+20:01:11.706 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:11.711 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:11.717 > [F_RESPONSE] KLIC #15, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:11.820 > [STREAM] event: put
+20:01:11.834 > ************************************
+20:01:11.834 > [F_HEAP] Free Heap pred RESPONSE: 216520
+20:01:11.839 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:11.845 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:11.850 > [F_RESPONSE] KLIC #16, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:11.856 > [F_RESPONSE] Task: setTask2
+20:01:11.856 > [F_RESPONSE] Payload length: 6
+20:01:11.861 > -------------Neznan task---------------
+20:01:11.867 > task: setTask2, payload: 115868
+20:01:11.867 > [F_RESPONSE] Free Heap po RESPONSE: 216520
+20:01:11.873 > ************************************
+20:01:11.873 > [F_HEAP] Free Heap pred RESPONSE: 216520
+20:01:11.878 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:11.884 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:11.889 > [F_RESPONSE] KLIC #17, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:27.001 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:27.001 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:01:31.658 > [STREAM] event: put
+20:01:31.672 > ************************************
+20:01:31.672 > [F_HEAP] Free Heap pred RESPONSE: 214868
+20:01:31.678 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:31.684 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:31.689 > [F_RESPONSE] KLIC #18, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:31.695 > [F_RESPONSE] Task: setTask1
+20:01:31.695 > [F_RESPONSE] Payload length: 25
+20:01:31.701 > -------------Neznan task---------------
+20:01:31.706 > task: setTask1, payload: {"ms":80004,"rand":13991}
+20:01:31.706 > [F_RESPONSE] Free Heap po RESPONSE: 214732
+20:01:31.711 > ************************************
+20:01:31.717 > [F_HEAP] Free Heap pred RESPONSE: 214868
+20:01:31.717 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:31.722 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:31.727 > [F_RESPONSE] KLIC #19, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:31.828 > [STREAM] event: put
+20:01:31.847 > ************************************
+20:01:31.847 > [F_HEAP] Free Heap pred RESPONSE: 216524
+20:01:31.853 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:31.858 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:31.863 > [F_RESPONSE] KLIC #20, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:31.869 > [F_RESPONSE] Task: setTask2
+20:01:31.869 > [F_RESPONSE] Payload length: 6
+20:01:31.875 > -------------Neznan task---------------
+20:01:31.881 > task: setTask2, payload: 107874
+20:01:31.881 > [F_RESPONSE] Free Heap po RESPONSE: 216524
+20:01:31.886 > ************************************
+20:01:31.886 > [F_HEAP] Free Heap pred RESPONSE: 216524
+20:01:31.891 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:31.898 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:31.902 > [F_RESPONSE] KLIC #21, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:46.899 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:46.899 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:01:51.646 > [STREAM] event: put
+20:01:51.664 > ************************************
+20:01:51.664 > [F_HEAP] Free Heap pred RESPONSE: 214884
+20:01:51.669 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:51.683 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:51.683 > [F_RESPONSE] KLIC #22, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:51.686 > [F_RESPONSE] Task: setTask1
+20:01:51.686 > [F_RESPONSE] Payload length: 26
+20:01:51.694 > -------------Neznan task---------------
+20:01:51.697 > task: setTask1, payload: {"ms":100005,"rand":16531}
+20:01:51.697 > [F_RESPONSE] Free Heap po RESPONSE: 214884
+20:01:51.703 > ************************************
+20:01:51.709 > [F_HEAP] Free Heap pred RESPONSE: 214884
+20:01:51.709 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:51.714 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:01:51.719 > [F_RESPONSE] KLIC #23, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:01:51.821 > [STREAM] event: put
+20:01:51.835 > ************************************
+20:01:51.835 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:01:51.840 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:51.846 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:51.851 > [F_RESPONSE] KLIC #24, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:01:51.856 > [F_RESPONSE] Task: setTask2
+20:01:51.856 > [F_RESPONSE] Payload length: 6
+20:01:51.862 > -------------Neznan task---------------
+20:01:51.867 > task: setTask2, payload: 133368
+20:01:51.867 > [F_RESPONSE] Free Heap po RESPONSE: 216532
+20:01:51.873 > ************************************
+20:01:51.873 > [F_HEAP] Free Heap pred RESPONSE: 216532
+20:01:51.879 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:01:51.884 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:01:51.890 > [F_RESPONSE] KLIC #25, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:07.011 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:07.012 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:02:11.662 > [STREAM] event: put
+20:02:11.677 > ************************************
+20:02:11.677 > [F_HEAP] Free Heap pred RESPONSE: 214856
+20:02:11.683 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:11.688 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:11.693 > [F_RESPONSE] KLIC #26, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:02:11.699 > [F_RESPONSE] Task: setTask1
+20:02:11.699 > [F_RESPONSE] Payload length: 26
+20:02:11.705 > -------------Neznan task---------------
+20:02:11.710 > task: setTask1, payload: {"ms":120006,"rand":23984}
+20:02:11.710 > [F_RESPONSE] Free Heap po RESPONSE: 214696
+20:02:11.716 > ************************************
+20:02:11.722 > [F_HEAP] Free Heap pred RESPONSE: 214856
+20:02:11.722 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:11.727 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:11.733 > [F_RESPONSE] KLIC #27, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:11.845 > [STREAM] event: put
+20:02:11.859 > ************************************
+20:02:11.859 > [F_HEAP] Free Heap pred RESPONSE: 216528
+20:02:11.864 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:11.870 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:11.874 > [F_RESPONSE] KLIC #28, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:02:11.881 > [F_RESPONSE] Task: setTask2
+20:02:11.881 > [F_RESPONSE] Payload length: 6
+20:02:11.886 > -------------Neznan task---------------
+20:02:11.892 > task: setTask2, payload: 191646
+20:02:11.892 > [F_RESPONSE] Free Heap po RESPONSE: 216528
+20:02:11.897 > ************************************
+20:02:11.897 > [F_HEAP] Free Heap pred RESPONSE: 216496
+20:02:11.903 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:11.909 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:11.914 > [F_RESPONSE] KLIC #29, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:15.241 > 🔄 FORCING RE-AUTH [Heap before: 218260]
+20:02:15.241 > ************************************
+20:02:15.247 > [F_HEAP] Free Heap pred RESPONSE: 217684
+20:02:15.247 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:15.253 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:02:15.258 > [F_RESPONSE] KLIC #30, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:15.269 > ************************************
+20:02:15.269 > [F_HEAP] Free Heap pred RESPONSE: 217652
+20:02:15.274 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:15.280 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:02:15.286 > [F_RESPONSE] KLIC #31, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:02:15.291 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+20:02:15.297 > [F_READY] Avtentikacija v teku...
+20:02:15.302 > ************************************
+20:02:15.302 > [F_HEAP] Free Heap pred RESPONSE: 216468
+20:02:15.307 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:15.314 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:02:15.319 > [F_RESPONSE] KLIC #32, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:02:15.324 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+20:02:15.330 > ************************************
+20:02:15.336 > [F_HEAP] Free Heap pred RESPONSE: 216404
+20:02:15.342 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:15.347 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:02:15.353 > [F_RESPONSE] KLIC #33, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:02:15.358 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+20:02:16.097 > ************************************
+20:02:16.097 > [F_HEAP] Free Heap pred RESPONSE: 220364
+20:02:16.102 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:16.107 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:02:16.113 > [F_RESPONSE] KLIC #34, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+20:02:16.118 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+20:02:16.125 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+20:02:16.135 > [F_RESPONSE] Task: 🔐 authTask
+20:02:16.135 > [F_RESPONSE] Payload length: 511
+20:02:16.141 > -------------Neznan task---------------
+20:02:16.141 > task: 🔐 authTask, payload: {
+20:02:16.147 >   "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNTM1LCJleHAiOjE3Njc4MTYxMzUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Egz35_9vl0id2SAEiNUj9DNOLzjV7xy4bNB-xjUPnZ7r-sijUGAEPyWOxCyDkvJ5Bpxni60uH3yZ2VpfUUV8MaNoT52WS_lW-U6Yr-oFxItyfxVereU5ttl3pOvN6snM_XvVZK1KfB1ul2XOFyoWUEXSwaFddHTRU9zWvAT-_XWsFq-LJe7svOL6mJaw1iCibdVrj8iZTqrjdMP3z_A3HqrV5xU5lVTrv37PDO7JO62-NX7kXYbGrpMWVhIODVOMYU3Tkp1MWUCmcLQPDYzXMz-ZMkvXqkGfY5Yn7RkWpijFLyF8e_6fMhm6gLQ9Ufw_3Y7Du3GWSwBazs05U_2uCA",
+20:02:16.225 >   "expires_in": "3600",
+20:02:16.230 >   "token_type": "Bearer",
+20:02:16.230 >   "refresh_token": "AMf-vBy6ObUwzXrYVHaltwnIKu9aJv09UKUk3HxdG_rxQOCrVV95IQJdftvmCYNh1_TLwx8arBCWHuKhwG_R7_TEqvURq9r-8h2PNPh6Qb6eG3Kr1dG4YuE6zq-XzKFp5he69eLL0mphI8ZbD9ncAa2YwSrJUJcWr79kn8SpIJZYFK63imA_CB69d4MF0IJBfsM6RCeiNncXbORidc2v69FotLPCDQm2og",
+20:02:16.252 >   "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNTM1LCJleHAiOjE3Njc4MTYxMzUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Egz35_9vl0id2SAEiNUj9DNOLzjV7xy4bNB-xjUPnZ7r-sijUGAEPyWOxCyDkvJ5Bpxni60uH3yZ2VpfUUV8MaNoT52WS_lW-U6Yr-oFxItyfxVereU5ttl3pOvN6snM_XvVZK1KfB1ul2XOFyoWUEXSwaFddHTRU9zWvAT-_XWsFq-LJe7svOL6mJaw1iCibdVrj8iZTqrjdMP3z_A3HqrV5xU5lVTrv37PDO7JO62-NX7kXYbGrpMWVhIODVOMYU3Tkp1MWUCmcLQPDYzXMz-ZMkvXqkGfY5Yn7RkWpijFLyF8e_6fMhm6gLQ9Ufw_3Y7Du3GWSwBazs05U_2uCA",
+20:02:16.335 >   "user_id": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+20:02:16.335 >   "project_id": "887041285936"
+20:02:16.341 > }
+20:02:16.341 > 
+20:02:16.341 > [F_RESPONSE] Free Heap po RESPONSE: 220716
+20:02:16.349 > ************************************
+20:02:16.349 > [F_HEAP] Free Heap pred RESPONSE: 220812
+20:02:16.352 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:16.357 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:02:16.363 > [F_RESPONSE] KLIC #35, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:02:16.369 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+20:02:16.374 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:16.380 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:02:16.833 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+20:02:16.834 > [STREAM] event: put
+20:02:31.390 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:31.390 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:02:31.980 > [STREAM] event: put
+20:02:31.997 > ************************************
+20:02:31.997 > [F_HEAP] Free Heap pred RESPONSE: 214604
+20:02:32.003 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:32.008 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:32.014 > [F_RESPONSE] KLIC #36, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+20:02:32.020 > [F_RESPONSE] Debug task: setTask1, msg: Connecting to server...
+20:02:32.024 > [F_RESPONSE] Task: setTask1
+20:02:32.024 > [F_RESPONSE] Payload length: 26
+20:02:32.030 > -------------Neznan task---------------
+20:02:32.036 > task: setTask1, payload: {"ms":140007,"rand":21729}
+20:02:32.036 > [F_RESPONSE] Free Heap po RESPONSE: 214424
+20:02:32.041 > ************************************
+20:02:32.047 > [F_HEAP] Free Heap pred RESPONSE: 214400
+20:02:32.047 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:32.053 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:32.058 > [F_RESPONSE] KLIC #37, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:32.155 > [STREAM] event: put
+20:02:32.170 > ************************************
+20:02:32.170 > [F_HEAP] Free Heap pred RESPONSE: 216280
+20:02:32.176 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:32.181 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:32.187 > [F_RESPONSE] KLIC #38, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:02:32.192 > [F_RESPONSE] Task: setTask2
+20:02:32.192 > [F_RESPONSE] Payload length: 6
+20:02:32.197 > -------------Neznan task---------------
+20:02:32.203 > task: setTask2, payload: 110536
+20:02:32.203 > [F_RESPONSE] Free Heap po RESPONSE: 216280
+20:02:32.208 > ************************************
+20:02:32.208 > [F_HEAP] Free Heap pred RESPONSE: 216280
+20:02:32.215 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:32.220 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:32.225 > [F_RESPONSE] KLIC #39, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:47.373 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:47.373 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:02:51.664 > [STREAM] event: put
+20:02:51.678 > ************************************
+20:02:51.678 > [F_HEAP] Free Heap pred RESPONSE: 214632
+20:02:51.683 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:51.689 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:51.694 > [F_RESPONSE] KLIC #40, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:02:51.700 > [F_RESPONSE] Task: setTask1
+20:02:51.700 > [F_RESPONSE] Payload length: 26
+20:02:51.706 > -------------Neznan task---------------
+20:02:51.711 > task: setTask1, payload: {"ms":160008,"rand":16804}
+20:02:51.711 > [F_RESPONSE] Free Heap po RESPONSE: 214632
+20:02:51.717 > ************************************
+20:02:51.722 > [F_HEAP] Free Heap pred RESPONSE: 214632
+20:02:51.722 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:51.728 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:02:51.733 > [F_RESPONSE] KLIC #41, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:02:51.841 > [STREAM] event: put
+20:02:51.855 > ************************************
+20:02:51.855 > [F_HEAP] Free Heap pred RESPONSE: 216288
+20:02:51.861 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:51.867 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:51.872 > [F_RESPONSE] KLIC #42, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:02:51.877 > [F_RESPONSE] Task: setTask2
+20:02:51.877 > [F_RESPONSE] Payload length: 6
+20:02:51.883 > -------------Neznan task---------------
+20:02:51.889 > task: setTask2, payload: 113096
+20:02:51.889 > [F_RESPONSE] Free Heap po RESPONSE: 216288
+20:02:51.894 > ************************************
+20:02:51.894 > [F_HEAP] Free Heap pred RESPONSE: 216288
+20:02:51.900 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:02:51.905 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:02:51.911 > [F_RESPONSE] KLIC #43, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:07.072 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:07.072 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:03:11.656 > [STREAM] event: put
+20:03:11.672 > ************************************
+20:03:11.672 > [F_HEAP] Free Heap pred RESPONSE: 214616
+20:03:11.677 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:11.683 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:11.688 > [F_RESPONSE] KLIC #44, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:11.694 > [F_RESPONSE] Task: setTask1
+20:03:11.694 > [F_RESPONSE] Payload length: 26
+20:03:11.700 > -------------Neznan task---------------
+20:03:11.705 > task: setTask1, payload: {"ms":180009,"rand":18116}
+20:03:11.705 > [F_RESPONSE] Free Heap po RESPONSE: 214592
+20:03:11.711 > ************************************
+20:03:11.716 > [F_HEAP] Free Heap pred RESPONSE: 214616
+20:03:11.716 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:11.722 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:11.728 > [F_RESPONSE] KLIC #45, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:11.829 > [STREAM] event: put
+20:03:11.845 > ************************************
+20:03:11.845 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:03:11.851 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:11.856 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:11.862 > [F_RESPONSE] KLIC #46, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:11.867 > [F_RESPONSE] Task: setTask2
+20:03:11.867 > [F_RESPONSE] Payload length: 6
+20:03:11.873 > -------------Neznan task---------------
+20:03:11.878 > task: setTask2, payload: 105198
+20:03:11.878 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:03:11.884 > ************************************
+20:03:11.884 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:03:11.890 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:11.895 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:11.901 > [F_RESPONSE] KLIC #47, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:27.018 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:27.018 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:03:31.657 > [STREAM] event: put
+20:03:31.677 > ************************************
+20:03:31.677 > [F_HEAP] Free Heap pred RESPONSE: 214668
+20:03:31.682 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:31.688 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:31.693 > [F_RESPONSE] KLIC #48, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:31.699 > [F_RESPONSE] Task: setTask1
+20:03:31.699 > [F_RESPONSE] Payload length: 26
+20:03:31.705 > -------------Neznan task---------------
+20:03:31.709 > task: setTask1, payload: {"ms":200010,"rand":25575}
+20:03:31.709 > [F_RESPONSE] Free Heap po RESPONSE: 214668
+20:03:31.716 > ************************************
+20:03:31.721 > [F_HEAP] Free Heap pred RESPONSE: 214668
+20:03:31.721 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:31.727 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:31.732 > [F_RESPONSE] KLIC #49, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:31.840 > [STREAM] event: put
+20:03:31.855 > ************************************
+20:03:31.855 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:03:31.861 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:31.866 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:31.872 > [F_RESPONSE] KLIC #50, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:31.877 > [F_RESPONSE] Task: setTask2
+20:03:31.877 > [F_RESPONSE] Payload length: 6
+20:03:31.883 > -------------Neznan task---------------
+20:03:31.889 > task: setTask2, payload: 174312
+20:03:31.889 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:03:31.895 > ************************************
+20:03:31.895 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:03:31.900 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:31.905 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:31.910 > [F_RESPONSE] KLIC #51, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:46.920 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:46.920 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:03:51.662 > [STREAM] event: put
+20:03:51.678 > ************************************
+20:03:51.697 > [F_HEAP] Free Heap pred RESPONSE: 214632
+20:03:51.697 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:51.697 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:51.697 > [F_RESPONSE] KLIC #52, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:51.700 > [F_RESPONSE] Task: setTask1
+20:03:51.700 > [F_RESPONSE] Payload length: 26
+20:03:51.721 > -------------Neznan task---------------
+20:03:51.721 > task: setTask1, payload: {"ms":220011,"rand":29627}
+20:03:51.721 > [F_RESPONSE] Free Heap po RESPONSE: 214468
+20:03:51.721 > ************************************
+20:03:51.730 > [F_HEAP] Free Heap pred RESPONSE: 214632
+20:03:51.730 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:51.730 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:03:51.733 > [F_RESPONSE] KLIC #53, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:03:51.839 > [STREAM] event: put
+20:03:51.853 > ************************************
+20:03:51.853 > [F_HEAP] Free Heap pred RESPONSE: 216304
+20:03:51.860 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:51.864 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:51.869 > [F_RESPONSE] KLIC #54, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:03:51.879 > [F_RESPONSE] Task: setTask2
+20:03:51.879 > [F_RESPONSE] Payload length: 6
+20:03:51.881 > -------------Neznan task---------------
+20:03:51.887 > task: setTask2, payload: 123929
+20:03:51.887 > [F_RESPONSE] Free Heap po RESPONSE: 216304
+20:03:51.896 > ************************************
+20:03:51.896 > [F_HEAP] Free Heap pred RESPONSE: 216304
+20:03:51.897 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:03:51.903 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:03:51.911 > [F_RESPONSE] KLIC #55, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:07.025 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:07.025 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:04:11.666 > [STREAM] event: put
+20:04:11.682 > ************************************
+20:04:11.682 > [F_HEAP] Free Heap pred RESPONSE: 214616
+20:04:11.687 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:11.692 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:11.698 > [F_RESPONSE] KLIC #56, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:04:11.703 > [F_RESPONSE] Task: setTask1
+20:04:11.703 > [F_RESPONSE] Payload length: 26
+20:04:11.709 > -------------Neznan task---------------
+20:04:11.714 > task: setTask1, payload: {"ms":240012,"rand":19726}
+20:04:11.714 > [F_RESPONSE] Free Heap po RESPONSE: 214616
+20:04:11.720 > ************************************
+20:04:11.726 > [F_HEAP] Free Heap pred RESPONSE: 214616
+20:04:11.726 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:11.731 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:11.737 > [F_RESPONSE] KLIC #57, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:11.844 > [STREAM] event: put
+20:04:11.861 > ************************************
+20:04:11.861 > [F_HEAP] Free Heap pred RESPONSE: 216288
+20:04:11.866 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:11.872 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:11.877 > [F_RESPONSE] KLIC #58, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:04:11.883 > [F_RESPONSE] Task: setTask2
+20:04:11.883 > [F_RESPONSE] Payload length: 6
+20:04:11.888 > -------------Neznan task---------------
+20:04:11.894 > task: setTask2, payload: 115903
+20:04:11.894 > [F_RESPONSE] Free Heap po RESPONSE: 216288
+20:04:11.900 > ************************************
+20:04:11.900 > [F_HEAP] Free Heap pred RESPONSE: 216288
+20:04:11.905 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:11.911 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:11.916 > [F_RESPONSE] KLIC #59, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:15.244 > 🔄 FORCING RE-AUTH [Heap before: 218500]
+20:04:15.244 > ************************************
+20:04:15.250 > [F_HEAP] Free Heap pred RESPONSE: 217924
+20:04:15.250 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:15.255 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:04:15.261 > [F_RESPONSE] KLIC #60, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:15.272 > ************************************
+20:04:15.272 > [F_HEAP] Free Heap pred RESPONSE: 217880
+20:04:15.278 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:15.283 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:04:15.289 > [F_RESPONSE] KLIC #61, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:04:15.294 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+20:04:15.300 > [F_READY] Avtentikacija v teku...
+20:04:15.305 > ************************************
+20:04:15.305 > [F_HEAP] Free Heap pred RESPONSE: 216688
+20:04:15.311 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:15.316 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:04:15.322 > [F_RESPONSE] KLIC #62, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:04:15.327 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+20:04:15.333 > ************************************
+20:04:15.338 > [F_HEAP] Free Heap pred RESPONSE: 216636
+20:04:15.345 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:15.350 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:04:15.355 > [F_RESPONSE] KLIC #63, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:04:15.361 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+20:04:16.114 > ************************************
+20:04:16.114 > [F_HEAP] Free Heap pred RESPONSE: 220356
+20:04:16.119 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:16.125 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:04:16.130 > [F_RESPONSE] KLIC #64, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+20:04:16.136 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+20:04:16.142 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+20:04:16.153 > [F_RESPONSE] Task: 🔐 authTask
+20:04:16.153 > [F_RESPONSE] Payload length: 511
+20:04:16.158 > -------------Neznan task---------------
+20:04:16.158 > task: 🔐 authTask, payload: {
+20:04:16.164 >   "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNjU1LCJleHAiOjE3Njc4MTYyNTUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Kntj-XL_AFNi5vuCabB2s1irXsuo2vik0Dca7bTT1ZbkI4zrZ6Ii8BG1V6yAAtHestxTvxVw5qV-4ooHQr7PKIbBuYTr4IEBAf9q2om0nZnf-NCZRHcWzxCtknI99HDdtbylijX3CLUAcWF-VB0fuk8X3huknXRhvqMzYUNv1cxdENNiIA7ntePsv15zOpj2iyx2hL2FPeweXAaufjd1w9lLjQuMj12Rml0wFdG_mks4qK40ps0fHNoAfmdtuWrW0m4OC3hwsb9oOK3tHnIdrFv_RK4kjZpoZZYKu02STJbi1vLg4-PrLjYlPFeA3fp_s8E_ki8GrMm4Jxdd1ZlAfQ",
+20:04:16.252 >   "expires_in": "3600",
+20:04:16.252 >   "token_type": "Bearer",
+20:04:16.252 >   "refresh_token": "AMf-vBy6ObUwzXrYVHaltwnIKu9aJv09UKUk3HxdG_rxQOCrVV95IQJdftvmCYNh1_TLwx8arBCWHuKhwG_R7_TEqvURq9r-8h2PNPh6Qb6eG3Kr1dG4YuE6zq-XzKFp5he69eLL0mphI8ZbD9ncAa2YwSrJUJcWr79kn8SpIJZYFK63imA_CB69d4MF0IJBfsM6RCeiNncXbORidc2v69FotLPCDQm2og",
+20:04:16.282 >   "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNjU1LCJleHAiOjE3Njc4MTYyNTUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Kntj-XL_AFNi5vuCabB2s1irXsuo2vik0Dca7bTT1ZbkI4zrZ6Ii8BG1V6yAAtHestxTvxVw5qV-4ooHQr7PKIbBuYTr4IEBAf9q2om0nZnf-NCZRHcWzxCtknI99HDdtbylijX3CLUAcWF-VB0fuk8X3huknXRhvqMzYUNv1cxdENNiIA7ntePsv15zOpj2iyx2hL2FPeweXAaufjd1w9lLjQuMj12Rml0wFdG_mks4qK40ps0fHNoAfmdtuWrW0m4OC3hwsb9oOK3tHnIdrFv_RK4kjZpoZZYKu02STJbi1vLg4-PrLjYlPFeA3fp_s8E_ki8GrMm4Jxdd1ZlAfQ",
+20:04:16.353 >   "user_id": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+20:04:16.353 >   "project_id": "887041285936"
+20:04:16.358 > }
+20:04:16.358 > 
+20:04:16.358 > [F_RESPONSE] Free Heap po RESPONSE: 220708
+20:04:16.364 > ************************************
+20:04:16.364 > [F_HEAP] Free Heap pred RESPONSE: 220812
+20:04:16.390 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:16.390 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:04:16.390 > [F_RESPONSE] KLIC #65, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:04:16.390 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+20:04:16.393 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:16.397 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:04:16.887 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+20:04:16.888 > [STREAM] event: put
+20:04:31.457 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:31.457 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:04:31.996 > [STREAM] event: put
+20:04:32.012 > ************************************
+20:04:32.012 > [F_HEAP] Free Heap pred RESPONSE: 214600
+20:04:32.018 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:32.024 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:32.030 > [F_RESPONSE] KLIC #66, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+20:04:32.035 > [F_RESPONSE] Debug task: setTask1, msg: Connecting to server...
+20:04:32.040 > [F_RESPONSE] Task: setTask1
+20:04:32.040 > [F_RESPONSE] Payload length: 26
+20:04:32.046 > -------------Neznan task---------------
+20:04:32.052 > task: setTask1, payload: {"ms":260013,"rand":19091}
+20:04:32.052 > [F_RESPONSE] Free Heap po RESPONSE: 214600
+20:04:32.057 > ************************************
+20:04:32.063 > [F_HEAP] Free Heap pred RESPONSE: 214600
+20:04:32.063 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:32.068 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:32.073 > [F_RESPONSE] KLIC #67, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:32.177 > [STREAM] event: put
+20:04:32.189 > ************************************
+20:04:32.189 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:04:32.195 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:32.200 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:32.206 > [F_RESPONSE] KLIC #68, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:04:32.211 > [F_RESPONSE] Task: setTask2
+20:04:32.211 > [F_RESPONSE] Payload length: 6
+20:04:32.217 > -------------Neznan task---------------
+20:04:32.223 > task: setTask2, payload: 159009
+20:04:32.223 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:04:32.227 > ************************************
+20:04:32.227 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:04:32.234 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:32.239 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:32.244 > [F_RESPONSE] KLIC #69, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:47.384 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:47.384 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:04:51.670 > [STREAM] event: put
+20:04:51.684 > ************************************
+20:04:51.684 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:04:51.690 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:51.695 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:51.701 > [F_RESPONSE] KLIC #70, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:04:51.707 > [F_RESPONSE] Task: setTask1
+20:04:51.707 > [F_RESPONSE] Payload length: 26
+20:04:51.713 > -------------Neznan task---------------
+20:04:51.718 > task: setTask1, payload: {"ms":280014,"rand":15140}
+20:04:51.718 > [F_RESPONSE] Free Heap po RESPONSE: 214660
+20:04:51.724 > ************************************
+20:04:51.728 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:04:51.728 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:51.734 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:04:51.739 > [F_RESPONSE] KLIC #71, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:04:51.848 > [STREAM] event: put
+20:04:51.863 > ************************************
+20:04:51.863 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:04:51.869 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:51.874 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:51.880 > [F_RESPONSE] KLIC #72, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:04:51.886 > [F_RESPONSE] Task: setTask2
+20:04:51.886 > [F_RESPONSE] Payload length: 6
+20:04:51.891 > -------------Neznan task---------------
+20:04:51.897 > task: setTask2, payload: 154865
+20:04:51.897 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:04:51.902 > ************************************
+20:04:51.902 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:04:51.908 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:04:51.913 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:04:51.919 > [F_RESPONSE] KLIC #73, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:07.081 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:07.082 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:05:11.668 > [STREAM] event: put
+20:05:11.684 > ************************************
+20:05:11.685 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:05:11.690 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:11.695 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:11.701 > [F_RESPONSE] KLIC #74, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:11.706 > [F_RESPONSE] Task: setTask1
+20:05:11.706 > [F_RESPONSE] Payload length: 26
+20:05:11.712 > -------------Neznan task---------------
+20:05:11.718 > task: setTask1, payload: {"ms":300015,"rand":23598}
+20:05:11.718 > [F_RESPONSE] Free Heap po RESPONSE: 214636
+20:05:11.724 > ************************************
+20:05:11.729 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:05:11.729 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:11.734 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:11.740 > [F_RESPONSE] KLIC #75, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:11.851 > [STREAM] event: put
+20:05:11.864 > ************************************
+20:05:11.864 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:11.870 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:11.875 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:11.881 > [F_RESPONSE] KLIC #76, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:11.887 > [F_RESPONSE] Task: setTask2
+20:05:11.887 > [F_RESPONSE] Payload length: 6
+20:05:11.891 > -------------Neznan task---------------
+20:05:11.898 > task: setTask2, payload: 198798
+20:05:11.898 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:05:11.903 > ************************************
+20:05:11.903 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:11.909 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:11.914 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:11.920 > [F_RESPONSE] KLIC #77, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:27.024 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:27.024 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:05:31.668 > [STREAM] event: put
+20:05:31.687 > ************************************
+20:05:31.687 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:05:31.692 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:31.698 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:31.704 > [F_RESPONSE] KLIC #78, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:31.709 > [F_RESPONSE] Task: setTask1
+20:05:31.709 > [F_RESPONSE] Payload length: 26
+20:05:31.715 > -------------Neznan task---------------
+20:05:31.721 > task: setTask1, payload: {"ms":320016,"rand":17897}
+20:05:31.721 > [F_RESPONSE] Free Heap po RESPONSE: 214660
+20:05:31.726 > ************************************
+20:05:31.732 > [F_HEAP] Free Heap pred RESPONSE: 214660
+20:05:31.732 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:31.737 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:31.742 > [F_RESPONSE] KLIC #79, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:31.849 > [STREAM] event: put
+20:05:31.863 > ************************************
+20:05:31.863 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:31.869 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:31.874 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:31.880 > [F_RESPONSE] KLIC #80, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:31.886 > [F_RESPONSE] Task: setTask2
+20:05:31.886 > [F_RESPONSE] Payload length: 6
+20:05:31.891 > -------------Neznan task---------------
+20:05:31.897 > task: setTask2, payload: 185773
+20:05:31.897 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:05:31.902 > ************************************
+20:05:31.902 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:31.910 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:31.913 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:31.919 > [F_RESPONSE] KLIC #81, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:46.923 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:46.924 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:05:51.674 > [STREAM] event: put
+20:05:51.692 > ************************************
+20:05:51.693 > [F_HEAP] Free Heap pred RESPONSE: 214624
+20:05:51.698 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:51.704 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:51.709 > [F_RESPONSE] KLIC #82, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:51.715 > [F_RESPONSE] Task: setTask1
+20:05:51.715 > [F_RESPONSE] Payload length: 26
+20:05:51.720 > -------------Neznan task---------------
+20:05:51.726 > task: setTask1, payload: {"ms":340017,"rand":24952}
+20:05:51.726 > [F_RESPONSE] Free Heap po RESPONSE: 214624
+20:05:51.731 > ************************************
+20:05:51.737 > [F_HEAP] Free Heap pred RESPONSE: 214596
+20:05:51.737 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:51.742 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:05:51.748 > [F_RESPONSE] KLIC #83, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:05:51.854 > [STREAM] event: put
+20:05:51.871 > ************************************
+20:05:51.871 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:51.877 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:51.882 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:51.888 > [F_RESPONSE] KLIC #84, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:05:51.893 > [F_RESPONSE] Task: setTask2
+20:05:51.893 > [F_RESPONSE] Payload length: 6
+20:05:51.899 > -------------Neznan task---------------
+20:05:51.905 > task: setTask2, payload: 195739
+20:05:51.905 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:05:51.910 > ************************************
+20:05:51.910 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:05:51.916 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:05:51.921 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:05:51.926 > [F_RESPONSE] KLIC #85, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:07.039 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:07.040 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:06:11.672 > [STREAM] event: put
+20:06:11.688 > ************************************
+20:06:11.688 > [F_HEAP] Free Heap pred RESPONSE: 214644
+20:06:11.693 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:11.699 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:11.704 > [F_RESPONSE] KLIC #86, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:06:11.710 > [F_RESPONSE] Task: setTask1
+20:06:11.710 > [F_RESPONSE] Payload length: 26
+20:06:11.715 > -------------Neznan task---------------
+20:06:11.721 > task: setTask1, payload: {"ms":360018,"rand":13126}
+20:06:11.721 > [F_RESPONSE] Free Heap po RESPONSE: 214644
+20:06:11.726 > ************************************
+20:06:11.732 > [F_HEAP] Free Heap pred RESPONSE: 214644
+20:06:11.732 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:11.737 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:11.743 > [F_RESPONSE] KLIC #87, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:11.855 > [STREAM] event: put
+20:06:11.869 > ************************************
+20:06:11.869 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:06:11.874 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:11.880 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:11.885 > [F_RESPONSE] KLIC #88, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:06:11.891 > [F_RESPONSE] Task: setTask2
+20:06:11.891 > [F_RESPONSE] Payload length: 6
+20:06:11.896 > -------------Neznan task---------------
+20:06:11.902 > task: setTask2, payload: 109822
+20:06:11.902 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:06:11.908 > ************************************
+20:06:11.908 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:06:11.913 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:11.919 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:11.924 > [F_RESPONSE] KLIC #89, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:15.247 > 🔄 FORCING RE-AUTH [Heap before: 218480]
+20:06:15.248 > ************************************
+20:06:15.253 > [F_HEAP] Free Heap pred RESPONSE: 217904
+20:06:15.253 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:15.258 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:06:15.264 > [F_RESPONSE] KLIC #90, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:15.275 > ************************************
+20:06:15.275 > [F_HEAP] Free Heap pred RESPONSE: 217872
+20:06:15.281 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:15.286 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:06:15.292 > [F_RESPONSE] KLIC #91, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:06:15.297 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+20:06:15.303 > [F_READY] Avtentikacija v teku...
+20:06:15.308 > ************************************
+20:06:15.308 > [F_HEAP] Free Heap pred RESPONSE: 216672
+20:06:15.314 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:15.319 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:06:15.325 > [F_RESPONSE] KLIC #92, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:06:15.331 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+20:06:15.336 > ************************************
+20:06:15.341 > [F_HEAP] Free Heap pred RESPONSE: 216608
+20:06:15.347 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:15.353 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 0
+20:06:15.358 > [F_RESPONSE] KLIC #93, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:06:15.364 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+20:06:16.129 > ************************************
+20:06:16.129 > [F_HEAP] Free Heap pred RESPONSE: 220288
+20:06:16.134 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:16.139 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:06:16.145 > [F_RESPONSE] KLIC #94, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+20:06:16.151 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+20:06:16.156 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+20:06:16.167 > [F_RESPONSE] Task: 🔐 authTask
+20:06:16.167 > [F_RESPONSE] Payload length: 511
+20:06:16.172 > -------------Neznan task---------------
+20:06:16.172 > task: 🔐 authTask, payload: {
+20:06:16.178 >   "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNzc1LCJleHAiOjE3Njc4MTYzNzUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.pana_jdjHMx5EWkv14HH1Ng5a87cHqFkKzaa47uM2S8accYOfajUK0vp39EAE0ZcKnk6buz-XbUjYBFr6idqzVNS29At3ijIFOaHqrvsaJNfPmng3L4TDlssMxxuoo1VVB-WyBP-oFXS6uHp_DtlqsIOLH-G4W_T91h1FvOnJPAACTJzVqW_Gkm-fkbw5Zk95O449W6lIX9tGg8qCLAr0VCn3I0bjAAOzhAUlWJZpxInyNgvbcBdEv_SmQc4Hy9KowJJ4n-c275yfHEIou8ywBLoqHt2aw0HYU_sziMKtvpb7hd2EAVoub6fNweCuLlAFDJfsyIvjyW4DV4k_EK1IQ",
+20:06:16.256 >   "expires_in": "3600",
+20:06:16.261 >   "token_type": "Bearer",
+20:06:16.261 >   "refresh_token": "AMf-vBy6ObUwzXrYVHaltwnIKu9aJv09UKUk3HxdG_rxQOCrVV95IQJdftvmCYNh1_TLwx8arBCWHuKhwG_R7_TEqvURq9r-8h2PNPh6Qb6eG3Kr1dG4YuE6zq-XzKFp5he69eLL0mphI8ZbD9ncAa2YwSrJUJcWr79kn8SpIJZYFK63imA_CB69d4MF0IJBfsM6RCeiNncXbORidc2v69FotLPCDQm2og",
+20:06:16.284 >   "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2NzgxMjQxNCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3ODEyNzc1LCJleHAiOjE3Njc4MTYzNzUsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.pana_jdjHMx5EWkv14HH1Ng5a87cHqFkKzaa47uM2S8accYOfajUK0vp39EAE0ZcKnk6buz-XbUjYBFr6idqzVNS29At3ijIFOaHqrvsaJNfPmng3L4TDlssMxxuoo1VVB-WyBP-oFXS6uHp_DtlqsIOLH-G4W_T91h1FvOnJPAACTJzVqW_Gkm-fkbw5Zk95O449W6lIX9tGg8qCLAr0VCn3I0bjAAOzhAUlWJZpxInyNgvbcBdEv_SmQc4Hy9KowJJ4n-c275yfHEIou8ywBLoqHt2aw0HYU_sziMKtvpb7hd2EAVoub6fNweCuLlAFDJfsyIvjyW4DV4k_EK1IQ",
+20:06:16.367 >   "user_id": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+20:06:16.367 >   "project_id": "887041285936"
+20:06:16.372 > }
+20:06:16.372 > 
+20:06:16.372 > [F_RESPONSE] Free Heap po RESPONSE: 220660
+20:06:16.378 > ************************************
+20:06:16.378 > [F_HEAP] Free Heap pred RESPONSE: 220760
+20:06:16.384 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:16.389 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 0
+20:06:16.394 > [F_RESPONSE] KLIC #95, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:06:16.400 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+20:06:16.406 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:16.411 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:06:16.818 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+20:06:16.820 > [STREAM] event: put
+20:06:31.401 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:31.401 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0, Auth ready: 1
+20:06:31.985 > [STREAM] event: put
+20:06:32.003 > ************************************
+20:06:32.004 > [F_HEAP] Free Heap pred RESPONSE: 214592
+20:06:32.009 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:32.015 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:32.021 > [F_RESPONSE] KLIC #96, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+20:06:32.026 > [F_RESPONSE] Debug task: setTask1, msg: Connecting to server...
+20:06:32.032 > [F_RESPONSE] Task: setTask1
+20:06:32.032 > [F_RESPONSE] Payload length: 26
+20:06:32.037 > -------------Neznan task---------------
+20:06:32.042 > task: setTask1, payload: {"ms":380019,"rand":15297}
+20:06:32.042 > [F_RESPONSE] Free Heap po RESPONSE: 214592
+20:06:32.048 > ************************************
+20:06:32.053 > [F_HEAP] Free Heap pred RESPONSE: 214592
+20:06:32.053 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:32.059 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:32.065 > [F_RESPONSE] KLIC #97, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:32.161 > [STREAM] event: put
+20:06:32.178 > ************************************
+20:06:32.178 > [F_HEAP] Free Heap pred RESPONSE: 216292
+20:06:32.183 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:32.189 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:32.195 > [F_RESPONSE] KLIC #98, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:06:32.200 > [F_RESPONSE] Task: setTask2
+20:06:32.200 > [F_RESPONSE] Payload length: 6
+20:06:32.206 > -------------Neznan task---------------
+20:06:32.211 > task: setTask2, payload: 153642
+20:06:32.211 > [F_RESPONSE] Free Heap po RESPONSE: 216292
+20:06:32.217 > ************************************
+20:06:32.217 > [F_HEAP] Free Heap pred RESPONSE: 216292
+20:06:32.222 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:32.228 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:32.233 > [F_RESPONSE] KLIC #99, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:47.380 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:47.380 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:06:51.662 > [STREAM] event: put
+20:06:51.679 > ************************************
+20:06:51.679 > [F_HEAP] Free Heap pred RESPONSE: 214652
+20:06:51.684 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:51.690 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:51.696 > [F_RESPONSE] KLIC #100, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:06:51.701 > [F_RESPONSE] Task: setTask1
+20:06:51.701 > [F_RESPONSE] Payload length: 26
+20:06:51.707 > -------------Neznan task---------------
+20:06:51.713 > task: setTask1, payload: {"ms":400020,"rand":14623}
+20:06:51.713 > [F_RESPONSE] Free Heap po RESPONSE: 214480
+20:06:51.718 > ************************************
+20:06:51.724 > [F_HEAP] Free Heap pred RESPONSE: 214652
+20:06:51.724 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:51.729 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:06:51.735 > [F_RESPONSE] KLIC #101, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:06:51.831 > [STREAM] event: put
+20:06:51.849 > ************************************
+20:06:51.849 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:06:51.855 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:51.860 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:51.866 > [F_RESPONSE] KLIC #102, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:06:51.872 > [F_RESPONSE] Task: setTask2
+20:06:51.872 > [F_RESPONSE] Payload length: 6
+20:06:51.877 > -------------Neznan task---------------
+20:06:51.883 > task: setTask2, payload: 145044
+20:06:51.883 > [F_RESPONSE] Free Heap po RESPONSE: 216296
+20:06:51.888 > ************************************
+20:06:51.888 > [F_HEAP] Free Heap pred RESPONSE: 216296
+20:06:51.893 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:06:51.899 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:06:51.905 > [F_RESPONSE] KLIC #103, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:07:07.078 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:07.078 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:07:11.664 > [STREAM] event: put
+20:07:11.681 > ************************************
+20:07:11.681 > [F_HEAP] Free Heap pred RESPONSE: 214652
+20:07:11.687 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:11.692 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:07:11.698 > [F_RESPONSE] KLIC #104, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:07:11.703 > [F_RESPONSE] Task: setTask1
+20:07:11.703 > [F_RESPONSE] Payload length: 26
+20:07:11.708 > -------------Neznan task---------------
+20:07:11.714 > task: setTask1, payload: {"ms":420021,"rand":13000}
+20:07:11.714 > [F_RESPONSE] Free Heap po RESPONSE: 214500
+20:07:11.720 > ************************************
+20:07:11.725 > [F_HEAP] Free Heap pred RESPONSE: 214652
+20:07:11.725 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:11.731 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:07:11.736 > [F_RESPONSE] KLIC #105, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:07:11.834 > [STREAM] event: put
+20:07:11.851 > ************************************
+20:07:11.851 > [F_HEAP] Free Heap pred RESPONSE: 216304
+20:07:11.857 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:11.862 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:07:11.868 > [F_RESPONSE] KLIC #106, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:07:11.873 > [F_RESPONSE] Task: setTask2
+20:07:11.873 > [F_RESPONSE] Payload length: 6
+20:07:11.879 > -------------Neznan task---------------
+20:07:11.884 > task: setTask2, payload: 145406
+20:07:11.884 > [F_RESPONSE] Free Heap po RESPONSE: 216304
+20:07:11.890 > ************************************
+20:07:11.890 > [F_HEAP] Free Heap pred RESPONSE: 216304
+20:07:11.896 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:11.901 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:07:11.907 > [F_RESPONSE] KLIC #107, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:07:27.031 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:27.031 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 1, Auth ready: 1
+20:07:31.663 > [STREAM] event: put
+20:07:31.681 > ************************************
+20:07:31.681 > [F_HEAP] Free Heap pred RESPONSE: 214640
+20:07:31.686 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:31.692 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:07:31.698 > [F_RESPONSE] KLIC #108, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:07:31.703 > [F_RESPONSE] Task: setTask1
+20:07:31.703 > [F_RESPONSE] Payload length: 26
+20:07:31.709 > -------------Neznan task---------------
+20:07:31.714 > task: setTask1, payload: {"ms":440022,"rand":17161}
+20:07:31.714 > [F_RESPONSE] Free Heap po RESPONSE: 214640
+20:07:31.719 > ************************************
+20:07:31.725 > [F_HEAP] Free Heap pred RESPONSE: 214640
+20:07:31.725 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:31.731 > [F_DEBUG] Stream Active tasks: 2, Stream SSL connected: 1, Auth ready: 1
+20:07:31.736 > [F_RESPONSE] KLIC #109, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:07:31.835 > [STREAM] event: put
+20:07:31.850 > ************************************
+20:07:31.850 > [F_HEAP] Free Heap pred RESPONSE: 216284
+20:07:31.855 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:31.861 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:07:31.867 > [F_RESPONSE] KLIC #110, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:07:31.872 > [F_RESPONSE] Task: setTask2
+20:07:31.872 > [F_RESPONSE] Payload length: 6
+20:07:31.878 > -------------Neznan task---------------
+20:07:31.883 > task: setTask2, payload: 159595
+20:07:31.883 > [F_RESPONSE] Free Heap po RESPONSE: 216284
+20:07:31.889 > ************************************
+20:07:31.889 > [F_HEAP] Free Heap pred RESPONSE: 216284
+20:07:31.894 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:07:31.900 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1, Auth ready: 1
+20:07:31.906 > [F_RESPONSE] KLIC #111, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
