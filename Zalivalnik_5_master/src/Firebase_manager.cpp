@@ -136,7 +136,7 @@ char examplePath1[64];
 char examplePath2[64];
 char uid[32];
 unsigned long ms = 0;
-bool extract_uid = false;
+bool firebase_connected = false;
 
 // Dodajte globalno spremenljivko za sledenje minimalnega heap-a
 uint32_t minHeapDuringAuth = 0xFFFFFFFF;
@@ -445,9 +445,9 @@ int extractIntValue(const char* json, const char* key) {
 // Funkcija za preverjanje stanja SSL povezave
 void Firebase_Check_Active_State(bool wait) {
 
-  // če je wait true, preverimo stanje vsakih 15 sekund, če je false, preverimo takoj
+  // če je wait true, preverimo stanje vsakih 30 sekund, če je false, preverimo takoj
   static unsigned long lastCheckTime = 0;
-  bool checkNow = !wait || (millis() - lastCheckTime > 15000);
+  bool checkNow = !wait || (millis() - lastCheckTime > 30000);
 
   if (checkNow) {
     lastCheckTime = millis();
@@ -470,7 +470,7 @@ bool Firebase_IsReady()
 {
   // 1. Preveri heap
   size_t freeHeap = ESP.getFreeHeap();
-  if (freeHeap < 60000) {
+  if (freeHeap < 100000) {
     Firebase.printf("[F_HEAP] ⚠️ Premalo heap-a: %d B\n", freeHeap);
     return false;
   }
@@ -509,7 +509,7 @@ void Firebase_readInterval()
     return;
   }
 
-  Database.get(streamClient1, chartIntervalPath, Firebase_processResponse, false, "getChartIntervalTask");
+  Database.get(aClient, chartIntervalPath, Firebase_processResponse, false, "getChartIntervalTask");
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -535,12 +535,12 @@ void Firebase_readKanalUrnik(uint8_t kanalIndex)
     return;
   }
 
-  Database.get(streamClient1, path_buffer, Firebase_processResponse, false, "getUrnikTask");
+  Database.get(aClient, path_buffer, Firebase_processResponse, false, "getUrnikTask");
 }
 
 //------------------------------------------------------------------------------------------------------------------------
 // Funkcija za posodobitev podatkov v Firebase (eno polje kanala)
-void Firebase_Update_Relay_State(int kanal, bool state)
+void Firebase_Update_Relay_State(uint8_t kanal, bool state)
 {
   char path_buffer[100];
   snprintf(path_buffer, sizeof(path_buffer), "%s%d/state", kanaliPath, kanal);
@@ -563,7 +563,7 @@ void Firebase_Update_Relay_State(int kanal, bool state)
     return;
   }
 
-  Database.set(streamClient1, path_buffer, state_payload, Firebase_processResponse, "updateStateTask");
+  Database.set(aClient, path_buffer, state_payload, Firebase_processResponse, "updateStateTask");
 }
 
 //------------------------------------------------------------------------------------------------------------------------
@@ -613,7 +613,7 @@ void Firebase_Update_Sensor_Data(unsigned long timestamp, const SensorDataPayloa
     return;
   }
   // Pošljemo podatke
-  Database.set<object_t>(streamClient1, path_buffer, json, Firebase_processResponse, "updateSensorTask");
+  Database.set<object_t>(aClient, path_buffer, json, Firebase_processResponse, "updateSensorTask");
 
 }
 
@@ -704,7 +704,7 @@ void Firebase_Update_INA_Data(unsigned long timestamp, const INA3221_DataPayload
   }
 
   // Pošljemo podatke
-  Database.set<object_t>(streamClient1, path_buffer, final_json, Firebase_processResponse, "updateINA3221Task");
+  Database.set<object_t>(aClient, path_buffer, final_json, Firebase_processResponse, "updateINA3221Task");
 
 }
 
@@ -829,18 +829,24 @@ void Firebase_loop()
       forceReauthAt = millis() + 120000; // Naslednji test čez 2 min
     }
 
-    if (!extract_uid) // samo enkrat ob prvem ready
+    if (!firebase_connected) // samo enkrat ob prvem ready
     {
       // Pridobimo UID
       strncpy(uid, app.getUid().c_str(), sizeof(uid) - 1);
       uid[sizeof(uid) - 1] = '\0'; // Zagotovimo null-terminacijo
       Firebase.printf("User UID: %s\n", uid);
+      // Priprava poti
       snprintf(databasePath, sizeof(databasePath), "/UserData/%s", uid);
       snprintf(examplesPath, sizeof(examplesPath), "%s/examples", databasePath);
 
       snprintf(examplePath1, sizeof(examplePath1), "%s/1", examplesPath);
       snprintf(examplePath2, sizeof(examplePath2), "%s/2", examplesPath);
 
+      snprintf(sensorPath, sizeof(sensorPath), "%s/Sensors", databasePath);
+      snprintf(inaPath, sizeof(inaPath), "%s/INA3221", databasePath);
+      snprintf(kanaliPath, sizeof(kanaliPath), "%s/Kanali/kanal", databasePath);
+      snprintf(chartIntervalPath, sizeof(chartIntervalPath), "%s/charts/Interval", databasePath);
+      
       // In SSE mode (HTTP Streaming) task, you can filter the Stream events by using AsyncClientClass::setSSEFilters(<keywords>),
       // which the <keywords> is the comma separated events.
       // The event keywords supported are:
@@ -857,7 +863,7 @@ void Firebase_loop()
       Database.get(streamClient1, examplesPath, streamCallback, true, "streamTask");
       // Database.get(streamClient2, examplePath2, processData, true, "streamTask2");
       Firebase.printf("Free Heap: %d\n", ESP.getFreeHeap());
-      extract_uid = true;
+      firebase_connected = true;
     }
 
     //---- Periodične naloge----
@@ -887,22 +893,22 @@ void Firebase_loop()
     // --- konec periodičnih nalog ---
 
 
-    if (millis() - ms > 20000)
-    {
-      ms = millis();
+    // if (millis() - ms > 20000)
+    // {
+    //   ms = millis();
 
-      JsonWriter writer;
+    //   JsonWriter writer;
 
-      object_t json, obj1, obj2;
+    //   object_t json, obj1, obj2;
 
-      writer.create(obj1, "ms", ms);
-      writer.create(obj2, "rand", random(10000, 30000));
-      writer.join(json, 2, obj1, obj2);
+    //   writer.create(obj1, "ms", ms);
+    //   writer.create(obj2, "rand", random(10000, 30000));
+    //   writer.join(json, 2, obj1, obj2);
 
-      Database.set<object_t>(aClient, examplePath1, json, Firebase_processResponse, "setTask1");
+    //   Database.set<object_t>(aClient, examplePath1, json, Firebase_processResponse, "setTask1");
 
-      Database.set<int>(aClient, examplePath2, random(100000, 200000), Firebase_processResponse, "setTask2");
-    }
+    //   Database.set<int>(aClient, examplePath2, random(100000, 200000), Firebase_processResponse, "setTask2");
+    // }
 
 
   }

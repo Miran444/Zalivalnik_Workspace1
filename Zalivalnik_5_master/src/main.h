@@ -29,3 +29,4 @@ struct ChannelUpdateData {
 };
 
 extern Kanal firebase_kanal[8]; // Polje struktur za kanale
+extern bool firebase_connected;

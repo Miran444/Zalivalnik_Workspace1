@@ -19,15 +19,5 @@ extern LoRaPacket lora_received_packet;
 // DODAJ na konec datoteke pred #endif:
 void lora_process_received_packets(); // Nova funkcija za obdelavo v main loop
 
-// DODAJ: Nova struktura za kontekst
-enum class LoRaContext {
-    IDLE,                 // Nič ne počnemo
-    INITIALIZATION,       // Sredi inicializacije (manageReleInitialization upravlja)
-    WAITING_FOR_RESPONSE, // Pošiljanje ukaza in čakanje na odgovor
-    JUST_ACK,             // Samo ACK
-    SENSOR_QUEUE          // NOVO: Sensor queue ima svoj retry mehanizem
-
-};
-
 void lora_set_context(LoRaContext context); // Nastavi kontekst inicializacije
 LoRaContext lora_get_context(); // Pridobi trenutni kontekst

@@ -1,0 +1,187 @@
+20:16:18.611 > ets Jun  8 2016 00:22:57
+20:16:18.611 > 
+20:16:18.611 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+20:16:18.616 > configsip: 188777542, SPIWP:0xee
+20:16:18.616 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+20:16:18.627 > mode:DIO, clock div:2
+20:16:18.627 > load:0x3fff0030,len:1184
+20:16:18.627 > load:0x40078000,len:13232
+20:16:18.728 > load:0x40080400,len:3028
+20:16:18.728 > entry 0x400805e4
+20:16:19.195 > Connecting to Wi-Fi.
+20:16:19.499 > Connected with IP: 192.168.64.105
+20:16:19.499 > 
+20:16:19.499 > Cakam na NTP sinhronizacijo... 
+20:16:23.611 > NTP sinhronizacija uspesna!
+20:16:23.611 > Friday, January 09 2026 20:16:23
+20:16:23.617 > Trenutni čas: 1767986183
+20:16:23.617 > Free Heap BEFORE Firebase: 240000
+20:16:23.617 > Firebase Client v2.2.7
+20:16:23.622 > Initializing app...
+20:16:23.622 > Free Heap: 240000
+20:16:23.622 > ************************************
+20:16:23.627 > [F_HEAP] Free Heap pred RESPONSE: 239204
+20:16:23.633 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:23.639 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 0
+20:16:23.644 > [F_RESPONSE] KLIC #1, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:16:23.650 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+20:16:23.655 > [F_READY] Avtentikacija v teku...
+20:16:23.661 > ************************************
+20:16:23.661 > [F_HEAP] Free Heap pred RESPONSE: 237940
+20:16:23.667 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:23.672 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 0, Auth ready: 0
+20:16:23.677 > [F_RESPONSE] KLIC #2, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:16:23.683 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+20:16:23.689 > ************************************
+20:16:23.694 > [F_HEAP] Free Heap pred RESPONSE: 237676
+20:16:23.694 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:23.699 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 0, Auth ready: 0
+20:16:23.711 > [F_RESPONSE] KLIC #3, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:16:23.717 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+20:16:23.737 > [LORA] Init uspesen. Cakam na sporocila...
+20:16:23.737 > [SENSOR_QUEUE] Inicializirana.
+20:16:23.744 > Setup končan.
+20:16:23.744 > Friday, January 09 2026 20:16:23
+20:16:23.744 > Trenutni čas: 1767986183
+20:16:23.749 > [F_HEAP] Free Heap po SETUP: 226596
+20:16:24.604 > ************************************
+20:16:24.605 > [F_HEAP] Free Heap pred RESPONSE: 222812
+20:16:24.611 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:24.616 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 0
+20:16:24.622 > [F_RESPONSE] KLIC #4, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+20:16:24.626 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+20:16:24.632 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+20:16:24.643 > [F_RESPONSE] Task: 🔐 authTask
+20:16:24.643 > [F_RESPONSE] Payload length: 511
+20:16:24.649 > -------------Neznan task---------------
+20:16:24.649 > task: 🔐 authTask, payload: {
+20:16:24.655 >   "kind": "identitytoolkit#VerifyPasswordResponse",
+20:16:24.661 >   "localId": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+20:16:24.661 >   "email": "miranbudal@gmail.com",
+20:16:24.666 >   "displayName": "",
+20:16:24.666 >   "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4Mjg5MmZhMzJlY2QxM2E0ZTBhZWZlNjI4ZGQ5YWFlM2FiYThlMWUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2Nzk4NjE4NCwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY3OTg2MTg0LCJleHAiOjE3Njc5ODk3ODQsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.guc7465w3AhfcqWiRJLrXfWAOB7I9Wo3Ec1v6z3vuZKiDodm_rb2Zo5xXioJoRBFbrmmYjO2zThOk7YkPVLkFgRpjLJczniSh7KGfVKS4W0uZI_opvVWsptxiuq1oVkb_Wp1NErVtF1Pn7x9Hw36ombgDCx0qMNvsDPNO-nOUCJAYjRA2jX22i2snj6-rQffwob9cLhGYRc9DWqaDJ7oyjNVlWC6l1_trJb2DphEa9KDd-y8pkSHgTOlbdEBTx7i5w6tfhaNeg-Dd2KoejvDOTgnjs-_r5pEe5FY4Jj37PcCXC-2Rff7oNscFwsiWb-lSgyk-HlpU_PhBPDbw55hlQ",
+20:16:24.749 >   "registered": true,
+20:16:24.749 >   "refreshToken": "AMf-vByGnmUpMrpJC9CGdwltkhWPVuhKOFO0QGSSWKKJuSfvzLW6H-1dqlBCs95QLNnUnJbQZ_cO4CUYueFrINtlXyYnHBkyN3EI7oazl2gA9d_mQ18uJG_AuAVQ4OvJ3jOuVAKagQLz9RMXV9Z19wqX98Db7gCVsHpM1YvRz1lcnuytpJbdbzAIdamanTopOaiLoNG_mn0uKi694Ygf_52dUI13isnJbA",
+20:16:24.771 >   "expiresIn": "3600"
+20:16:24.771 > }
+20:16:24.771 > 
+20:16:24.771 > [F_RESPONSE] Free Heap po RESPONSE: 222976
+20:16:24.776 > ************************************
+20:16:24.782 > [F_HEAP] Free Heap pred RESPONSE: 221816
+20:16:24.782 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:24.787 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 0
+20:16:24.793 > [F_RESPONSE] KLIC #5, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+20:16:24.805 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+20:16:24.805 > [F_DEBUG] Stream Active tasks: 0, Stream SSL connected: 0
+20:16:24.811 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+20:16:24.820 > User UID: 68TA11sAdOaFnIdmqzDtkx3QIBC2
+20:16:25.179 > Free Heap: 210584
+20:16:25.179 > [INIT] Začenjam inicializacijo Rele modula...
+20:16:25.184 > [F_GET_INTERVAL] Reading interval (poskus 1/3)...
+20:16:25.622 > ************************************
+20:16:25.623 > [F_HEAP] Free Heap pred RESPONSE: 210204
+20:16:25.628 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 0
+20:16:25.633 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:25.638 > [F_RESPONSE] KLIC #6, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+20:16:25.644 > [F_RESPONSE] Debug task: getChartIntervalTask, msg: Connecting to server...
+20:16:25.650 > ************************************
+20:16:25.655 > [F_HEAP] Free Heap pred RESPONSE: 210096
+20:16:25.655 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 0
+20:16:25.661 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:25.673 > [F_RESPONSE] KLIC #7, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:16:25.678 > [F_RESPONSE] ⚠️ Path is empty!
+20:16:25.678 > ************************************
+20:16:25.683 > [F_HEAP] Free Heap pred RESPONSE: 210120
+20:16:25.689 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 0
+20:16:25.689 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:25.700 > [F_RESPONSE] KLIC #8, isResult=1, isError=1, isEvent=0, isDebug=0, available=0
+20:16:25.705 > [F_RESPONSE] Error task: getChartIntervalTask, msg: unauthorized, code: 401
+20:16:30.231 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+20:16:30.234 > [STREAM] event: put
+20:16:30.340 > [FB_RETRY] ⚠️ TIMEOUT! Poskus 1/3
+20:16:30.340 > [FB_RETRY] 🔄 Ponovni poskus...
+20:16:30.345 > [F_GET_INTERVAL] Reading interval (poskus 2/3)...
+20:16:30.449 > ************************************
+20:16:30.449 > [F_HEAP] Free Heap pred RESPONSE: 202048
+20:16:30.455 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:30.460 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:30.466 > [F_RESPONSE] KLIC #9, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:16:30.471 > ************************************
+20:16:30.476 > [F_HEAP] Free Heap pred RESPONSE: 201924
+20:16:30.476 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:30.482 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:30.487 > [F_RESPONSE] KLIC #10, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:16:30.499 > [F_RESPONSE] ⚠️ Path is empty!
+20:16:30.499 > ************************************
+20:16:30.505 > [F_HEAP] Free Heap pred RESPONSE: 201924
+20:16:30.505 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:30.510 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:30.516 > [F_RESPONSE] KLIC #11, isResult=1, isError=1, isEvent=0, isDebug=0, available=0
+20:16:30.526 > [F_RESPONSE] Error task: getChartIntervalTask, msg: unauthorized, code: 401
+20:16:35.365 > [FB_RETRY] ⚠️ TIMEOUT! Poskus 2/3
+20:16:35.365 > [FB_RETRY] 🔄 Ponovni poskus...
+20:16:35.370 > [F_GET_INTERVAL] Reading interval (poskus 3/3)...
+20:16:35.471 > ************************************
+20:16:35.471 > [F_HEAP] Free Heap pred RESPONSE: 201920
+20:16:35.476 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:35.482 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:35.488 > [F_RESPONSE] KLIC #12, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+20:16:35.493 > ************************************
+20:16:35.499 > [F_HEAP] Free Heap pred RESPONSE: 201812
+20:16:35.499 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:35.504 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:35.510 > [F_RESPONSE] KLIC #13, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+20:16:35.521 > [F_RESPONSE] ⚠️ Path is empty!
+20:16:35.521 > ************************************
+20:16:35.526 > [F_HEAP] Free Heap pred RESPONSE: 201812
+20:16:35.526 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:16:35.531 > [F_DEBUG] aClient Active tasks: 1, aClient SSL connected: 1, Auth ready: 1
+20:16:35.543 > [F_RESPONSE] KLIC #14, isResult=1, isError=1, isEvent=0, isDebug=0, available=0
+20:16:35.549 > [F_RESPONSE] Error task: getChartIntervalTask, msg: unauthorized, code: 401
+20:16:40.390 > [FB_RETRY] ⚠️ TIMEOUT! Poskus 3/3
+20:16:40.390 > [FB_RETRY] ❌ Maksimalno število poskusov doseženo. NEUSPEH!
+20:16:40.520 > [INIT] Timeout pri čakanju na 'odgovor za interval'. Uporabljam privzeto vrednost.
+20:16:40.525 > --- ZACENJAM INICIALIZACIJO RELE MODULA ---
+20:16:40.531 > [INIT] Korak 1: Posiljam cas...
+20:16:40.531 > Pripravljam paket za sinhronizacijo casa (CMD_SET_TIME)...
+20:16:40.536 >   Čas od polnoči: 73000 sekund
+20:16:40.541 >   Posiljam timestamp: 1767986200
+20:16:40.541 > OUT ID: 0, CMD: 1
+20:16:40.541 > [LORA] Način inicializacije - brez splošnih poskusov.
+20:16:40.689 > [DISPATCH TASK] Stack left: 2188
+20:16:40.689 > [TX TASK] Stack left: 2572
+20:16:40.689 > [LORA] Paket uspesno poslan.
+20:16:40.695 > [LORA] Preklop v RX po TX uspesen.
+20:16:40.695 > -------------------------
+20:16:40.697 > 
+20:16:45.546 > [INIT] Timeout pri čakanju na 'odgovor za čas'. Poskus 1/3...
+20:16:45.551 > [INIT] Korak 1: Posiljam cas...
+20:16:45.551 > Pripravljam paket za sinhronizacijo casa (CMD_SET_TIME)...
+20:16:45.557 >   Čas od polnoči: 73005 sekund
+20:16:45.557 >   Posiljam timestamp: 1767986205
+20:16:45.562 > OUT ID: 1, CMD: 1
+20:16:45.562 > [LORA] Način inicializacije - brez splošnih poskusov.
+20:16:45.714 > [DISPATCH TASK] Stack left: 1728
+20:16:45.714 > [TX TASK] Stack left: 1728
+20:16:45.714 > [LORA] Paket uspesno poslan.
+20:16:45.720 > [LORA] Preklop v RX po TX uspesen.
+20:16:45.720 > -------------------------
+20:16:45.722 > 
+20:16:50.570 > [INIT] Timeout pri čakanju na 'odgovor za čas'. Poskus 2/3...
+20:16:50.575 > [INIT] Korak 1: Posiljam cas...
+20:16:50.576 > Pripravljam paket za sinhronizacijo casa (CMD_SET_TIME)...
+20:16:50.581 >   Čas od polnoči: 73010 sekund
+20:16:50.581 >   Posiljam timestamp: 1767986210
+20:16:50.586 > OUT ID: 2, CMD: 1
+20:16:50.586 > [LORA] Način inicializacije - brez splošnih poskusov.
+20:16:50.738 > [DISPATCH TASK] Stack left: 1500
+20:16:50.738 > [TX TASK] Stack left: 1500
+20:16:50.738 > [LORA] Paket uspesno poslan.
+20:16:50.743 > [LORA] Preklop v RX po TX uspesen.
+20:16:50.743 > -------------------------
+20:16:50.746 > 
+20:16:55.594 > [INIT] Timeout pri čakanju na 'odgovor za čas'. Poskus 3/3...
+20:16:55.600 > [INIT] NAPAKA: Preseženo število poskusov. Prekinjam inicializacijo.
+20:17:00.387 > [STREAM] event: keep-alive
+20:17:05.716 > [F_DEBUG] Stream Active tasks: 1, Stream SSL connected: 1
+20:17:05.716 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1

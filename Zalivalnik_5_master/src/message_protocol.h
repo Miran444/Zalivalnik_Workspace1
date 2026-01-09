@@ -32,6 +32,7 @@ enum class CommandType : uint8_t {
     RESPONSE_INA_DATA = 110,
     
     // Notifikacije od Rele -> Master (brez zahteve)
+    NOTIFY_BLOCK_START = 199,
     NOTIFY_LOW_BATT = 200,
     NOTIFY_TEMP_HIGH = 201,
     NOTIFY_RELAY_STATE_CHANGED = 202,
@@ -41,6 +42,7 @@ enum class CommandType : uint8_t {
     NOTIFY_RESET_OCCURED = 207,
     NOTIFY_INA_DATA = 208,
     NOTIFY_INA_ALERT = 209,
+    NOTIFY_BLOCK_END = 249,
 
     // Potrditev notifikacije od Master -> Rele
     ACK_NOTIFICATION = 250,
@@ -57,6 +59,16 @@ enum class AckStatus : uint8_t {
     ERR_INVALID_PAYLOAD = 4,
     ERR_INVALID_PARAMETER = 5,
     ERR_INVALID_INDEX = 6
+};
+
+// DODAJ: Nova struktura za kontekst
+enum class LoRaContext {
+    IDLE,                 // Nič ne počnemo
+    INITIALIZATION,       // Sredi inicializacije (manageReleInitialization upravlja)
+    WAITING_FOR_RESPONSE, // Pošiljanje ukaza in čakanje na odgovor
+    JUST_ACK,             // Samo ACK
+    SENSOR_QUEUE          // NOVO: Sensor queue ima svoj retry mehanizem
+
 };
 
 // --- DODAJTE TE DVE VRSTICI ---
