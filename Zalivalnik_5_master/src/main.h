@@ -28,3 +28,4 @@ struct ChannelUpdateData {
   int end_sec = -1;
 };
 
+extern Kanal firebase_kanal[8]; // Polje struktur za kanale

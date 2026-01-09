@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "Zalivalnik_4_lora_rele"
+		},
+		{
+			"path": "Zalivalnik_4_rele"
+		},
+		{
+			"path": "Zalivalnik_5_master"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"sstream": "cpp",
+			"array": "cpp",
+			"string": "cpp",
+			"string_view": "cpp"
+		}
+	}
+}
