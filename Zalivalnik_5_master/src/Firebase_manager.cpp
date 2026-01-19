@@ -334,29 +334,30 @@ void streamCallback(AsyncResult &streamResult)
 
       if (stream.event() == "keep-alive")
       {
-        Firebase.printf("[STREAM] Keep-alive event received.\n");
+        // Firebase.printf("[STREAM] Keep-alive event received.\n");
         return;
       }
-      const char *path = stream.dataPath().c_str();
+
+      // const char *task = streamResult.uid().c_str();
+      // const char *event = stream.event().c_str();
       const char *payload = stream.to<const char *>();
       // Primer: {"kanal2/end":"22:00","kanal2/end_sec":79200}
-
-      Firebase.printf("[STREAM] Payload: %s\n", payload);
       size_t payloadLen = strlen(payload);
       Firebase.printf("[STREAM] Payload Length: %d\n", payloadLen);
 
-      uint8_t kanalIndex = 0;
-      int start_sec = -1;
-      int end_sec = -1;
 
-      if (strcmp(path, "/Kanali") == 0 && payloadLen < 100)
+      // Stream1 posluša na /Kanali, zato je path "/" za patch dogodke
+      if (streamResult.uid() == "streamTask1" && stream.event() == "patch")
       {
+        uint8_t kanalIndex = 0;
+        int start_sec = -1;
+        int end_sec = -1;
+
         Firebase.printf("[STREAM] Obdelujem posodobitev urnika...\n");
         kanalIndex = extractKanalNumber(payload);
         end_sec = extractIntValue(payload, "end_sec\""); // Uporabi obstoječo funkcijo
         start_sec = extractIntValue(payload, "start_sec\"");        
-
-
+        Firebase.printf("[STREAM] Izvlečeni podatki - Kanal: %d, Start_sec: %d, End_sec: %d\n", kanalIndex, start_sec, end_sec);
 
         if (kanalIndex > 0)
         {
@@ -399,7 +400,7 @@ void streamCallback(AsyncResult &streamResult)
       }
       //-----------------------------------------
       // Ali je sprememba poti /charts/Interval?
-      else if (strcmp(path, "/charts/Interval") == 0)
+      else if (streamResult.uid() == "streamTask2" && stream.event() == "patch")
       {
         uint8_t chartInterval = stream.to<uint8_t>();
         set_Interval(chartInterval);
@@ -843,7 +844,7 @@ void Firebase_loop()
       // Pridobimo UID
       strncpy(uid, app.getUid().c_str(), sizeof(uid) - 1);
       uid[sizeof(uid) - 1] = '\0'; // Zagotovimo null-terminacijo
-      Firebase.printf("User UID: %s\n", uid);
+      // Firebase.printf("User UID: %s\n", uid);
       // Priprava poti
       snprintf(databasePath, sizeof(databasePath), "/UserData/%s", uid);
       // snprintf(examplesPath, sizeof(examplesPath), "%s/examples", databasePath);
@@ -1199,7 +1200,7 @@ void Firebase_processResponse(AsyncResult &aResult)
   else
   {
     Serial.println("-------------Neznan task---------------");
-    Firebase.printf("task: %s, payload: %s\n", aResult.uid().c_str(), aResult.c_str());
+    // Firebase.printf("task: %s, payload: %s\n", aResult.uid().c_str(), aResult.c_str());
   }
 
   Firebase.printf("[F_RESPONSE] Free Heap po RESPONSE: %d\n", ESP.getFreeHeap());
