@@ -308,7 +308,7 @@ void manageReleInitialization()
   case InitState::WAIT_FOR_UPDATE_URNIK:
     //============================================================================
     // Čakamo na odgovor iz `Lora_handle_received_packet` - RESPONSE_UPDATE_URNIK.
-    if (lora_response_received)
+    if (check_init_wait_state(lora_response_received, InitState::WAIT_FOR_UPDATE_URNIK, InitState::WAIT_FOR_UPDATE_URNIK, "odgovor update urnik"))
     {
       lora_response_received = false;
       currentChannelInProcess++;                           // Povečamo indeks za naslednji kanal

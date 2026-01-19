@@ -216,7 +216,6 @@ void setup()
 //---------------------------------------------------------------------------------------------------------------------
 void loop()
 {
-  //-------------------------------------------------------------------------------------
   // 1. Preverimo WiFi povezavo
   if (WiFi.status() != WL_CONNECTED)
   {
@@ -227,52 +226,60 @@ void loop()
   // 2. FIREBASE PROCESSING (najprej!)
   Firebase_loop();
 
-  // 2.c. Zagon Rele inicijacije
-  if (firebase_connected && !init_done_flag && !rele_init_in_progress)
+  // 2.a. Zagon Rele inicijacije
+  if (firebase_connected)
   {
-    StartReleInitialization();
-    rele_init_in_progress = true;
-  }
-
-  // 2.a. Upravljanje inicializacije Rele modula
-  manageReleInitialization();
-
-  // 2.b. Upravljanje ponovnega zagona Rele modula
-  if (reset_occured && !lora_is_busy())
-  {
-    triggerReleReinitialization();
-    reset_occured = false; // Ponastavi zastavico
-  }
-
-
-
-  // 3.Ko je Lora prosta, pošlji posodobitev prek LoRa
-  if (firebaseUpdatePending && !lora_is_busy())
-  {
-    Firebase.printf("[STREAM] LoRa prosta. Pošiljam posodobitev.\n");
-    // Pošljemo podatke, ki so bili shranjeni v nabiralniku
-    Rele_updateRelayUrnik(
-        pendingUpdateData.kanalIndex,
-        pendingUpdateData.start_sec,
-        pendingUpdateData.end_sec);
-    firebaseUpdatePending = false;
-  }
-
-  // 4. Periodično branje senzorjev
-  if (init_done_flag)
-  {
-    if (Sensor_IntervalRead(Interval_mS)) // Če je čas za branje, pokliči funkcijo
+    if (!init_done_flag)
     {
-      Serial.print("------------------------------------------\n");
-      Serial.println("[SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...");
-      Serial.print("------------------------------------------\n");
+      if (!rele_init_in_progress)
+      {
+        // StartReleInitialization();
+        rele_init_in_progress = true;
+      }
 
-      Sensor_QueueOperation(SensorTaskType::READ_SENSORS);
-      Sensor_QueueOperation(SensorTaskType::READ_INA);
-      // read_sensor = false; // Ponastavimo zastavico
+      // 2.b. Upravljanje inicializacije Rele modula
+      // manageReleInitialization();
     }
-  }
+    else
+    {
+      // 2.c. Upravljanje ponovnega zagona Rele modula
+      if (reset_occured && !lora_is_busy())
+      {
+        triggerReleReinitialization();
+        reset_occured = false; // Ponastavi zastavico
+      }
+    }
+  
+    // 3.Ko je Lora prosta, pošlji posodobitev prek LoRa
+    if (firebaseUpdatePending && !lora_is_busy())
+    {
+      Firebase.printf("[STREAM] LoRa prosta. Pošiljam posodobitev.\n");
+      // Pošljemo podatke, ki so bili shranjeni v nabiralniku
+      Rele_updateRelayUrnik(
+          pendingUpdateData.kanalIndex,
+          pendingUpdateData.start_sec,
+          pendingUpdateData.end_sec);
+      firebaseUpdatePending = false;
+    }
 
+    // 4. Periodično branje senzorjev
+    if (init_done_flag)
+    {
+      // if (Sensor_IntervalRead(Interval_mS)) // Če je čas za branje, pokliči funkcijo
+      // {
+      //   Serial.print("------------------------------------------\n");
+      //   Serial.println("[SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...");
+      //   Serial.print("------------------------------------------\n");
+
+      //   Sensor_QueueOperation(SensorTaskType::READ_SENSORS);
+      //   Sensor_QueueOperation(SensorTaskType::READ_INA);
+      //   // read_sensor = false; // Ponastavimo zastavico
+      // }
+    }
+
+    // Procesiranje senzorske čakalne vrste 10x na sekundo
+    Sensor_ProcessQueue();
+  }
 
   // 5. LoRa obdelava prejetih paketov
   lora_process_received_packets(); // Preverimo če so prisotni novi paketi

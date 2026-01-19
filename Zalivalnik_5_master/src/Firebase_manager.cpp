@@ -112,14 +112,14 @@
 //#include <FirebaseClient.h>
 #include "ExampleFunctions.h"
 
-WiFiClient basic_client1, basic_client2;
+WiFiClient basic_client1, basic_client2, basic_client3;
 
 // The ESP_SSLClient uses PSRAM by default (if it is available), for PSRAM usage, see https://github.com/mobizt/FirebaseClient#memory-options
 // For ESP_SSLClient documentation, see https://github.com/mobizt/ESP_SSLClient
-ESP_SSLClient ssl_client, stream_ssl_client1;
+ESP_SSLClient ssl_client, stream_ssl_client1, stream_ssl_client2;
 
 using AsyncClient = AsyncClientClass;
-AsyncClient aClient(ssl_client), streamClient1(stream_ssl_client1);
+AsyncClient aClient(ssl_client), streamClient1(stream_ssl_client1), streamClient2(stream_ssl_client2);
 
 UserAuth user_auth(API_KEY, USER_EMAIL, USER_PASSWORD);
 FirebaseApp app;
@@ -131,9 +131,10 @@ char sensorPath[64];
 char inaPath[64];
 char kanaliPath[64];
 char chartIntervalPath[72];
-char examplesPath[64];
-char examplePath1[64];
-char examplePath2[64];
+// char examplesPath[64];
+// char examplePath1[64];
+// char examplePath2[64];
+char kanaliStreamPath[64];
 char uid[32];
 unsigned long ms = 0;
 bool firebase_connected = false;
@@ -173,11 +174,11 @@ struct LastFirebaseOperation {
     union {
         struct {
             unsigned long timestamp;                 
-            // SensorDataPayload data;  // POPRAVIT KO BO LORA INSTALIRANA
+            SensorDataPayload data;  // POPRAVIT KO BO LORA INSTALIRANA
         } sensor;
         struct {
             unsigned long timestamp;
-            // INA3221_DataPayload data;  // POPRAVIT KO BO LORA INSTALIRANA
+            INA3221_DataPayload data;  // POPRAVIT KO BO LORA INSTALIRANA
         } ina;
         struct {
             int kanal;
@@ -191,6 +192,50 @@ struct LastFirebaseOperation {
 } lastOperation = {LastFirebaseOperation::Type::NONE, {}, false};
 
 
+//-------------------------------------------------------------------------------------------------------
+// Pomožna funkcija za ekstrakcijo številke za ključem
+int extractIntValue(const char* json, const char* key) {
+  if (!json || !key) return -1;  // Preveri NULL kazalce
+  
+  const char* keyPos = strstr(json, key);
+  if (!keyPos) return -1;
+  
+  keyPos += strlen(key);
+  
+  // Preskočimo ': ' ali '":"' in whitespace
+  while (*keyPos && (*keyPos == ':' || *keyPos == ' ' || 
+                     *keyPos == '"' || *keyPos == '\t')) {
+    keyPos++;
+  }
+  
+  // Preveri, ali je naslednji znak številka
+  if (!isdigit(*keyPos) && *keyPos != '-') {
+    return -1;
+  }
+  
+  return atoi(keyPos);
+}
+
+//----------------------------------------------------------------------------------------
+// Pomožna funkcija za ekstrahiranje kanal številke iz JSON-a
+uint8_t extractKanalNumber(const char* json) {
+  const char* kanalPtr = strstr(json, "kanal");
+  if (!kanalPtr) return 0;
+  
+  kanalPtr += 5; // Preskočimo "kanal"
+  
+  // Najdemo prvo številko
+  while (*kanalPtr && !isdigit(*kanalPtr)) {
+    kanalPtr++;
+  }
+  
+  if (!isdigit(*kanalPtr)) return 0;
+  
+  uint8_t num = (uint8_t)atoi(kanalPtr);
+  return (num >= 1 && num <= 8) ? num : 0;
+}
+
+
 //------------------------------------------------------------------------------------------------
 // Funkcija za inicializacijo Firebase
 void Firebase_setup()
@@ -201,15 +246,15 @@ void Firebase_setup()
 
   ssl_client.setClient(&basic_client1);
   stream_ssl_client1.setClient(&basic_client2);
-  // stream_ssl_client2.setClient(&basic_client3);
+  stream_ssl_client2.setClient(&basic_client3);
 
   ssl_client.setInsecure();
   stream_ssl_client1.setInsecure();
-  // stream_ssl_client2.setInsecure();
+  stream_ssl_client2.setInsecure();
 
   ssl_client.setBufferSizes(2048, 1024);
   stream_ssl_client1.setBufferSizes(2048, 1024);
-  // stream_ssl_client2.setBufferSizes(2048, 1024);
+  stream_ssl_client2.setBufferSizes(2048, 1024);
 
   // In case using ESP8266 without PSRAM and you want to reduce the memory usage,
   // you can use WiFiClientSecure instead of ESP_SSLClient with minimum receive and transmit buffer size setting as following.
@@ -221,16 +266,16 @@ void Firebase_setup()
 
   ssl_client.setDebugLevel(1);
   stream_ssl_client1.setDebugLevel(1);
-  // stream_ssl_client2.setDebugLevel(1);
+  stream_ssl_client2.setDebugLevel(1);
 
   // In ESP32, when using WiFiClient with ESP_SSLClient, the WiFiClient was unable to detect
   // the server disconnection in case server session timed out and the TCP session was kept alive for reusage.
   // The TCP session timeout in seconds (>= 60 seconds) can be set via `ESP_SSLClient::setSessionTimeout`.
   ssl_client.setSessionTimeout(150);
   stream_ssl_client1.setSessionTimeout(150);
-  // stream_ssl_client2.setSessionTimeout(150);
+  stream_ssl_client2.setSessionTimeout(150);
 
-  Serial.println("Initializing app...");
+  Serial.print("Initializing app...\n");
   minHeapDuringAuth = ESP.getFreeHeap(); // Reset
   Firebase.printf("Free Heap: %d\n", minHeapDuringAuth);
 
@@ -257,10 +302,13 @@ void Firebase_setup()
 void streamCallback(AsyncResult &streamResult)
 {
   // Exits when no result is available when calling from the loop.
-  if (!streamResult.isResult()) return;
+  if (!streamResult.isResult())
+    return;
 
-  if (streamResult.isEvent()) Firebase.printf("[F_STREAM] Event task: %s, msg: %s, code: %d\n", streamResult.uid().c_str(), streamResult.eventLog().message().c_str(), streamResult.eventLog().code());
-  if (streamResult.isDebug()) Firebase.printf("[F_STREAM] Debug task: %s, msg: %s\n", streamResult.uid().c_str(), streamResult.debug().c_str());
+  if (streamResult.isEvent())
+    Firebase.printf("[F_STREAM] Event task: %s, msg: %s, code: %d\n", streamResult.uid().c_str(), streamResult.eventLog().message().c_str(), streamResult.eventLog().code());
+  if (streamResult.isDebug())
+    Firebase.printf("[F_STREAM] Debug task: %s, msg: %s\n", streamResult.uid().c_str(), streamResult.debug().c_str());
 
   if (streamResult.isError())
   {
@@ -268,16 +316,6 @@ void streamCallback(AsyncResult &streamResult)
                     streamResult.uid().c_str(),
                     streamResult.error().message().c_str(),
                     streamResult.error().code());
-
-    // // ✅ Označi, da stream ni več aktiven
-    // if (streamResult.error().code() == -118 || // operation cancelled
-    //     streamResult.error().code() == -1 ||   // TCP failed
-    //     streamResult.error().code() == 401)    // unauthorized
-    // {
-    //   stream_is_active = false;
-    //   FirebaseNeedsReconnect = true;
-    // }
-
     return;
   }
 
@@ -287,80 +325,74 @@ void streamCallback(AsyncResult &streamResult)
     RealtimeDatabaseResult &stream = streamResult.to<RealtimeDatabaseResult>();
     if (stream.isStream())
     {
-      //Serial.println("----------------------------");
+      Serial.println("----------------------------");
+      Firebase.printf("[STREAM] task: %s\n", streamResult.uid().c_str());
       Firebase.printf("[STREAM] event: %s\n", stream.event().c_str());
-   
-      // if (stream.event() == "keep-alive")   // če je event "keep-alive"
-      // {
-      //   lastFirebaseActivityTime = millis();
-      // }
+      Firebase.printf("[STREAM] path: %s\n", stream.dataPath().c_str());
+      Firebase.printf("[STREAM] data: %s\n", stream.to<const char *>());
+      Firebase.printf("[STREAM] type: %d\n", stream.type());
 
-      // Najprej shrani v String objekt
-      String path_str = stream.dataPath();
-      const char* path = path_str.c_str();  // Zdaj je kazalec veljaven
-      // Firebase.printf("[STREAM] String path: %s\n", path);
-
-      //-----------------------------------
-      // Ali je sprememba znotraj /Kanali?
-      if (strncmp(path, "/Kanali", 7) == 0)
+      if (stream.event() == "keep-alive")
       {
-        // PRAV TAKO shranimo payload v String
-        String payload_str = stream.data();
-        const char* payload = payload_str.c_str();  // Kazalec na veljavno pomnilniško lokacijo
-        Firebase.printf("[STREAM] Payload: %s\n", payload);
+        Firebase.printf("[STREAM] Keep-alive event received.\n");
+        return;
+      }
+      const char *path = stream.dataPath().c_str();
+      const char *payload = stream.to<const char *>();
+      // Primer: {"kanal2/end":"22:00","kanal2/end_sec":79200}
 
-        int kanalIndex = -1;
-        const char* kanalStr = strstr(payload, "kanal");
-        if (kanalStr != NULL) {
-            // Preskočimo "kanal" in pretvorimo številko v int
-            kanalIndex = atoi(kanalStr + 5);
-        }
+      Firebase.printf("[STREAM] Payload: %s\n", payload);
+      size_t payloadLen = strlen(payload);
+      Firebase.printf("[STREAM] Payload Length: %d\n", payloadLen);
 
-        if (kanalIndex != -1)
+      uint8_t kanalIndex = 0;
+      int start_sec = -1;
+      int end_sec = -1;
+
+      if (strcmp(path, "/Kanali") == 0 && payloadLen < 100)
+      {
+        Firebase.printf("[STREAM] Obdelujem posodobitev urnika...\n");
+        kanalIndex = extractKanalNumber(payload);
+        end_sec = extractIntValue(payload, "end_sec\""); // Uporabi obstoječo funkcijo
+        start_sec = extractIntValue(payload, "start_sec\"");        
+
+
+
+        if (kanalIndex > 0)
         {
-          // Preveri, ali je sprememba v 'state' polju
-          const char* stateKey = "\"state\":";
-          const char* statePtr = strstr(payload, stateKey);
-          if (statePtr != NULL) {
-            Serial.printf("[STREAM] Zaznana sprememba stanja, ne urnika. Ignoriram.\n");
-            return; // NE pošiljamo nazaj na Rele!
-          }
-
-          // Samo urnik (start_sec/end_sec) procesiramo naprej
-          int startSec = firebase_kanal[kanalIndex - 1].start_sec;
-          int endSec = firebase_kanal[kanalIndex - 1].end_sec;
           bool dataChanged = false; // Zastavica, ki pove, ali je prišlo do spremembe
 
-          // Preverimo, ali se je spremenil 'start_sec'
-          const char* startSecKey = "start_sec\":";
-          const char* startSecPtr = strstr(payload, startSecKey);
-          if (startSecPtr != NULL)
+          if (end_sec != -1)
           {
-            // Premaknemo kazalec za dolžino ključa, da pridemo do vrednosti
-            startSec = atoi(startSecPtr + strlen(startSecKey));
-            Firebase.printf("[STREAM] Kanal %d je spremenjen, nov začetni čas: %d\n", kanalIndex, startSec);
-            firebase_kanal[kanalIndex - 1].start_sec = startSec;
+            Firebase.printf("[STREAM] Kanal %d je spremenjen, nov končni čas: %d\n", kanalIndex, end_sec);
+            firebase_kanal[kanalIndex - 1].end_sec = end_sec;
             dataChanged = true;
+          }
+          else
+          {
+            Firebase.printf("[STREAM] Kanal %d končni čas ni spremenjen, ostaja: %d\n", kanalIndex, firebase_kanal[kanalIndex - 1].end_sec);
+            end_sec = firebase_kanal[kanalIndex - 1].end_sec;
           }
 
-          // Preverimo, ali se je spremenil 'end_sec'
-          const char* endSecKey = "end_sec\":";
-          const char* endSecPtr = strstr(payload, endSecKey);
-          if (endSecPtr != NULL)
+          if (start_sec != -1)
           {
-            // Premaknemo kazalec za dolžino ključa, da pridemo do vrednosti
-            endSec = atoi(endSecPtr + strlen(endSecKey));
-            Firebase.printf("[STREAM] Kanal %d je spremenjen, nov končni čas: %d\n", kanalIndex, endSec);
-            firebase_kanal[kanalIndex - 1].end_sec = endSec;
+            Firebase.printf("[STREAM] Kanal %d je spremenjen, nov začetni čas: %d\n", kanalIndex, start_sec);
+            firebase_kanal[kanalIndex - 1].start_sec = start_sec;
             dataChanged = true;
           }
+          else
+          {
+            Firebase.printf("[STREAM] Kanal %d začetni čas ni spremenjen, ostaja: %d\n", kanalIndex, firebase_kanal[kanalIndex - 1].start_sec);
+            start_sec = firebase_kanal[kanalIndex - 1].start_sec;
+          }
+
           // Pošljemo posodobitev samo, če je dejansko prišlo do spremembe
           if (dataChanged)
           {
             // Nastavimo zastavico, da je na voljo nova posodobitev za pošiljanje na rele
             channelUpdate.kanalIndex = kanalIndex;
-            channelUpdate.start_sec = startSec;
-            channelUpdate.end_sec = endSec;
+            channelUpdate.start_sec = start_sec;
+            channelUpdate.end_sec = end_sec;
             newChannelDataAvailable = true;
           }
         }
@@ -417,29 +449,6 @@ bool Firebase_handleStreamUpdate(int kanalIndex, int start_sec, int end_sec)
   return updated;
 }
 
-//-------------------------------------------------------------------------------------------------------
-// Pomožna funkcija za ekstrakcijo številke za ključem
-int extractIntValue(const char* json, const char* key) {
-  if (!json || !key) return -1;  // Preveri NULL kazalce
-  
-  const char* keyPos = strstr(json, key);
-  if (!keyPos) return -1;
-  
-  keyPos += strlen(key);
-  
-  // Preskočimo ': ' ali '":"' in whitespace
-  while (*keyPos && (*keyPos == ':' || *keyPos == ' ' || 
-                     *keyPos == '"' || *keyPos == '\t')) {
-    keyPos++;
-  }
-  
-  // Preveri, ali je naslednji znak številka
-  if (!isdigit(*keyPos) && *keyPos != '-') {
-    return -1;
-  }
-  
-  return atoi(keyPos);
-}
 
 //------------------------------------------------------------------------------------------------------------------------
 // Funkcija za preverjanje stanja SSL povezave
@@ -451,11 +460,11 @@ void Firebase_Check_Active_State(bool wait) {
 
   if (checkNow) {
     lastCheckTime = millis();
-    Firebase.printf("[F_DEBUG] Stream Active tasks: %d, Stream SSL connected: %d\n",
+    Firebase.printf("[F_DEBUG] Stream1 Active tasks: %d, Stream1 SSL connected: %d, Stream2 Active tasks: %d, Stream2 SSL connected: %d\n",
                   streamClient1.taskCount(),
-                  stream_ssl_client1.connected());
-
-
+                  stream_ssl_client1.connected(),
+                  streamClient2.taskCount(),
+                  stream_ssl_client2.connected());
     Firebase.printf("[F_DEBUG] aClient Active tasks: %d, aClient SSL connected: %d, Auth ready: %d\n",
                   aClient.taskCount(),
                   ssl_client.connected(),
@@ -602,7 +611,7 @@ void Firebase_Update_Sensor_Data(unsigned long timestamp, const SensorDataPayloa
   // NOVO: Shrani operacijo za morebitni retry
   lastOperation.type = LastFirebaseOperation::Type::UPDATE_SENSOR;
   lastOperation.data.sensor.timestamp = timestamp;
-  // lastOperation.data.sensor.data = sensors;      // POPRAVIT KO BO LORA INSTALIRANA
+  lastOperation.data.sensor.data = sensors;      // POPRAVIT KO BO LORA INSTALIRANA
   lastOperation.waiting_for_response = true;
   lastFirebaseOperationTime = millis();
   firebase_response_received = false;
@@ -692,7 +701,7 @@ void Firebase_Update_INA_Data(unsigned long timestamp, const INA3221_DataPayload
   // NOVO: Shrani operacijo za retry
   lastOperation.type = LastFirebaseOperation::Type::UPDATE_INA;
   lastOperation.data.ina.timestamp = timestamp;
-  // lastOperation.data.ina.data = data;        // POPRAVIT KO BO LORA INSTALIRANA
+  lastOperation.data.ina.data = data;        // POPRAVIT KO BO LORA INSTALIRANA
   lastOperation.waiting_for_response = true;
   lastFirebaseOperationTime = millis();
   firebase_response_received = false;
@@ -781,15 +790,15 @@ void Firebase_CheckAndRetry()
 
   switch (lastOperation.type)
   {
-  // case LastFirebaseOperation::Type::UPDATE_SENSOR:                     // POPRAVIT KO BO LORA INSTALIRANA
-  //   Firebase_Update_Sensor_Data(lastOperation.data.sensor.timestamp,
-  //                               lastOperation.data.sensor.data);
-  //   break;
+  case LastFirebaseOperation::Type::UPDATE_SENSOR:                     // POPRAVIT KO BO LORA INSTALIRANA
+    Firebase_Update_Sensor_Data(lastOperation.data.sensor.timestamp,
+                                lastOperation.data.sensor.data);
+    break;
 
-  // case LastFirebaseOperation::Type::UPDATE_INA:
-  //   Firebase_Update_INA_Data(lastOperation.data.ina.timestamp,
-  //                            lastOperation.data.ina.data);
-  //   break;
+  case LastFirebaseOperation::Type::UPDATE_INA:
+    Firebase_Update_INA_Data(lastOperation.data.ina.timestamp,
+                             lastOperation.data.ina.data);
+    break;
 
   case LastFirebaseOperation::Type::UPDATE_RELAY:
     Firebase_Update_Relay_State(lastOperation.data.relay.kanal,
@@ -821,13 +830,13 @@ void Firebase_loop()
   if (app.ready())
   {
     // Testirajte re-avtentikacijo po 2 minutah
-    static unsigned long forceReauthAt = millis() + 120000;
-    if (millis() > forceReauthAt)
-    {
-      Firebase.printf("🔄 FORCING RE-AUTH [Heap before: %d]\n", ESP.getFreeHeap());
-      app.authenticate();                // Force library to re-authenticate (refresh the auth token).
-      forceReauthAt = millis() + 120000; // Naslednji test čez 2 min
-    }
+    // static unsigned long forceReauthAt = millis() + 120000;
+    // if (millis() > forceReauthAt)
+    // {
+    //   Firebase.printf("🔄 FORCING RE-AUTH [Heap before: %d]\n", ESP.getFreeHeap());
+    //   app.authenticate();                // Force library to re-authenticate (refresh the auth token).
+    //   forceReauthAt = millis() + 120000; // Naslednji test čez 2 min
+    // }
 
     if (!firebase_connected) // samo enkrat ob prvem ready
     {
@@ -837,16 +846,17 @@ void Firebase_loop()
       Firebase.printf("User UID: %s\n", uid);
       // Priprava poti
       snprintf(databasePath, sizeof(databasePath), "/UserData/%s", uid);
-      snprintf(examplesPath, sizeof(examplesPath), "%s/examples", databasePath);
+      // snprintf(examplesPath, sizeof(examplesPath), "%s/examples", databasePath);
 
-      snprintf(examplePath1, sizeof(examplePath1), "%s/1", examplesPath);
-      snprintf(examplePath2, sizeof(examplePath2), "%s/2", examplesPath);
+      // snprintf(examplePath1, sizeof(examplePath1), "%s/1", examplesPath);
+      // snprintf(examplePath2, sizeof(examplePath2), "%s/2", examplesPath);
 
       snprintf(sensorPath, sizeof(sensorPath), "%s/Sensors", databasePath);
       snprintf(inaPath, sizeof(inaPath), "%s/INA3221", databasePath);
       snprintf(kanaliPath, sizeof(kanaliPath), "%s/Kanali/kanal", databasePath);
       snprintf(chartIntervalPath, sizeof(chartIntervalPath), "%s/charts/Interval", databasePath);
-      
+        // SPREMENI: Ožje poti za stream1
+      snprintf(kanaliStreamPath, sizeof(kanaliStreamPath), "%s/Kanali", databasePath);
       // In SSE mode (HTTP Streaming) task, you can filter the Stream events by using AsyncClientClass::setSSEFilters(<keywords>),
       // which the <keywords> is the comma separated events.
       // The event keywords supported are:
@@ -858,11 +868,12 @@ void Firebase_loop()
       // auth_revoked - To allow the auth_revoked event.
       // To clear all prevousely set filter to allow all Stream events, use AsyncClientClass::setSSEFilters().
       streamClient1.setSSEFilters("get,put,patch,keep-alive,cancel,auth_revoked");
-
+      streamClient2.setSSEFilters("get,put,patch,keep-alive,cancel,auth_revoked");
       // VZPOSTAVITE STREAM ŠELE TUKAJ, ko imate pravilne poti
-      Database.get(streamClient1, examplesPath, streamCallback, true, "streamTask");
-      // Database.get(streamClient2, examplePath2, processData, true, "streamTask2");
-      Firebase.printf("Free Heap: %d\n", ESP.getFreeHeap());
+      Database.get(streamClient1, kanaliStreamPath, streamCallback, true, "streamTask1");
+      Database.get(streamClient2, chartIntervalPath, streamCallback, true, "streamTask2");
+
+      Serial.print("Firebase connected!\n");
       firebase_connected = true;
     }
 
@@ -893,7 +904,7 @@ void Firebase_loop()
     // --- konec periodičnih nalog ---
 
 
-    // if (millis() - ms > 20000)
+    // if (millis() - ms > 300000)
     // {
     //   ms = millis();
 
@@ -914,85 +925,65 @@ void Firebase_loop()
   }
 }
 
-// Procesiranje podatkov iz Firebase (callback)
 /* void processData(AsyncResult &aResult)
 {
-  uint32_t heap = ESP.getFreeHeap();
+    // Exits when no result is available when calling from the loop.
+    if (!aResult.isResult())
+        return;
 
-  if (heap < minHeapDuringAuth)
-  {
-    Firebase.printf("Minimum Free Heap: %d\n", heap);
-    minHeapDuringAuth = heap;
-  }
-
-  if (!aResult.isResult())
-    return;
-
-  if (aResult.isEvent())
-  {
-    Firebase.printf("Event task: %s, msg: %s, code: %d [Heap: %d]\n",
-                    aResult.uid().c_str(),
-                    aResult.eventLog().message().c_str(),
-                    aResult.eventLog().code(),
-                    heap);
-  }
-
-  if (aResult.isDebug())
-  {
-    Firebase.printf("Debug task: %s, msg: %s [Heap: %d]\n",
-                    aResult.uid().c_str(),
-                    aResult.debug().c_str(),
-                    heap);
-  }
-
-  if (aResult.isError())
-  {
-    Firebase.printf("❌ Error task: %s, msg: %s, code: %d [Heap: %d, Min: %d]\n",
-                    aResult.uid().c_str(),
-                    aResult.error().message().c_str(),
-                    aResult.error().code(),
-                    heap, minHeapDuringAuth);
-  }
-
-  if (aResult.available())
-  {
-    RealtimeDatabaseResult &stream = aResult.to<RealtimeDatabaseResult>();
-    if (stream.isStream())
+    if (aResult.isEvent())
     {
-      Serial.println("----------------------------");
-      Firebase.printf("task: %s\n", aResult.uid().c_str());
-      Firebase.printf("event: %s\n", stream.event().c_str());
-      Firebase.printf("path: %s\n", stream.dataPath().c_str());
-      Firebase.printf("data: %s\n", stream.to<const char *>());
-      Firebase.printf("type: %d\n", stream.type());
+        Firebase.printf("Event task: %s, msg: %s, code: %d\n", aResult.uid().c_str(), aResult.eventLog().message().c_str(), aResult.eventLog().code());
+    }
 
-      // The stream event from RealtimeDatabaseResult can be converted to the values as following.
-      // bool v1 = stream.to<bool>();
-      // int v2 = stream.to<int>();
-      // float v3 = stream.to<float>();
-      // double v4 = stream.to<double>();
-      // String v5 = stream.to<String>();
-    }
-    else
+    if (aResult.isDebug())
     {
-      Serial.println("----------------------------");
-      Firebase.printf("task: %s, payload: %s\n", aResult.uid().c_str(), aResult.c_str());
+        Firebase.printf("Debug task: %s, msg: %s\n", aResult.uid().c_str(), aResult.debug().c_str());
     }
+
+    if (aResult.isError())
+    {
+        Firebase.printf("Error task: %s, msg: %s, code: %d\n", aResult.uid().c_str(), aResult.error().message().c_str(), aResult.error().code());
+    }
+
+    if (aResult.available())
+    {
+        RealtimeDatabaseResult &stream = aResult.to<RealtimeDatabaseResult>();
+        if (stream.isStream())
+        {
+            Serial.println("----------------------------");
+            Firebase.printf("task: %s\n", aResult.uid().c_str());
+            Firebase.printf("event: %s\n", stream.event().c_str());
+            Firebase.printf("path: %s\n", stream.dataPath().c_str());
+            Firebase.printf("data: %s\n", stream.to<const char *>());
+            Firebase.printf("type: %d\n", stream.type());
+
+            // The stream event from RealtimeDatabaseResult can be converted to the values as following.
+            bool v1 = stream.to<bool>();
+            int v2 = stream.to<int>();
+            float v3 = stream.to<float>();
+            double v4 = stream.to<double>();
+            String v5 = stream.to<String>();
+        }
+        else
+        {
+            Serial.println("----------------------------");
+            Firebase.printf("task: %s, payload: %s\n", aResult.uid().c_str(), aResult.c_str());
+        }
 #if defined(ESP32) || defined(ESP8266)
-    Firebase.printf("Free Heap: %d\n", ESP.getFreeHeap());
+        Firebase.printf("Free Heap: %d\n", ESP.getFreeHeap());
 #elif defined(ARDUINO_RASPBERRY_PI_PICO_W)
-    Firebase.printf("Free Heap: %d\n", rp2040.getFreeHeap());
+        Firebase.printf("Free Heap: %d\n", rp2040.getFreeHeap());
 #endif
-  }
+    }
 } */
 
+//------------------------------------------------------------------------------------------------------------------------
+// Procesiranje podatkov iz Firebase (callback)
 void Firebase_processResponse(AsyncResult &aResult)
 {
-  Serial.println("************************************");
+  Serial.print("************************************\n");
   Firebase.printf("[F_HEAP] Free Heap pred RESPONSE: %d\n", ESP.getFreeHeap());
-  // Preveri in izpiši stanje SSL povezave
-  
-  Firebase_Check_Active_State(false);
 
   // SAMO EN KLIC available() NA ZAČETKU!
   bool hasResult = aResult.isResult();
@@ -1018,13 +1009,6 @@ void Firebase_processResponse(AsyncResult &aResult)
                     aResult.uid().c_str(),
                     aResult.error().message().c_str(),
                     aResult.error().code());
-
-    // // NOVO: TCP connection failed -> označimo za reconnect
-    // if (aResult.error().code() == -1 || aResult.error().code() == 401)
-    // {
-    //   Firebase.printf("[F_RESPONSE] ⚠️ TCP povezava prekinjena! Načrtujem reconnect...\n");
-    //   FirebaseNeedsReconnect = true;
-    // }
 
     firebase_response_received = false;
     return; // error sporočila nimajo payload-a
@@ -1080,6 +1064,13 @@ void Firebase_processResponse(AsyncResult &aResult)
     return;
   }
 
+    // RealtimeDatabaseResult &stream = aResult.to<RealtimeDatabaseResult>();
+    // if (stream.isStream())
+    // {
+    //   Firebase.printf("[STREAM] event: %s\n", stream.event().c_str());
+    //   return;
+    // }
+
   // DIREKTNE PRIMERJAVE - brez vmesnih spremenljivk:
   if (aResult.path().length() == 0) {
     Serial.println("[F_RESPONSE] ⚠️ Path is empty!");
@@ -1104,7 +1095,7 @@ void Firebase_processResponse(AsyncResult &aResult)
   
   //-----------------------------------------------------------------------------------------
   // Preberi urnik kanala
-  if (aResult.uid().equals("getUrnikTask"))  // ✅ SAFE primerjava
+  if (aResult.uid().equals("getUrnikTask"))  // SAFE primerjava
   {
     const char* path = aResult.path().c_str();  // Uporabi takoj, ne shrani
     
@@ -1149,7 +1140,7 @@ void Firebase_processResponse(AsyncResult &aResult)
 
   //-----------------------------------------------------------------------------------------
   // Preberi interval
-  else if (aResult.uid().equals("getChartIntervalTask"))  // ✅
+  else if (aResult.uid().equals("getChartIntervalTask"))  
   {
     uint8_t interval = atoi(payloadBuf);
     if (interval > 0) {
@@ -1163,32 +1154,32 @@ void Firebase_processResponse(AsyncResult &aResult)
 
   //-----------------------------------------------------------------------------------------
   // Senzorji
-  else if (aResult.uid().equals("updateSensorTask"))  // ✅
+  else if (aResult.uid().equals("updateSensorTask"))  
   {
     Firebase.printf("[F_RESPONSE] Sensor data uploaded ✅\n");
     firebase_response_received = true;
     firebaseRetryCount = 0;
     lastOperation.waiting_for_response = false;
-    // Sensor_OnFirebaseResponse(true);
+    Sensor_OnFirebaseResponse(true);
 
   }
 
   //-----------------------------------------------------------------------------------------
   // INA3221
-  else if (aResult.uid().equals("updateINA3221Task"))  // ✅
+  else if (aResult.uid().equals("updateINA3221Task"))  
   {
     Firebase.printf("[F_RESPONSE] INA3221 data uploaded ✅\n");
     firebase_response_received = true;
     firebaseRetryCount = 0;
     lastOperation.waiting_for_response = false;
-    // Sensor_OnFirebaseResponse(true);
+    Sensor_OnFirebaseResponse(true);
     // Firebase_CloseSSL();
 
   }
 
   //-----------------------------------------------------------------------------------------
   // Relay state
-  else if (aResult.uid().equals("updateStateTask"))  // ✅
+  else if (aResult.uid().equals("updateStateTask"))  
   {
     Firebase.printf("[F_RESPONSE] State data uploaded ✅\n");
     firebase_response_received = true;

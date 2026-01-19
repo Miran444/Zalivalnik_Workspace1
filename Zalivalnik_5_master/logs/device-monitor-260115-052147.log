@@ -1,0 +1,670 @@
+05:21:47.760 > ets Jun  8 2016 00:22:57
+05:21:47.760 > 
+05:21:47.760 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+05:21:47.765 > configsip: 188777542, SPIWP:0xee
+05:21:47.765 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+05:21:47.776 > mode:DIO, clock div:2
+05:21:47.776 > load:0x3fff0030,len:1184
+05:21:47.776 > load:0x40078000,len:13232
+05:21:47.862 > load:0x40080400,len:3028
+05:21:47.862 > entry 0x400805e4
+05:21:48.345 > Connecting to Wi-Fi.
+05:21:48.648 > Connected with IP: 192.168.64.105
+05:21:48.648 > 
+05:21:48.648 > Cakam na NTP sinhronizacijo... 
+05:21:51.141 > NTP sinhronizacija uspesna!
+05:21:51.141 > Thursday, January 15 2026 05:21:51
+05:21:51.147 > Trenutni čas: 1768450911
+05:21:51.147 > Free Heap BEFORE Firebase: 238372
+05:21:51.147 > Firebase Client v2.2.7
+05:21:51.153 > Initializing app...
+05:21:51.153 > Free Heap: 238372
+05:21:51.153 > ************************************
+05:21:51.158 > [F_HEAP] Free Heap pred RESPONSE: 237576
+05:21:51.163 > [F_RESPONSE] KLIC #1, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:21:51.169 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+05:21:51.174 > [F_READY] Avtentikacija v teku...
+05:21:51.180 > ************************************
+05:21:51.180 > [F_HEAP] Free Heap pred RESPONSE: 236312
+05:21:51.185 > [F_RESPONSE] KLIC #2, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+05:21:51.191 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+05:21:51.196 > ************************************
+05:21:51.202 > [F_HEAP] Free Heap pred RESPONSE: 236048
+05:21:51.202 > [F_RESPONSE] KLIC #3, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:21:51.207 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+05:21:51.226 > [LORA] Init uspesen. Cakam na sporocila...
+05:21:51.226 > [SENSOR_QUEUE] Inicializirana.
+05:21:51.231 > Setup končan.
+05:21:51.231 > Thursday, January 15 2026 05:21:51
+05:21:51.237 > Trenutni čas: 1768450911
+05:21:51.237 > [F_HEAP] Free Heap po SETUP: 224956
+05:21:51.960 > ************************************
+05:21:51.960 > [F_HEAP] Free Heap pred RESPONSE: 221172
+05:21:51.966 > [F_RESPONSE] KLIC #4, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+05:21:51.971 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+05:21:51.977 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+05:21:51.982 > [F_RESPONSE] Task: 🔐 authTask
+05:21:51.987 > [F_RESPONSE] Payload length: 511
+05:21:51.987 > -------------Neznan task---------------
+05:21:51.993 > task: 🔐 authTask, payload: {
+05:21:51.998 >   "kind": "identitytoolkit#VerifyPasswordResponse",
+05:21:51.998 >   "localId": "68TA11sAdOaFnIdmqzDtkx3QIBC2",
+05:21:52.004 >   "email": "miranbudal@gmail.com",
+05:21:52.009 >   "displayName": "",
+05:21:52.009 >   "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjA4MmU5NzVlMDdkZmE0OTYwYzdiN2I0ZmMxZDEwZjkxNmRjMmY1NWIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vemFsaXZhbG5pazIiLCJhdWQiOiJ6YWxpdmFsbmlrMiIsImF1dGhfdGltZSI6MTc2ODQ1MDkxMiwidXNlcl9pZCI6IjY4VEExMXNBZE9hRm5JZG1xekR0a3gzUUlCQzIiLCJzdWIiOiI2OFRBMTFzQWRPYUZuSWRtcXpEdGt4M1FJQkMyIiwiaWF0IjoxNzY4NDUwOTEyLCJleHAiOjE3Njg0NTQ1MTIsImVtYWlsIjoibWlyYW5idWRhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWlyYW5idWRhbEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.adsdkhyMv5OghnHX54q3_d74G1MG5PLg-uQ7Tl1IuuuCobO1hpbrnUaJUozzODpgMpFmvh-cnULx_dBujH7FWgSI85FdlOtkBnKfltBjl2TppoN-oy5nKDf_4wXC_XhfEHILf84u5jb7OGZZk3wMg4YElAOTt0oVd9q_6tirb3Vg9hy8BWEY-7wULE5WAmmS7URoG0p7-I3pZZWmE1Tp12dryxgY8rNsnacDEJ07_IX3uvmWNOweuVH5bPDo5gmyPytTl340xewjCwVgwKq7RPmII2k_O_zqF0eMf5tUHSzhpvY2tSVbBPz1hnEz4g5AZsny9Kr68yzzQF8vwfkxlQ",
+05:21:52.092 >   "registered": true,
+05:21:52.092 >   "refreshToken": "AMf-vBzUA7Bnfxb2QEZC5nw8E9_9HOORfBRgnEMQuX1N5G3rZAeukmC6jnPkqs10N7WI-zakzBrMc_8Nn19tD2_3PbmDI4eVTH2JIqgBOiDNo9wj3RIElGVLDUHPhpjg67McIQSqLqJ_3abK3j5vnw4Ui0Ve6A9UBu60Ieq_-fOB1yG95p4wC4VKLSy21VCvuti4qRytXyRVodiCwdrgIg3hAQBFfJ1AMA",
+05:21:52.115 >   "expiresIn": "3600"
+05:21:52.115 > }
+05:21:52.115 > 
+05:21:52.115 > [F_RESPONSE] Free Heap po RESPONSE: 221320
+05:21:52.121 > ************************************
+05:21:52.121 > [F_HEAP] Free Heap pred RESPONSE: 220168
+05:21:52.127 > [F_RESPONSE] KLIC #5, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:21:52.132 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+05:21:52.137 > [F_DEBUG] Stream1 Active tasks: 0, Stream1 SSL connected: 0, Stream2 Active tasks: 0, Stream2 SSL connected: 0
+05:21:52.148 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:21:52.154 > User UID: 68TA11sAdOaFnIdmqzDtkx3QIBC2
+05:21:52.805 > Firebase connected!
+05:21:57.867 > [F_STREAM] Debug task: streamTask, msg: Connecting to server...
+05:21:57.872 > ----------------------------
+05:21:57.872 > [STREAM] task: streamTask
+05:21:57.872 > [STREAM] event: put
+05:21:57.878 > [STREAM] path: /
+05:21:57.878 > [STREAM] data: {"kanal1":{"end":"17:05","end_sec":61500,"start":"10:15","start_sec":36900,"state":"OFF"},"kanal2":{"end":"22:00","end_sec":79200,"start":"03:50","start_sec":13800,"state":"ON"},"kanal3":{"end":"18:05","end_sec":65100,"start":"06:00","start_sec":21600,"state":"ON"},"kanal4":{"end":"20:45","end_sec":74700,"start":"04:53","start_sec":17580,"state":"ON"},"kanal5":{"end":"12:15","end_sec":44100,"start":"06:56","start_sec":24960,"state":"OFF"},"kanal6":{"end":"22:00","end_sec":79200,"start":"04:55","start_sec":17700,"state":"ON"},"kanal7":{"end":"17:35","end_sec":63300,"start":"09:35","start_sec":34500,"state":"OFF"},"kanal8":{"end":"13:30","end_sec":48600,"start":"07:30","start_sec":27000,"state":"OFF"}}
+05:21:57.938 > [STREAM] type: 6
+05:21:57.944 > [STREAM] Payload: {"kanal1":{"end":"17:05","end_sec":61500,"start":"10:15","start_sec":36900,"state":"OFF"},"kanal2":{"end":"22:00","end_sec":79200,"start":"03:50","start_sec":13800,"state":"ON"},"kanal3":{"end":"18:05","end_sec":65100,"start":"06:00","start_sec":21600,"state":"ON"},"kanal4":{"end":"20:45","end_sec":74700,"start":"04:53","start_sec":17580,"state":"ON"},"kanal5":{"end":"12:15","end_sec":44100,"start":"06:56","start_sec":24960,"state":"OFF"},"kanal6":{"end":"22:00","end_sec":79200,"start":"04:55","start_sec":17700,"state":"ON"},"kanal7":{"end":"17:35","end_sec":63300,"start":"09:35","start_sec":34500,"state":"OFF"},"kanal8":{"end":"13:30","end_sec":48600,"start":"07:30","start_sec":27000,"state":"OFF"}}
+05:21:58.005 > [STREAM] Payload Length: 709
+05:21:58.005 > [STREAM] Payload je predolg, preskočena obdelava urnika.
+05:21:58.027 > Debug task: streamTask2, msg: Connecting to server...
+05:21:58.027 > ----------------------------
+05:21:58.033 > task: streamTask2
+05:21:58.033 > event: put
+05:21:58.033 > path: /
+05:21:58.033 > data: [null,{"ms":2400008,"rand":12517},162884]
+05:21:58.038 > type: 7
+05:21:58.038 > Free Heap: 197532
+05:22:22.160 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:22:22.165 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:22:27.744 > ----------------------------
+05:22:27.744 > [STREAM] task: streamTask
+05:22:27.744 > [STREAM] event: keep-alive
+05:22:27.749 > [STREAM] path: 
+05:22:27.749 > [STREAM] data: null
+05:22:27.749 > [STREAM] type: 0
+05:22:27.755 > [STREAM] Payload: null
+05:22:27.755 > [STREAM] Payload Length: 4
+05:22:27.755 > [STREAM] Obdelujem posodobitev urnika...
+05:22:27.948 > ----------------------------
+05:22:27.948 > task: streamTask2
+05:22:27.948 > event: keep-alive
+05:22:27.953 > path: 
+05:22:27.953 > data: null
+05:22:27.953 > type: 0
+05:22:27.953 > Free Heap: 197580
+05:22:52.309 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:22:52.315 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:22:57.851 > ----------------------------
+05:22:57.851 > [STREAM] task: streamTask
+05:22:57.851 > [STREAM] event: keep-alive
+05:22:57.857 > [STREAM] path: 
+05:22:57.857 > [STREAM] data: null
+05:22:57.857 > [STREAM] type: 0
+05:22:57.863 > [STREAM] Payload: null
+05:22:57.863 > [STREAM] Payload Length: 4
+05:22:57.863 > [STREAM] Obdelujem posodobitev urnika...
+05:22:57.953 > ----------------------------
+05:22:57.953 > task: streamTask2
+05:22:57.953 > event: keep-alive
+05:22:57.957 > path: 
+05:22:57.957 > data: null
+05:22:57.957 > type: 0
+05:22:57.957 > Free Heap: 197580
+05:23:22.460 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:23:22.465 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:23:27.649 > ----------------------------
+05:23:27.649 > [STREAM] task: streamTask
+05:23:27.649 > [STREAM] event: keep-alive
+05:23:27.655 > [STREAM] path: 
+05:23:27.655 > [STREAM] data: null
+05:23:27.655 > [STREAM] type: 0
+05:23:27.660 > [STREAM] Payload: null
+05:23:27.660 > [STREAM] Payload Length: 4
+05:23:27.660 > [STREAM] Obdelujem posodobitev urnika...
+05:23:27.956 > ----------------------------
+05:23:27.957 > task: streamTask2
+05:23:27.957 > event: keep-alive
+05:23:27.961 > path: 
+05:23:27.961 > data: null
+05:23:27.961 > type: 0
+05:23:27.961 > Free Heap: 197572
+05:23:52.610 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:23:52.616 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:23:57.654 > ----------------------------
+05:23:57.654 > [STREAM] task: streamTask
+05:23:57.654 > [STREAM] event: keep-alive
+05:23:57.659 > [STREAM] path: 
+05:23:57.659 > [STREAM] data: null
+05:23:57.659 > [STREAM] type: 0
+05:23:57.665 > [STREAM] Payload: null
+05:23:57.665 > [STREAM] Payload Length: 4
+05:23:57.665 > [STREAM] Obdelujem posodobitev urnika...
+05:23:57.960 > ----------------------------
+05:23:57.960 > task: streamTask2
+05:23:57.960 > event: keep-alive
+05:23:57.965 > path: 
+05:23:57.965 > data: null
+05:23:57.965 > type: 0
+05:23:57.965 > Free Heap: 198244
+05:24:22.761 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:24:22.766 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:24:27.761 > ----------------------------
+05:24:27.762 > [STREAM] task: streamTask
+05:24:27.762 > [STREAM] event: keep-alive
+05:24:27.767 > [STREAM] path: 
+05:24:27.767 > [STREAM] data: null
+05:24:27.767 > [STREAM] type: 0
+05:24:27.772 > [STREAM] Payload: null
+05:24:27.772 > [STREAM] Payload Length: 4
+05:24:27.772 > [STREAM] Obdelujem posodobitev urnika...
+05:24:28.272 > ----------------------------
+05:24:28.272 > task: streamTask2
+05:24:28.272 > event: keep-alive
+05:24:28.277 > path: 
+05:24:28.277 > data: null
+05:24:28.277 > type: 0
+05:24:28.277 > Free Heap: 197572
+05:24:52.911 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:24:52.917 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:24:57.661 > ----------------------------
+05:24:57.661 > [STREAM] task: streamTask
+05:24:57.661 > [STREAM] event: keep-alive
+05:24:57.667 > [STREAM] path: 
+05:24:57.667 > [STREAM] data: null
+05:24:57.667 > [STREAM] type: 0
+05:24:57.673 > [STREAM] Payload: null
+05:24:57.673 > [STREAM] Payload Length: 4
+05:24:57.673 > [STREAM] Obdelujem posodobitev urnika...
+05:24:57.968 > ----------------------------
+05:24:57.969 > task: streamTask2
+05:24:57.969 > event: keep-alive
+05:24:57.973 > path: 
+05:24:57.973 > data: null
+05:24:57.973 > type: 0
+05:24:57.973 > Free Heap: 198252
+05:25:23.061 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:25:23.067 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:25:27.667 > ----------------------------
+05:25:27.667 > [STREAM] task: streamTask
+05:25:27.667 > [STREAM] event: keep-alive
+05:25:27.672 > [STREAM] path: 
+05:25:27.672 > [STREAM] data: null
+05:25:27.672 > [STREAM] type: 0
+05:25:27.677 > [STREAM] Payload: null
+05:25:27.677 > [STREAM] Payload Length: 4
+05:25:27.677 > [STREAM] Obdelujem posodobitev urnika...
+05:25:27.973 > ----------------------------
+05:25:27.973 > task: streamTask2
+05:25:27.973 > event: keep-alive
+05:25:27.977 > path: 
+05:25:27.977 > data: null
+05:25:27.977 > type: 0
+05:25:27.977 > Free Heap: 198252
+05:25:53.212 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:25:53.217 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:25:57.669 > ----------------------------
+05:25:57.669 > [STREAM] task: streamTask
+05:25:57.669 > [STREAM] event: keep-alive
+05:25:57.675 > [STREAM] path: 
+05:25:57.675 > [STREAM] data: null
+05:25:57.675 > [STREAM] type: 0
+05:25:57.681 > [STREAM] Payload: null
+05:25:57.681 > [STREAM] Payload Length: 4
+05:25:57.681 > [STREAM] Obdelujem posodobitev urnika...
+05:25:57.976 > ----------------------------
+05:25:57.977 > task: streamTask2
+05:25:57.977 > event: keep-alive
+05:25:57.981 > path: 
+05:25:57.981 > data: null
+05:25:57.981 > type: 0
+05:25:57.981 > Free Heap: 198252
+05:26:23.362 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:26:23.368 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:26:27.673 > ----------------------------
+05:26:27.673 > [STREAM] task: streamTask
+05:26:27.673 > [STREAM] event: keep-alive
+05:26:27.678 > [STREAM] path: 
+05:26:27.678 > [STREAM] data: null
+05:26:27.678 > [STREAM] type: 0
+05:26:27.684 > [STREAM] Payload: null
+05:26:27.684 > [STREAM] Payload Length: 4
+05:26:27.684 > [STREAM] Obdelujem posodobitev urnika...
+05:26:27.980 > ----------------------------
+05:26:27.980 > task: streamTask2
+05:26:27.980 > event: keep-alive
+05:26:27.984 > path: 
+05:26:27.984 > data: null
+05:26:27.984 > type: 0
+05:26:27.984 > Free Heap: 198276
+05:26:48.674 > ----------------------------
+05:26:48.675 > task: streamTask2
+05:26:48.675 > event: put
+05:26:48.675 > path: /1
+05:26:48.680 > data: {"ms":300001,"rand":21509}
+05:26:48.680 > type: 6
+05:26:48.680 > Free Heap: 183112
+05:26:48.691 > ************************************
+05:26:48.692 > [F_HEAP] Free Heap pred RESPONSE: 184520
+05:26:48.697 > [F_RESPONSE] KLIC #6, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+05:26:48.704 > [F_RESPONSE] Debug task: setTask1, msg: Connecting to server...
+05:26:48.709 > [F_RESPONSE] Task: setTask1
+05:26:48.709 > [F_RESPONSE] Payload length: 26
+05:26:48.714 > -------------Neznan task---------------
+05:26:48.719 > task: setTask1, payload: {"ms":300001,"rand":21509}
+05:26:48.719 > [F_RESPONSE] Free Heap po RESPONSE: 184520
+05:26:48.725 > ************************************
+05:26:48.730 > [F_HEAP] Free Heap pred RESPONSE: 184520
+05:26:48.730 > [F_RESPONSE] KLIC #7, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:48.835 > ----------------------------
+05:26:48.835 > task: streamTask2
+05:26:48.835 > event: put
+05:26:48.835 > path: /2
+05:26:48.839 > data: 158034
+05:26:48.839 > type: 1
+05:26:48.839 > Free Heap: 184696
+05:26:48.851 > ************************************
+05:26:48.851 > [F_HEAP] Free Heap pred RESPONSE: 186228
+05:26:48.856 > [F_RESPONSE] KLIC #8, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:48.862 > [F_RESPONSE] Task: setTask2
+05:26:48.862 > [F_RESPONSE] Payload length: 6
+05:26:48.868 > -------------Neznan task---------------
+05:26:48.873 > task: setTask2, payload: 158034
+05:26:48.873 > [F_RESPONSE] Free Heap po RESPONSE: 186228
+05:26:48.879 > ************************************
+05:26:48.879 > [F_HEAP] Free Heap pred RESPONSE: 186228
+05:26:48.885 > [F_RESPONSE] KLIC #9, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:53.416 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:26:53.421 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:26:57.677 > ----------------------------
+05:26:57.677 > [STREAM] task: streamTask
+05:26:57.677 > [STREAM] event: keep-alive
+05:26:57.682 > [STREAM] path: 
+05:26:57.682 > [STREAM] data: null
+05:26:57.682 > [STREAM] type: 0
+05:26:57.688 > [STREAM] Payload: null
+05:26:57.688 > [STREAM] Payload Length: 4
+05:26:57.688 > [STREAM] Obdelujem posodobitev urnika...
+05:27:18.875 > ----------------------------
+05:27:18.875 > task: streamTask2
+05:27:18.875 > event: keep-alive
+05:27:18.879 > path: 
+05:27:18.879 > data: null
+05:27:18.879 > type: 0
+05:27:18.879 > Free Heap: 187920
+05:27:23.566 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:27:23.572 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:27:27.681 > ----------------------------
+05:27:27.681 > [STREAM] task: streamTask
+05:27:27.681 > [STREAM] event: keep-alive
+05:27:27.686 > [STREAM] path: 
+05:27:27.686 > [STREAM] data: null
+05:27:27.686 > [STREAM] type: 0
+05:27:27.691 > [STREAM] Payload: null
+05:27:27.691 > [STREAM] Payload Length: 4
+05:27:27.691 > [STREAM] Obdelujem posodobitev urnika...
+05:27:31.676 > ----------------------------
+05:27:31.676 > [STREAM] task: streamTask
+05:27:31.676 > [STREAM] event: patch
+05:27:31.682 > [STREAM] path: /
+05:27:31.682 > [STREAM] data: {"kanal2/end":"11:00","kanal2/end_sec":39600}
+05:27:31.689 > [STREAM] type: 6
+05:27:31.689 > [STREAM] Payload: {"kanal2/end":"11:00","kanal2/end_sec":39600}
+05:27:31.693 > [STREAM] Payload Length: 45
+05:27:31.698 > [STREAM] Obdelujem posodobitev urnika...
+05:27:31.698 > [STREAM] Kanal 2 je spremenjen, nov končni čas: 39600
+05:27:31.704 > [STREAM] Kanal 2 začetni čas ni spremenjen, ostaja: 0
+05:27:31.807 > [STREAM] LoRa prosta. Pošiljam posodobitev.
+05:27:31.807 > Posiljanje posodobitve urnika za kanal 2 (CMD_UPDATE_URNIK)...
+05:27:31.813 >   Nov urnik - Start sec: 0, End sec: 39600
+05:27:31.818 > OUT ID: 0, CMD: 4
+05:27:31.818 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:31.965 > [DISPATCH TASK] Stack left: 2392
+05:27:31.965 > [TX TASK] Stack left: 2584
+05:27:31.965 > [LORA] Paket uspesno poslan.
+05:27:31.971 > [LORA] Preklop v RX po TX uspesen.
+05:27:31.971 > -------------------------
+05:27:31.974 > 
+05:27:34.819 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:34.819 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:34.966 > [DISPATCH TASK] Stack left: 1740
+05:27:34.966 > [TX TASK] Stack left: 1740
+05:27:34.966 > [LORA] Paket uspesno poslan.
+05:27:34.971 > [LORA] Preklop v RX po TX uspesen.
+05:27:34.971 > -------------------------
+05:27:34.974 > 
+05:27:37.822 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:37.822 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:37.969 > [DISPATCH TASK] Stack left: 1740
+05:27:37.969 > [TX TASK] Stack left: 1740
+05:27:37.969 > [LORA] Paket uspesno poslan.
+05:27:37.975 > [LORA] Preklop v RX po TX uspesen.
+05:27:37.975 > -------------------------
+05:27:37.978 > 
+05:27:40.825 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:40.825 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:40.972 > [DISPATCH TASK] Stack left: 1740
+05:27:40.973 > [TX TASK] Stack left: 1512
+05:27:40.973 > [LORA] Paket uspesno poslan.
+05:27:40.977 > [LORA] Preklop v RX po TX uspesen.
+05:27:40.977 > -------------------------
+05:27:40.980 > 
+05:27:43.829 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:43.829 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:43.976 > [DISPATCH TASK] Stack left: 1496
+05:27:43.976 > [TX TASK] Stack left: 1512
+05:27:43.976 > [LORA] Paket uspesno poslan.
+05:27:43.981 > [LORA] Preklop v RX po TX uspesen.
+05:27:43.981 > -------------------------
+05:27:43.983 > 
+05:27:46.832 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:46.832 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:46.978 > [DISPATCH TASK] Stack left: 1496
+05:27:46.978 > [TX TASK] Stack left: 1512
+05:27:46.978 > [LORA] Paket uspesno poslan.
+05:27:46.983 > [LORA] Preklop v RX po TX uspesen.
+05:27:46.983 > -------------------------
+05:27:46.986 > 
+05:27:48.879 > ----------------------------
+05:27:48.879 > task: streamTask2
+05:27:48.879 > event: keep-alive
+05:27:48.884 > path: 
+05:27:48.884 > data: null
+05:27:48.884 > type: 0
+05:27:48.884 > Free Heap: 187920
+05:27:49.834 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:49.835 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:49.982 > [DISPATCH TASK] Stack left: 1496
+05:27:49.982 > [TX TASK] Stack left: 1512
+05:27:49.982 > [LORA] Paket uspesno poslan.
+05:27:49.987 > [LORA] Preklop v RX po TX uspesen.
+05:27:49.987 > -------------------------
+05:27:49.989 > 
+05:27:52.838 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:52.838 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:52.985 > [DISPATCH TASK] Stack left: 1496
+05:27:52.985 > [TX TASK] Stack left: 1512
+05:27:52.985 > [LORA] Paket uspesno poslan.
+05:27:52.991 > [LORA] Preklop v RX po TX uspesen.
+05:27:52.991 > -------------------------
+05:27:52.994 > 
+05:27:53.717 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:27:53.722 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:27:55.842 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:55.842 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:55.988 > [DISPATCH TASK] Stack left: 1496
+05:27:55.988 > [TX TASK] Stack left: 1512
+05:27:55.988 > [LORA] Paket uspesno poslan.
+05:27:55.993 > [LORA] Preklop v RX po TX uspesen.
+05:27:55.993 > -------------------------
+05:27:55.997 > 
+05:27:58.844 > [LORA RETRY] Timeout! Poskus 1/3
+05:27:58.844 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:27:58.991 > [DISPATCH TASK] Stack left: 1496
+05:27:58.991 > [TX TASK] Stack left: 1512
+05:27:58.991 > [LORA] Paket uspesno poslan.
+05:27:58.997 > [LORA] Preklop v RX po TX uspesen.
+05:27:58.997 > -------------------------
+05:27:58.999 > 
+05:28:01.474 > ----------------------------
+05:28:01.474 > [STREAM] task: streamTask
+05:28:01.474 > [STREAM] event: keep-alive
+05:28:01.480 > [STREAM] path: 
+05:28:01.480 > [STREAM] data: null
+05:28:01.480 > [STREAM] type: 0
+05:28:01.485 > [STREAM] Payload: null
+05:28:01.485 > [STREAM] Payload Length: 4
+05:28:01.485 > [STREAM] Obdelujem posodobitev urnika...
+05:28:01.848 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:01.848 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:01.995 > [DISPATCH TASK] Stack left: 1496
+05:28:01.995 > [TX TASK] Stack left: 1512
+05:28:01.995 > [LORA] Paket uspesno poslan.
+05:28:02.000 > [LORA] Preklop v RX po TX uspesen.
+05:28:02.000 > -------------------------
+05:28:02.002 > 
+05:28:04.851 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:04.851 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:04.997 > [DISPATCH TASK] Stack left: 1496
+05:28:04.997 > [TX TASK] Stack left: 1512
+05:28:04.997 > [LORA] Paket uspesno poslan.
+05:28:05.003 > [LORA] Preklop v RX po TX uspesen.
+05:28:05.003 > -------------------------
+05:28:05.006 > 
+05:28:07.853 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:07.854 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:08.000 > [DISPATCH TASK] Stack left: 1496
+05:28:08.000 > [TX TASK] Stack left: 1512
+05:28:08.000 > [LORA] Paket uspesno poslan.
+05:28:08.006 > [LORA] Preklop v RX po TX uspesen.
+05:28:08.006 > -------------------------
+05:28:08.009 > 
+05:28:10.857 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:10.857 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:11.002 > [DISPATCH TASK] Stack left: 1496
+05:28:11.003 > [TX TASK] Stack left: 1512
+05:28:11.003 > [LORA] Paket uspesno poslan.
+05:28:11.009 > [LORA] Preklop v RX po TX uspesen.
+05:28:11.009 > -------------------------
+05:28:11.011 > 
+05:28:13.860 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:13.860 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:14.006 > [DISPATCH TASK] Stack left: 1496
+05:28:14.006 > [TX TASK] Stack left: 1512
+05:28:14.006 > [LORA] Paket uspesno poslan.
+05:28:14.012 > [LORA] Preklop v RX po TX uspesen.
+05:28:14.012 > -------------------------
+05:28:14.014 > 
+05:28:16.863 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:16.863 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:17.009 > [DISPATCH TASK] Stack left: 1496
+05:28:17.009 > [TX TASK] Stack left: 1512
+05:28:17.009 > [LORA] Paket uspesno poslan.
+05:28:17.015 > [LORA] Preklop v RX po TX uspesen.
+05:28:17.015 > -------------------------
+05:28:17.018 > 
+05:28:19.190 > ----------------------------
+05:28:19.191 > task: streamTask2
+05:28:19.191 > event: keep-alive
+05:28:19.194 > path: 
+05:28:19.194 > data: null
+05:28:19.194 > type: 0
+05:28:19.194 > Free Heap: 187616
+05:28:19.866 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:19.866 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:20.013 > [DISPATCH TASK] Stack left: 1496
+05:28:20.013 > [TX TASK] Stack left: 1512
+05:28:20.013 > [LORA] Paket uspesno poslan.
+05:28:20.018 > [LORA] Preklop v RX po TX uspesen.
+05:28:20.018 > -------------------------
+05:28:20.021 > 
+05:28:22.869 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:22.869 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:23.017 > [DISPATCH TASK] Stack left: 1496
+05:28:23.017 > [TX TASK] Stack left: 1512
+05:28:23.017 > [LORA] Paket uspesno poslan.
+05:28:23.021 > [LORA] Preklop v RX po TX uspesen.
+05:28:23.021 > -------------------------
+05:28:23.024 > 
+05:28:23.867 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:28:23.873 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:28:25.873 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:25.873 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:26.018 > [DISPATCH TASK] Stack left: 1496
+05:28:26.019 > [TX TASK] Stack left: 1512
+05:28:26.019 > [LORA] Paket uspesno poslan.
+05:28:26.025 > [LORA] Preklop v RX po TX uspesen.
+05:28:26.025 > -------------------------
+05:28:26.028 > 
+05:28:28.876 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:28.876 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:29.022 > [DISPATCH TASK] Stack left: 1496
+05:28:29.022 > [TX TASK] Stack left: 1464
+05:28:29.022 > [LORA] Paket uspesno poslan.
+05:28:29.028 > [LORA] Preklop v RX po TX uspesen.
+05:28:29.028 > -------------------------
+05:28:29.031 > 
+05:28:31.581 > ----------------------------
+05:28:31.581 > [STREAM] task: streamTask
+05:28:31.581 > [STREAM] event: keep-alive
+05:28:31.586 > [STREAM] path: 
+05:28:31.586 > [STREAM] data: null
+05:28:31.586 > [STREAM] type: 0
+05:28:31.592 > [STREAM] Payload: null
+05:28:31.592 > [STREAM] Payload Length: 4
+05:28:31.592 > [STREAM] Obdelujem posodobitev urnika...
+05:28:31.879 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:31.879 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:32.027 > [DISPATCH TASK] Stack left: 1496
+05:28:32.027 > [TX TASK] Stack left: 1464
+05:28:32.027 > [LORA] Paket uspesno poslan.
+05:28:32.032 > [LORA] Preklop v RX po TX uspesen.
+05:28:32.032 > -------------------------
+05:28:32.035 > 
+05:28:34.883 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:34.883 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:35.030 > [DISPATCH TASK] Stack left: 1496
+05:28:35.030 > [TX TASK] Stack left: 1464
+05:28:35.030 > [LORA] Paket uspesno poslan.
+05:28:35.035 > [LORA] Preklop v RX po TX uspesen.
+05:28:35.035 > -------------------------
+05:28:35.037 > 
+05:28:37.886 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:37.886 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:38.033 > [DISPATCH TASK] Stack left: 1496
+05:28:38.033 > [TX TASK] Stack left: 1464
+05:28:38.033 > [LORA] Paket uspesno poslan.
+05:28:38.038 > [LORA] Preklop v RX po TX uspesen.
+05:28:38.038 > -------------------------
+05:28:38.041 > 
+05:28:40.889 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:40.889 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:41.036 > [DISPATCH TASK] Stack left: 1496
+05:28:41.036 > [TX TASK] Stack left: 1464
+05:28:41.036 > [LORA] Paket uspesno poslan.
+05:28:41.041 > [LORA] Preklop v RX po TX uspesen.
+05:28:41.041 > -------------------------
+05:28:41.044 > 
+05:28:43.892 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:43.892 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:44.039 > [DISPATCH TASK] Stack left: 1496
+05:28:44.039 > [TX TASK] Stack left: 1464
+05:28:44.039 > [LORA] Paket uspesno poslan.
+05:28:44.044 > [LORA] Preklop v RX po TX uspesen.
+05:28:44.044 > -------------------------
+05:28:44.047 > 
+05:28:46.895 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:46.895 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:47.042 > [DISPATCH TASK] Stack left: 1496
+05:28:47.043 > [TX TASK] Stack left: 1464
+05:28:47.043 > [LORA] Paket uspesno poslan.
+05:28:47.048 > [LORA] Preklop v RX po TX uspesen.
+05:28:47.048 > -------------------------
+05:28:47.050 > 
+05:28:48.886 > ----------------------------
+05:28:48.886 > task: streamTask2
+05:28:48.886 > event: keep-alive
+05:28:48.890 > path: 
+05:28:48.890 > data: null
+05:28:48.890 > type: 0
+05:28:48.890 > Free Heap: 187612
+05:28:49.898 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:49.899 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:50.046 > [DISPATCH TASK] Stack left: 1496
+05:28:50.046 > [TX TASK] Stack left: 1464
+05:28:50.046 > [LORA] Paket uspesno poslan.
+05:28:50.051 > [LORA] Preklop v RX po TX uspesen.
+05:28:50.051 > -------------------------
+05:28:50.053 > 
+05:28:52.902 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:52.902 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:53.049 > [DISPATCH TASK] Stack left: 1496
+05:28:53.049 > [TX TASK] Stack left: 1464
+05:28:53.049 > [LORA] Paket uspesno poslan.
+05:28:53.054 > [LORA] Preklop v RX po TX uspesen.
+05:28:53.054 > -------------------------
+05:28:53.057 > 
+05:28:54.018 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:28:54.024 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:28:55.905 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:55.905 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:56.052 > [DISPATCH TASK] Stack left: 1496
+05:28:56.052 > [TX TASK] Stack left: 1464
+05:28:56.052 > [LORA] Paket uspesno poslan.
+05:28:56.057 > [LORA] Preklop v RX po TX uspesen.
+05:28:56.057 > -------------------------
+05:28:56.060 > 
+05:28:58.908 > [LORA RETRY] Timeout! Poskus 1/3
+05:28:58.909 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:28:59.055 > [DISPATCH TASK] Stack left: 1496
+05:28:59.056 > [TX TASK] Stack left: 1464
+05:28:59.056 > [LORA] Paket uspesno poslan.
+05:28:59.061 > [LORA] Preklop v RX po TX uspesen.
+05:28:59.061 > -------------------------
+05:28:59.063 > 
+05:29:01.585 > ----------------------------
+05:29:01.585 > [STREAM] task: streamTask
+05:29:01.585 > [STREAM] event: keep-alive
+05:29:01.591 > [STREAM] path: 
+05:29:01.591 > [STREAM] data: null
+05:29:01.591 > [STREAM] type: 0
+05:29:01.596 > [STREAM] Payload: null
+05:29:01.596 > [STREAM] Payload Length: 4
+05:29:01.596 > [STREAM] Obdelujem posodobitev urnika...
+05:29:01.912 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:01.912 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:02.059 > [DISPATCH TASK] Stack left: 1496
+05:29:02.059 > [TX TASK] Stack left: 1464
+05:29:02.059 > [LORA] Paket uspesno poslan.
+05:29:02.064 > [LORA] Preklop v RX po TX uspesen.
+05:29:02.064 > -------------------------
+05:29:02.067 > 
+05:29:04.915 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:04.915 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:05.062 > [DISPATCH TASK] Stack left: 1496
+05:29:05.062 > [TX TASK] Stack left: 1464
+05:29:05.062 > [LORA] Paket uspesno poslan.
+05:29:05.067 > [LORA] Preklop v RX po TX uspesen.
+05:29:05.067 > -------------------------
+05:29:05.069 > 
+05:29:07.919 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:07.919 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:08.066 > [DISPATCH TASK] Stack left: 1496
+05:29:08.066 > [TX TASK] Stack left: 1464
+05:29:08.066 > [LORA] Paket uspesno poslan.
+05:29:08.071 > [LORA] Preklop v RX po TX uspesen.
+05:29:08.071 > -------------------------
+05:29:08.073 > 
+05:29:10.921 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:10.921 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:11.068 > [DISPATCH TASK] Stack left: 1496
+05:29:11.068 > [TX TASK] Stack left: 1464
+05:29:11.068 > [LORA] Paket uspesno poslan.
+05:29:11.074 > [LORA] Preklop v RX po TX uspesen.
+05:29:11.074 > -------------------------
+05:29:11.076 > 
+05:29:13.926 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:13.926 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:14.073 > [DISPATCH TASK] Stack left: 1496
+05:29:14.073 > [TX TASK] Stack left: 1464
+05:29:14.073 > [LORA] Paket uspesno poslan.
+05:29:14.077 > [LORA] Preklop v RX po TX uspesen.
+05:29:14.077 > -------------------------
+05:29:14.081 > 
+05:29:16.929 > [LORA RETRY] Timeout! Poskus 1/3
+05:29:16.929 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+05:29:17.077 > [DISPATCH TASK] Stack left: 1496
+05:29:17.077 > [TX TASK] Stack left: 1464
+05:29:17.077 > [LORA] Paket uspesno poslan.
+05:29:17.082 > [LORA] Preklop v RX po TX uspesen.
+05:29:17.082 > -------------------------
+05:29:17.085 > 
