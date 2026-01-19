@@ -233,12 +233,12 @@ void loop()
     {
       if (!rele_init_in_progress)
       {
-        // StartReleInitialization();
+        StartReleInitialization();
         rele_init_in_progress = true;
       }
 
       // 2.b. Upravljanje inicializacije Rele modula
-      // manageReleInitialization();
+      manageReleInitialization();
     }
     else
     {
@@ -265,16 +265,16 @@ void loop()
     // 4. Periodično branje senzorjev
     if (init_done_flag)
     {
-      // if (Sensor_IntervalRead(Interval_mS)) // Če je čas za branje, pokliči funkcijo
-      // {
-      //   Serial.print("------------------------------------------\n");
-      //   Serial.println("[SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...");
-      //   Serial.print("------------------------------------------\n");
+      if (Sensor_IntervalRead(Interval_mS)) // Če je čas za branje, pokliči funkcijo
+      {
+        Serial.print("------------------------------------------\n");
+        Serial.println("[SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...");
+        Serial.print("------------------------------------------\n");
 
-      //   Sensor_QueueOperation(SensorTaskType::READ_SENSORS);
-      //   Sensor_QueueOperation(SensorTaskType::READ_INA);
-      //   // read_sensor = false; // Ponastavimo zastavico
-      // }
+        Sensor_QueueOperation(SensorTaskType::READ_SENSORS);
+        Sensor_QueueOperation(SensorTaskType::READ_INA);
+        // read_sensor = false; // Ponastavimo zastavico
+      }
     }
 
     // Procesiranje senzorske čakalne vrste 10x na sekundo

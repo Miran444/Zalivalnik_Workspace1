@@ -1,0 +1,646 @@
+05:26:33.032 > ets Jun  8 2016 00:22:57
+05:26:33.032 > 
+05:26:33.032 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+05:26:33.037 > configsip: 188777542, SPIWP:0xee
+05:26:33.037 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+05:26:33.047 > mode:DIO, clock div:2
+05:26:33.047 > load:0x3fff0030,len:1184
+05:26:33.047 > load:0x40078000,len:13232
+05:26:33.134 > load:0x40080400,len:3028
+05:26:33.134 > entry 0x400805e4
+05:26:33.617 > Connecting to Wi-Fi.
+05:26:33.922 > Connected with IP: 192.168.64.105
+05:26:33.922 > 
+05:26:33.922 > Cakam na NTP sinhronizacijo... 
+05:26:38.104 > NTP sinhronizacija uspesna!
+05:26:38.104 > Monday, January 19 2026 05:26:38
+05:26:38.110 > Trenutni čas: 1768796798
+05:26:38.110 > Free Heap BEFORE Firebase: 238548
+05:26:38.110 > Firebase Client v2.2.7
+05:26:38.115 > Initializing app...
+05:26:38.115 > Free Heap: 238548
+05:26:38.115 > ************************************
+05:26:38.121 > [F_HEAP] Free Heap pred RESPONSE: 237768
+05:26:38.126 > [F_RESPONSE] KLIC #1, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:26:38.132 > [F_RESPONSE] Event task: 🔐 authTask, msg: authenticating, code: 7
+05:26:38.137 > [F_READY] Avtentikacija v teku...
+05:26:38.137 > ************************************
+05:26:38.143 > [F_HEAP] Free Heap pred RESPONSE: 236504
+05:26:38.148 > [F_RESPONSE] KLIC #2, isResult=1, isError=0, isEvent=0, isDebug=1, available=0
+05:26:38.154 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Connecting to server...
+05:26:38.160 > ************************************
+05:26:38.165 > [F_HEAP] Free Heap pred RESPONSE: 236240
+05:26:38.165 > [F_RESPONSE] KLIC #3, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:26:38.171 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth request sent, code: 8
+05:26:38.205 > [LORA] Init uspesen. Cakam na sporocila...
+05:26:38.205 > [SENSOR_QUEUE] Inicializirana.
+05:26:38.205 > Setup končan.
+05:26:38.205 > Monday, January 19 2026 05:26:38
+05:26:38.205 > Trenutni čas: 1768796798
+05:26:38.205 > [F_HEAP] Free Heap po SETUP: 225148
+05:26:39.032 > ************************************
+05:26:39.033 > [F_HEAP] Free Heap pred RESPONSE: 221364
+05:26:39.038 > [F_RESPONSE] KLIC #4, isResult=1, isError=0, isEvent=1, isDebug=1, available=1
+05:26:39.044 > [F_RESPONSE] Event task: 🔐 authTask, msg: auth response received, code: 9
+05:26:39.049 > [F_RESPONSE] Debug task: 🔐 authTask, msg: Terminating the server connection...
+05:26:39.055 > [F_RESPONSE] Task: 🔐 authTask
+05:26:39.060 > [F_RESPONSE] Payload length: 511
+05:26:39.060 > -------------Neznan task---------------
+05:26:39.065 > [F_RESPONSE] Free Heap po RESPONSE: 221320
+05:26:39.071 > ************************************
+05:26:39.071 > [F_HEAP] Free Heap pred RESPONSE: 220168
+05:26:39.077 > [F_RESPONSE] KLIC #5, isResult=1, isError=0, isEvent=1, isDebug=0, available=0
+05:26:39.082 > [F_RESPONSE] Event task: 🔐 authTask, msg: ready, code: 10
+05:26:39.088 > [F_DEBUG] Stream1 Active tasks: 0, Stream1 SSL connected: 0, Stream2 Active tasks: 0, Stream2 SSL connected: 0
+05:26:39.098 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 0, Auth ready: 1
+05:26:39.750 > Firebase connected!
+05:26:39.750 > [INIT] Začenjam inicializacijo Rele modula...
+05:26:39.755 > [F_GET_INTERVAL] Reading interval (poskus 1/3)...
+05:26:40.184 > ************************************
+05:26:40.184 > [F_HEAP] Free Heap pred RESPONSE: 204080
+05:26:40.190 > [F_RESPONSE] KLIC #6, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+05:26:40.195 > [F_RESPONSE] Debug task: getChartIntervalTask, msg: Connecting to server...
+05:26:40.201 > [F_RESPONSE] Task: getChartIntervalTask
+05:26:40.206 > [F_RESPONSE] Payload length: 1
+05:26:40.206 > [F_RESPONSE] Interval nastavljen: 3 minut ✅
+05:26:40.212 > [F_RESPONSE] Free Heap po RESPONSE: 204080
+05:26:40.217 > ************************************
+05:26:40.217 > [F_HEAP] Free Heap pred RESPONSE: 203940
+05:26:40.223 > [F_RESPONSE] KLIC #7, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:40.229 > [INIT] Uspeh pri branju intervala.
+05:26:40.234 > --- ZACENJAM INICIALIZACIJO RELE MODULA ---
+05:26:40.234 > [INIT] Korak 1: Posiljam cas...
+05:26:40.240 > Pripravljam paket za sinhronizacijo casa (CMD_SET_TIME)...
+05:26:40.244 >   Čas od polnoči: 19600 sekund
+05:26:40.244 >   Posiljam timestamp: 1768796800
+05:26:40.251 > OUT ID: 0, CMD: 1
+05:26:40.251 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:40.400 > [DISPATCH TASK] Stack left: 2392
+05:26:40.400 > [TX TASK] Stack left: 2584
+05:26:40.400 > [LORA] Paket uspesno poslan.
+05:26:40.406 > [LORA] Preklop v RX po TX uspesen.
+05:26:40.406 > -------------------------
+05:26:40.408 > 
+05:26:40.823 > [DISPATCH TASK] Stack left: 1740
+05:26:40.823 > [RX TASK] Stack left: 2400
+05:26:40.823 > [LORA RX] ID:0 CMD:103 RSSI:0 SNR:10.5
+05:26:40.829 > In ID: 0, CMD: 103
+05:26:40.829 > CRC OK.
+05:26:40.835 > Prejet odgovor na zahtevo.
+05:26:40.835 > Prejet odgovor: 19600
+05:26:40.835 > --------------------
+05:26:40.872 > [INIT] Uspeh pri čakanju na 'odgovor za čas'.
+05:26:40.872 > [INIT] Korak 3: Posiljam zahtevo za senzorje...
+05:26:40.872 > Pripravljam paket za branje senzorjev (CMD_GET_SENSORS)...
+05:26:40.872 > OUT ID: 1, CMD: 5
+05:26:40.872 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:40.999 > [DISPATCH TASK] Stack left: 1740
+05:26:40.999 > [TX TASK] Stack left: 1512
+05:26:40.999 > [LORA] Paket uspesno poslan.
+05:26:41.005 > [LORA] Preklop v RX po TX uspesen.
+05:26:41.005 > -------------------------
+05:26:41.007 > 
+05:26:41.402 > [DISPATCH TASK] Stack left: 1512
+05:26:41.402 > [RX TASK] Stack left: 1088
+05:26:41.402 > [LORA RX] ID:1 CMD:104 RSSI:0 SNR:9.2
+05:26:41.408 > In ID: 1, CMD: 104
+05:26:41.408 > CRC OK.
+05:26:41.408 > Prejet odgovor na zahtevo.
+05:26:41.413 > Prejeti podatki senzorjev:
+05:26:41.413 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:26:41.427 > --------------------
+05:26:41.435 > [INIT] Uspeh pri čakanju na 'odgovor za senzorje'.
+05:26:41.435 > [INIT] Posiljam zahtevo za urnik kanala 1...
+05:26:41.441 > Branje urnika za kanal 1 (CMD_GET_URNIK)...
+05:26:41.446 > OUT ID: 2, CMD: 3
+05:26:41.446 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:41.544 > ************************************
+05:26:41.544 > [F_HEAP] Free Heap pred RESPONSE: 203352
+05:26:41.549 > [F_RESPONSE] KLIC #8, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:41.555 > [F_RESPONSE] Task: updateSensorTask
+05:26:41.561 > [F_RESPONSE] Payload length: 90
+05:26:41.561 > [F_RESPONSE] Sensor data uploaded ✅
+05:26:41.566 > [F_RESPONSE] Free Heap po RESPONSE: 203352
+05:26:41.566 > ************************************
+05:26:41.572 > [F_HEAP] Free Heap pred RESPONSE: 203352
+05:26:41.577 > [F_RESPONSE] KLIC #9, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:41.595 > [DISPATCH TASK] Stack left: 1512
+05:26:41.595 > [TX TASK] Stack left: 1512
+05:26:41.595 > [LORA] Paket uspesno poslan.
+05:26:41.601 > [LORA] Preklop v RX po TX uspesen.
+05:26:41.601 > -------------------------
+05:26:41.604 > 
+05:26:41.976 > [DISPATCH TASK] Stack left: 1512
+05:26:41.976 > [RX TASK] Stack left: 1088
+05:26:41.976 > [LORA RX] ID:2 CMD:102 RSSI:0 SNR:10.2
+05:26:41.982 > In ID: 2, CMD: 102
+05:26:41.982 > CRC OK.
+05:26:41.987 > Prejet odgovor na zahtevo.
+05:26:41.987 > [INIT] Prejet urnik za kanal 1: 10:15 - 17:05 (Start sec=36900, End sec=61500)
+05:26:41.993 > --------------------
+05:26:41.998 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:41.998 > [INIT] Posiljam zahtevo za urnik kanala 2...
+05:26:42.004 > Branje urnika za kanal 2 (CMD_GET_URNIK)...
+05:26:42.009 > OUT ID: 3, CMD: 3
+05:26:42.009 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:42.153 > [DISPATCH TASK] Stack left: 1512
+05:26:42.153 > [TX TASK] Stack left: 1512
+05:26:42.153 > [LORA] Paket uspesno poslan.
+05:26:42.159 > [LORA] Preklop v RX po TX uspesen.
+05:26:42.159 > -------------------------
+05:26:42.162 > 
+05:26:42.501 > [DISPATCH TASK] Stack left: 1512
+05:26:42.501 > [RX TASK] Stack left: 1088
+05:26:42.501 > [LORA RX] ID:3 CMD:102 RSSI:0 SNR:10.0
+05:26:42.507 > In ID: 3, CMD: 102
+05:26:42.507 > CRC OK.
+05:26:42.512 > Prejet odgovor na zahtevo.
+05:26:42.512 > [INIT] Prejet urnik za kanal 2: 03:50 - 05:00 (Start sec=13800, End sec=18000)
+05:26:42.518 > --------------------
+05:26:42.523 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:42.523 > [INIT] Posiljam zahtevo za urnik kanala 3...
+05:26:42.528 > Branje urnika za kanal 3 (CMD_GET_URNIK)...
+05:26:42.534 > OUT ID: 4, CMD: 3
+05:26:42.534 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:42.687 > [DISPATCH TASK] Stack left: 1512
+05:26:42.687 > [TX TASK] Stack left: 1512
+05:26:42.687 > [LORA] Paket uspesno poslan.
+05:26:42.693 > [LORA] Preklop v RX po TX uspesen.
+05:26:42.693 > -------------------------
+05:26:42.695 > 
+05:26:43.067 > [DISPATCH TASK] Stack left: 1512
+05:26:43.067 > [RX TASK] Stack left: 1088
+05:26:43.073 > [LORA RX] ID:4 CMD:102 RSSI:0 SNR:9.5
+05:26:43.074 > In ID: 4, CMD: 102
+05:26:43.074 > CRC OK.
+05:26:43.079 > Prejet odgovor na zahtevo.
+05:26:43.079 > [INIT] Prejet urnik za kanal 3: 06:00 - 17:05 (Start sec=21600, End sec=61500)
+05:26:43.085 > --------------------
+05:26:43.090 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:43.090 > [INIT] Posiljam zahtevo za urnik kanala 4...
+05:26:43.095 > Branje urnika za kanal 4 (CMD_GET_URNIK)...
+05:26:43.101 > OUT ID: 5, CMD: 3
+05:26:43.101 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:43.244 > [DISPATCH TASK] Stack left: 1512
+05:26:43.245 > [TX TASK] Stack left: 1512
+05:26:43.245 > [LORA] Paket uspesno poslan.
+05:26:43.251 > [LORA] Preklop v RX po TX uspesen.
+05:26:43.251 > -------------------------
+05:26:43.254 > 
+05:26:43.626 > [DISPATCH TASK] Stack left: 1512
+05:26:43.626 > [RX TASK] Stack left: 1088
+05:26:43.626 > [LORA RX] ID:5 CMD:102 RSSI:0 SNR:9.5
+05:26:43.631 > In ID: 5, CMD: 102
+05:26:43.631 > CRC OK.
+05:26:43.631 > Prejet odgovor na zahtevo.
+05:26:43.637 > [INIT] Prejet urnik za kanal 4: 04:53 - 22:45 (Start sec=17580, End sec=81900)
+05:26:43.643 > --------------------
+05:26:43.648 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:43.648 > [INIT] Posiljam zahtevo za urnik kanala 5...
+05:26:43.654 > Branje urnika za kanal 5 (CMD_GET_URNIK)...
+05:26:43.659 > OUT ID: 6, CMD: 3
+05:26:43.659 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:43.812 > [DISPATCH TASK] Stack left: 1512
+05:26:43.812 > [TX TASK] Stack left: 1512
+05:26:43.812 > [LORA] Paket uspesno poslan.
+05:26:43.818 > [LORA] Preklop v RX po TX uspesen.
+05:26:43.818 > -------------------------
+05:26:43.820 > 
+05:26:44.194 > [DISPATCH TASK] Stack left: 1512
+05:26:44.194 > [RX TASK] Stack left: 1088
+05:26:44.194 > [LORA RX] ID:6 CMD:102 RSSI:0 SNR:10.0
+05:26:44.434 > In ID: 6, CMD: 102
+05:26:44.434 > CRC OK.
+05:26:44.434 > Prejet odgovor na zahtevo.
+05:26:44.434 > [INIT] Prejet urnik za kanal 5: 06:56 - 12:15 (Start sec=24960, End sec=44100)
+05:26:44.442 > --------------------
+05:26:44.780 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:44.781 > [INIT] Posiljam zahtevo za urnik kanala 6...
+05:26:44.785 > Branje urnika za kanal 6 (CMD_GET_URNIK)...
+05:26:44.791 > OUT ID: 7, CMD: 3
+05:26:44.791 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:44.829 > [F_STREAM] Debug task: streamTask1, msg: Connecting to server...
+05:26:44.835 > ----------------------------
+05:26:44.835 > [STREAM] task: streamTask1
+05:26:44.835 > [STREAM] event: put
+05:26:44.841 > [STREAM] path: /
+05:26:44.841 > [STREAM] data: {"kanal1":{"end":"17:05","end_sec":61500,"start":"10:15","start_sec":36900,"state":"OFF"},"kanal2":{"end":"05:00","end_sec":18000,"start":"03:50","start_sec":13800,"state":"OFF"},"kanal3":{"end":"17:05","end_sec":61500,"start":"06:00","start_sec":21600,"state":"OFF"},"kanal4":{"end":"22:45","end_sec":81900,"start":"04:53","start_sec":17580,"state":"ON"},"kanal5":{"end":"12:15","end_sec":44100,"start":"06:56","start_sec":24960,"state":"OFF"},"kanal6":{"end":"22:00","end_sec":79200,"start":"04:55","start_sec":17700,"state":"ON"},"kanal7":{"end":"17:35","end_sec":63300,"start":"09:35","start_sec":34500,"state":"OFF"},"kanal8":{"end":"13:30","end_sec":48600,"start":"07:30","start_sec":27000,"state":"OFF"}}
+05:26:44.902 > [STREAM] type: 6
+05:26:44.905 > [STREAM] Payload Length: 711
+05:26:44.917 > [F_STREAM] Debug task: streamTask2, msg: Connecting to server...
+05:26:44.922 > ----------------------------
+05:26:44.922 > [STREAM] task: streamTask2
+05:26:44.922 > [STREAM] event: put
+05:26:44.928 > [STREAM] path: /
+05:26:44.928 > [STREAM] data: 3
+05:26:44.928 > [STREAM] type: 1
+05:26:44.934 > [STREAM] Payload Length: 1
+05:26:44.934 > [STREAM] Nastavljen interval branja senzorjev: 3 minut
+05:26:44.942 > [DISPATCH TASK] Stack left: 1512
+05:26:44.942 > [TX TASK] Stack left: 1512
+05:26:44.942 > [LORA] Paket uspesno poslan.
+05:26:44.947 > [LORA] Preklop v RX po TX uspesen.
+05:26:44.947 > -------------------------
+05:26:44.950 > 
+05:26:45.323 > [DISPATCH TASK] Stack left: 1512
+05:26:45.323 > [RX TASK] Stack left: 1088
+05:26:45.323 > [LORA RX] ID:7 CMD:102 RSSI:0 SNR:9.2
+05:26:45.329 > In ID: 7, CMD: 102
+05:26:45.329 > CRC OK.
+05:26:45.329 > Prejet odgovor na zahtevo.
+05:26:45.334 > [INIT] Prejet urnik za kanal 6: 04:55 - 22:00 (Start sec=17700, End sec=79200)
+05:26:45.340 > --------------------
+05:26:45.345 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:45.345 > [INIT] Posiljam zahtevo za urnik kanala 7...
+05:26:45.351 > Branje urnika za kanal 7 (CMD_GET_URNIK)...
+05:26:45.356 > OUT ID: 8, CMD: 3
+05:26:45.356 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:45.507 > [DISPATCH TASK] Stack left: 1512
+05:26:45.507 > [TX TASK] Stack left: 1512
+05:26:45.507 > [LORA] Paket uspesno poslan.
+05:26:45.513 > [LORA] Preklop v RX po TX uspesen.
+05:26:45.513 > -------------------------
+05:26:45.516 > 
+05:26:45.855 > [DISPATCH TASK] Stack left: 1512
+05:26:45.855 > [RX TASK] Stack left: 1088
+05:26:45.855 > [LORA RX] ID:8 CMD:102 RSSI:0 SNR:9.2
+05:26:45.861 > In ID: 8, CMD: 102
+05:26:45.861 > CRC OK.
+05:26:45.861 > Prejet odgovor na zahtevo.
+05:26:45.866 > [INIT] Prejet urnik za kanal 7: 09:35 - 17:35 (Start sec=34500, End sec=63300)
+05:26:45.872 > --------------------
+05:26:45.877 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:45.877 > [INIT] Posiljam zahtevo za urnik kanala 8...
+05:26:45.882 > Branje urnika za kanal 8 (CMD_GET_URNIK)...
+05:26:45.888 > OUT ID: 9, CMD: 3
+05:26:45.888 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:46.040 > [DISPATCH TASK] Stack left: 1512
+05:26:46.040 > [TX TASK] Stack left: 1512
+05:26:46.040 > [LORA] Paket uspesno poslan.
+05:26:46.045 > [LORA] Preklop v RX po TX uspesen.
+05:26:46.045 > -------------------------
+05:26:46.048 > 
+05:26:46.420 > [DISPATCH TASK] Stack left: 1512
+05:26:46.420 > [RX TASK] Stack left: 1088
+05:26:46.420 > [LORA RX] ID:9 CMD:102 RSSI:0 SNR:9.5
+05:26:46.426 > In ID: 9, CMD: 102
+05:26:46.426 > CRC OK.
+05:26:46.426 > Prejet odgovor na zahtevo.
+05:26:46.431 > [INIT] Prejet urnik za kanal 8: 07:30 - 13:30 (Start sec=27000, End sec=48600)
+05:26:46.437 > --------------------
+05:26:46.442 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+05:26:46.442 > [INIT] Vsi urniki uspesno prebrani.
+05:26:46.447 > [INIT] Branje urnika iz Firebase za kanal 1...
+05:26:46.453 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:46.558 > ************************************
+05:26:46.558 > [F_HEAP] Free Heap pred RESPONSE: 185304
+05:26:46.563 > [F_RESPONSE] KLIC #10, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:46.569 > [F_RESPONSE] Task: getUrnikTask
+05:26:46.569 > [F_RESPONSE] Payload length: 79
+05:26:46.574 > [F_RESPONSE] Prejet urnik za kanal: 0 (pričakovan: 0)
+05:26:46.580 > [F_RESPONSE] ✅ Urnik prebran: 36900 - 61500
+05:26:46.585 > [F_RESPONSE] Free Heap po RESPONSE: 185304
+05:26:46.585 > ************************************
+05:26:46.591 > [F_HEAP] Free Heap pred RESPONSE: 185304
+05:26:46.591 > [F_RESPONSE] KLIC #11, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:46.602 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:46.608 > [INIT] Branje urnika iz Firebase za kanal 2...
+05:26:46.608 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:46.720 > ************************************
+05:26:46.720 > [F_HEAP] Free Heap pred RESPONSE: 185304
+05:26:46.726 > [F_RESPONSE] KLIC #12, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:46.732 > [F_RESPONSE] Task: getUrnikTask
+05:26:46.732 > [F_RESPONSE] Payload length: 79
+05:26:46.737 > [F_RESPONSE] Prejet urnik za kanal: 1 (pričakovan: 1)
+05:26:46.743 > [F_RESPONSE] ✅ Urnik prebran: 13800 - 18000
+05:26:46.748 > [F_RESPONSE] Free Heap po RESPONSE: 185312
+05:26:46.748 > ************************************
+05:26:46.754 > [F_HEAP] Free Heap pred RESPONSE: 185312
+05:26:46.754 > [F_RESPONSE] KLIC #13, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:46.765 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:46.770 > [INIT] Branje urnika iz Firebase za kanal 3...
+05:26:46.770 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:46.887 > ************************************
+05:26:46.887 > [F_HEAP] Free Heap pred RESPONSE: 185312
+05:26:46.893 > [F_RESPONSE] KLIC #14, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:46.898 > [F_RESPONSE] Task: getUrnikTask
+05:26:46.898 > [F_RESPONSE] Payload length: 79
+05:26:46.904 > [F_RESPONSE] Prejet urnik za kanal: 2 (pričakovan: 2)
+05:26:46.909 > [F_RESPONSE] ✅ Urnik prebran: 21600 - 61500
+05:26:46.914 > [F_RESPONSE] Free Heap po RESPONSE: 185312
+05:26:46.914 > ************************************
+05:26:46.920 > [F_HEAP] Free Heap pred RESPONSE: 185312
+05:26:46.920 > [F_RESPONSE] KLIC #15, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:46.932 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:46.937 > [INIT] Branje urnika iz Firebase za kanal 4...
+05:26:46.937 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:47.050 > ************************************
+05:26:47.050 > [F_HEAP] Free Heap pred RESPONSE: 185308
+05:26:47.056 > [F_RESPONSE] KLIC #16, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:47.062 > [F_RESPONSE] Task: getUrnikTask
+05:26:47.062 > [F_RESPONSE] Payload length: 78
+05:26:47.067 > [F_RESPONSE] Prejet urnik za kanal: 3 (pričakovan: 3)
+05:26:47.072 > [F_RESPONSE] ✅ Urnik prebran: 17580 - 81900
+05:26:47.078 > [F_RESPONSE] Free Heap po RESPONSE: 185308
+05:26:47.078 > ************************************
+05:26:47.083 > [F_HEAP] Free Heap pred RESPONSE: 185308
+05:26:47.083 > [F_RESPONSE] KLIC #17, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:47.094 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:47.099 > [INIT] Branje urnika iz Firebase za kanal 5...
+05:26:47.099 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:47.214 > ************************************
+05:26:47.214 > [F_HEAP] Free Heap pred RESPONSE: 185308
+05:26:47.220 > [F_RESPONSE] KLIC #18, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:47.225 > [F_RESPONSE] Task: getUrnikTask
+05:26:47.225 > [F_RESPONSE] Payload length: 79
+05:26:47.231 > [F_RESPONSE] Prejet urnik za kanal: 4 (pričakovan: 4)
+05:26:47.236 > [F_RESPONSE] ✅ Urnik prebran: 24960 - 44100
+05:26:47.242 > [F_RESPONSE] Free Heap po RESPONSE: 185316
+05:26:47.242 > ************************************
+05:26:47.247 > [F_HEAP] Free Heap pred RESPONSE: 185316
+05:26:47.247 > [F_RESPONSE] KLIC #19, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:47.258 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:47.264 > [INIT] Branje urnika iz Firebase za kanal 6...
+05:26:47.264 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:47.375 > ************************************
+05:26:47.375 > [F_HEAP] Free Heap pred RESPONSE: 185312
+05:26:47.381 > [F_RESPONSE] KLIC #20, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:47.386 > [F_RESPONSE] Task: getUrnikTask
+05:26:47.386 > [F_RESPONSE] Payload length: 78
+05:26:47.392 > [F_RESPONSE] Prejet urnik za kanal: 5 (pričakovan: 5)
+05:26:47.397 > [F_RESPONSE] ✅ Urnik prebran: 17700 - 79200
+05:26:47.402 > [F_RESPONSE] Free Heap po RESPONSE: 185312
+05:26:47.402 > ************************************
+05:26:47.409 > [F_HEAP] Free Heap pred RESPONSE: 185312
+05:26:47.409 > [F_RESPONSE] KLIC #21, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:47.419 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:47.425 > [INIT] Branje urnika iz Firebase za kanal 7...
+05:26:47.425 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:47.539 > ************************************
+05:26:47.539 > [F_HEAP] Free Heap pred RESPONSE: 185304
+05:26:47.544 > [F_RESPONSE] KLIC #22, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:47.550 > [F_RESPONSE] Task: getUrnikTask
+05:26:47.550 > [F_RESPONSE] Payload length: 79
+05:26:47.555 > [F_RESPONSE] Prejet urnik za kanal: 6 (pričakovan: 6)
+05:26:47.561 > [F_RESPONSE] ✅ Urnik prebran: 34500 - 63300
+05:26:47.567 > [F_RESPONSE] Free Heap po RESPONSE: 185304
+05:26:47.567 > ************************************
+05:26:47.572 > [F_HEAP] Free Heap pred RESPONSE: 185304
+05:26:47.572 > [F_RESPONSE] KLIC #23, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:47.584 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:47.589 > [INIT] Branje urnika iz Firebase za kanal 8...
+05:26:47.589 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+05:26:47.706 > ************************************
+05:26:47.706 > [F_HEAP] Free Heap pred RESPONSE: 185280
+05:26:47.711 > [F_RESPONSE] KLIC #24, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:47.717 > [F_RESPONSE] Task: getUrnikTask
+05:26:47.717 > [F_RESPONSE] Payload length: 79
+05:26:47.722 > [F_RESPONSE] Prejet urnik za kanal: 7 (pričakovan: 7)
+05:26:47.728 > [F_RESPONSE] ✅ Urnik prebran: 27000 - 48600
+05:26:47.733 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+05:26:47.733 > ************************************
+05:26:47.739 > [F_HEAP] Free Heap pred RESPONSE: 185280
+05:26:47.739 > [F_RESPONSE] KLIC #25, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:47.750 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:47.756 > [INIT] Vsi urniki iz Firebase uspesno prebrani.
+05:26:47.756 > [INIT] Urnik za kanal 1 je ze usklajen.
+05:26:47.761 > [INIT] Urnik za kanal 2 je ze usklajen.
+05:26:47.767 > [INIT] Urnik za kanal 3 je ze usklajen.
+05:26:47.767 > [INIT] Urnik za kanal 4 je ze usklajen.
+05:26:47.772 > [INIT] Urnik za kanal 5 je ze usklajen.
+05:26:47.772 > [INIT] Urnik za kanal 6 je ze usklajen.
+05:26:47.778 > [INIT] Urnik za kanal 7 je ze usklajen.
+05:26:47.784 > [INIT] Urnik za kanal 8 je ze usklajen.
+05:26:47.784 > [INIT] Korak 2: Posiljam zahtevo za status relejev...
+05:26:47.789 > Preverjanje stanja relejev (CMD_GET_STATUS)...
+05:26:47.795 > OUT ID: 10, CMD: 2
+05:26:47.795 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:47.941 > [DISPATCH TASK] Stack left: 1512
+05:26:47.941 > [TX TASK] Stack left: 1512
+05:26:47.941 > [LORA] Paket uspesno poslan.
+05:26:47.947 > [LORA] Preklop v RX po TX uspesen.
+05:26:47.947 > -------------------------
+05:26:47.949 > 
+05:26:48.363 > [DISPATCH TASK] Stack left: 1512
+05:26:48.363 > [RX TASK] Stack left: 1088
+05:26:48.363 > [LORA RX] ID:10 CMD:101 RSSI:0 SNR:10.0
+05:26:48.369 > In ID: 10, CMD: 101
+05:26:48.369 > CRC OK.
+05:26:48.374 > Prejet odgovor na zahtevo.
+05:26:48.374 > Prejeto stanje relejev:
+05:26:48.374 >   Rele 1: OFF
+05:26:48.379 >   Rele 2: OFF
+05:26:48.379 >   Rele 3: OFF
+05:26:48.379 >   Rele 4: ON
+05:26:48.379 >   Rele 5: OFF
+05:26:48.379 >   Rele 6: ON
+05:26:48.385 >   Rele 7: OFF
+05:26:48.385 >   Rele 8: OFF
+05:26:48.385 > --------------------
+05:26:48.385 > [INIT] Uspeh pri čakanju na 'odgovor za status'.
+05:26:48.391 > [INIT] Posodabljanje stanja v Firebase za kanal 1...
+05:26:48.396 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:48.510 > ************************************
+05:26:48.510 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.516 > [F_RESPONSE] KLIC #26, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:48.521 > [F_RESPONSE] Task: updateStateTask
+05:26:48.527 > [F_RESPONSE] Payload length: 5
+05:26:48.527 > [F_RESPONSE] State data uploaded ✅
+05:26:48.532 > [F_RESPONSE] Free Heap po RESPONSE: 185460
+05:26:48.532 > ************************************
+05:26:48.538 > [F_HEAP] Free Heap pred RESPONSE: 185460
+05:26:48.538 > [F_RESPONSE] KLIC #27, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:48.549 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:48.555 > [INIT] Posodabljanje stanja v Firebase za kanal 2...
+05:26:48.555 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:48.665 > ************************************
+05:26:48.665 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.670 > [F_RESPONSE] KLIC #28, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:48.676 > [F_RESPONSE] Task: updateStateTask
+05:26:48.681 > [F_RESPONSE] Payload length: 5
+05:26:48.681 > [F_RESPONSE] State data uploaded ✅
+05:26:48.687 > [F_RESPONSE] Free Heap po RESPONSE: 185452
+05:26:48.687 > ************************************
+05:26:48.692 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.692 > [F_RESPONSE] KLIC #29, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:48.704 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:48.709 > [INIT] Posodabljanje stanja v Firebase za kanal 3...
+05:26:48.709 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:48.819 > ************************************
+05:26:48.819 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.825 > [F_RESPONSE] KLIC #30, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:48.830 > [F_RESPONSE] Task: updateStateTask
+05:26:48.836 > [F_RESPONSE] Payload length: 5
+05:26:48.836 > [F_RESPONSE] State data uploaded ✅
+05:26:48.841 > [F_RESPONSE] Free Heap po RESPONSE: 185452
+05:26:48.841 > ************************************
+05:26:48.847 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.847 > [F_RESPONSE] KLIC #31, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:48.858 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:48.863 > [INIT] Posodabljanje stanja v Firebase za kanal 4...
+05:26:48.863 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:48.971 > ************************************
+05:26:48.971 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.977 > [F_RESPONSE] KLIC #32, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:48.982 > [F_RESPONSE] Task: updateStateTask
+05:26:48.988 > [F_RESPONSE] Payload length: 4
+05:26:48.988 > [F_RESPONSE] State data uploaded ✅
+05:26:48.993 > [F_RESPONSE] Free Heap po RESPONSE: 185452
+05:26:48.993 > ************************************
+05:26:48.998 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:48.998 > [F_RESPONSE] KLIC #33, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:49.010 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:49.016 > [INIT] Posodabljanje stanja v Firebase za kanal 5...
+05:26:49.016 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:49.120 > ************************************
+05:26:49.120 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:49.125 > [F_RESPONSE] KLIC #34, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:49.131 > [F_RESPONSE] Task: updateStateTask
+05:26:49.137 > [F_RESPONSE] Payload length: 5
+05:26:49.137 > [F_RESPONSE] State data uploaded ✅
+05:26:49.142 > [F_RESPONSE] Free Heap po RESPONSE: 185452
+05:26:49.142 > ************************************
+05:26:49.147 > [F_HEAP] Free Heap pred RESPONSE: 185452
+05:26:49.147 > [F_RESPONSE] KLIC #35, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:49.158 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:49.164 > [INIT] Posodabljanje stanja v Firebase za kanal 6...
+05:26:49.164 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:49.286 > ************************************
+05:26:49.286 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.292 > [F_RESPONSE] KLIC #36, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:49.297 > [F_RESPONSE] Task: updateStateTask
+05:26:49.302 > [F_RESPONSE] Payload length: 4
+05:26:49.302 > [F_RESPONSE] State data uploaded ✅
+05:26:49.308 > [F_RESPONSE] Free Heap po RESPONSE: 185444
+05:26:49.308 > ************************************
+05:26:49.313 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.313 > [F_RESPONSE] KLIC #37, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:49.324 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:49.330 > [INIT] Posodabljanje stanja v Firebase za kanal 7...
+05:26:49.330 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:49.436 > ************************************
+05:26:49.436 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.442 > [F_RESPONSE] KLIC #38, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:49.447 > [F_RESPONSE] Task: updateStateTask
+05:26:49.452 > [F_RESPONSE] Payload length: 5
+05:26:49.452 > [F_RESPONSE] State data uploaded ✅
+05:26:49.458 > [F_RESPONSE] Free Heap po RESPONSE: 185444
+05:26:49.458 > ************************************
+05:26:49.464 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.464 > [F_RESPONSE] KLIC #39, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:49.475 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:49.481 > [INIT] Posodabljanje stanja v Firebase za kanal 8...
+05:26:49.481 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:26:49.587 > ************************************
+05:26:49.587 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.593 > [F_RESPONSE] KLIC #40, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:49.598 > [F_RESPONSE] Task: updateStateTask
+05:26:49.604 > [F_RESPONSE] Payload length: 5
+05:26:49.604 > [F_RESPONSE] State data uploaded ✅
+05:26:49.609 > [F_RESPONSE] Free Heap po RESPONSE: 185444
+05:26:49.609 > ************************************
+05:26:49.615 > [F_HEAP] Free Heap pred RESPONSE: 185444
+05:26:49.615 > [F_RESPONSE] KLIC #41, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:49.626 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+05:26:49.631 > [INIT] Vsi statusi kanalov iz Firebase uspesno posodobljeni.
+05:26:49.637 > [INIT] Obvestilo Rele modulu, da je inicializacija končana...
+05:26:49.643 > OUT ID: 11, CMD: 12
+05:26:49.643 > [LORA] Način inicializacije - brez splošnih poskusov.
+05:26:49.788 > [DISPATCH TASK] Stack left: 1512
+05:26:49.788 > [TX TASK] Stack left: 1512
+05:26:49.788 > [LORA] Paket uspesno poslan.
+05:26:49.793 > [LORA] Preklop v RX po TX uspesen.
+05:26:49.793 > -------------------------
+05:26:49.796 > 
+05:26:50.178 > [DISPATCH TASK] Stack left: 1512
+05:26:50.178 > [RX TASK] Stack left: 1088
+05:26:50.178 > [LORA RX] ID:11 CMD:107 RSSI:0 SNR:10.0
+05:26:50.184 > In ID: 11, CMD: 107
+05:26:50.184 > CRC OK.
+05:26:50.189 > Prejet odgovor na zahtevo.
+05:26:50.189 > Rele modul je potrdil, da je inicializacija končana.
+05:26:50.195 > --------------------
+05:26:50.195 > [INIT] Uspeh pri čakanju na 'odgovor za init done'.
+05:26:50.200 > [INIT] Inicializacija uspesno zakljucena.
+05:26:59.336 > [SENSORS] Prvi sinhroniziran klic ob prehodu minute.
+05:26:59.336 > ------------------------------------------
+05:26:59.342 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:26:59.347 > ------------------------------------------
+05:26:59.353 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:26:59.358 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:26:59.379 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:26:59.379 > OUT ID: 12, CMD: 5
+05:26:59.384 > [LORA] Način samo ACK - brez poskusov.
+05:26:59.526 > [DISPATCH TASK] Stack left: 1512
+05:26:59.526 > [TX TASK] Stack left: 1512
+05:26:59.526 > [LORA] Paket uspesno poslan.
+05:26:59.532 > [LORA] Preklop v RX po TX uspesen.
+05:26:59.532 > -------------------------
+05:26:59.535 > 
+05:26:59.929 > [DISPATCH TASK] Stack left: 1512
+05:26:59.929 > [RX TASK] Stack left: 1088
+05:26:59.929 > [LORA RX] ID:12 CMD:104 RSSI:0 SNR:9.5
+05:26:59.935 > In ID: 12, CMD: 104
+05:26:59.935 > CRC OK.
+05:26:59.941 > Prejet odgovor na zahtevo.
+05:26:59.941 > Prejeti podatki senzorjev:
+05:26:59.941 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:26:59.946 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:26:59.953 > --------------------
+05:27:00.066 > ************************************
+05:27:00.066 > [F_HEAP] Free Heap pred RESPONSE: 185108
+05:27:00.072 > [F_RESPONSE] KLIC #42, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:27:00.078 > [F_RESPONSE] Task: updateSensorTask
+05:27:00.083 > [F_RESPONSE] Payload length: 90
+05:27:00.083 > [F_RESPONSE] Sensor data uploaded ✅
+05:27:00.088 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:27:00.088 > [F_RESPONSE] Free Heap po RESPONSE: 185108
+05:27:00.094 > ************************************
+05:27:00.099 > [F_HEAP] Free Heap pred RESPONSE: 185108
+05:27:00.099 > [F_RESPONSE] KLIC #43, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:27:00.108 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:27:00.209 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:27:00.209 > OUT ID: 13, CMD: 13
+05:27:00.209 > [LORA] Način samo ACK - brez poskusov.
+05:27:00.356 > [DISPATCH TASK] Stack left: 1512
+05:27:00.357 > [TX TASK] Stack left: 1512
+05:27:00.357 > [LORA] Paket uspesno poslan.
+05:27:00.363 > [LORA] Preklop v RX po TX uspesen.
+05:27:00.363 > -------------------------
+05:27:00.365 > 
+05:27:00.717 > [DISPATCH TASK] Stack left: 1512
+05:27:00.717 > [RX TASK] Stack left: 1088
+05:27:00.717 > [LORA RX] ID:13 CMD:110 RSSI:0 SNR:10.0
+05:27:00.723 > In ID: 13, CMD: 110
+05:27:00.723 > CRC OK.
+05:27:00.728 > Prejet odgovor na zahtevo.
+05:27:00.728 > Prejeti podatki iz INA3221 senzorja.
+05:27:00.733 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:27:00.733 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:27:00.745 > --------------------
+05:27:00.864 > ************************************
+05:27:00.864 > [F_HEAP] Free Heap pred RESPONSE: 184296
+05:27:00.870 > [F_RESPONSE] KLIC #44, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:27:00.875 > [F_RESPONSE] Task: updateINA3221Task
+05:27:00.881 > [F_RESPONSE] Payload length: 362
+05:27:00.881 > [F_RESPONSE] INA3221 data uploaded ✅
+05:27:00.887 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:27:00.887 > [F_RESPONSE] Free Heap po RESPONSE: 184296
+05:27:00.892 > ************************************
+05:27:00.898 > [F_HEAP] Free Heap pred RESPONSE: 184296
+05:27:00.898 > [F_RESPONSE] KLIC #45, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:27:00.907 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:27:09.193 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:27:09.200 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:27:14.616 > ----------------------------
+05:27:14.616 > [STREAM] task: streamTask1
+05:27:14.616 > [STREAM] event: keep-alive
+05:27:14.621 > [STREAM] path: 
+05:27:14.621 > [STREAM] data: null
+05:27:14.621 > [STREAM] type: 0
+05:27:14.922 > ----------------------------
+05:27:14.922 > [STREAM] task: streamTask2
+05:27:14.922 > [STREAM] event: keep-alive
+05:27:14.928 > [STREAM] path: 
+05:27:14.928 > [STREAM] data: null
+05:27:14.928 > [STREAM] type: 0

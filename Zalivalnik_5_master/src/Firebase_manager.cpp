@@ -338,8 +338,6 @@ void streamCallback(AsyncResult &streamResult)
         return;
       }
 
-      // const char *task = streamResult.uid().c_str();
-      // const char *event = stream.event().c_str();
       const char *payload = stream.to<const char *>();
       // Primer: {"kanal2/end":"22:00","kanal2/end_sec":79200}
       size_t payloadLen = strlen(payload);
@@ -400,7 +398,7 @@ void streamCallback(AsyncResult &streamResult)
       }
       //-----------------------------------------
       // Ali je sprememba poti /charts/Interval?
-      else if (streamResult.uid() == "streamTask2" && stream.event() == "patch")
+      else if (streamResult.uid() == "streamTask2")
       {
         uint8_t chartInterval = stream.to<uint8_t>();
         set_Interval(chartInterval);
