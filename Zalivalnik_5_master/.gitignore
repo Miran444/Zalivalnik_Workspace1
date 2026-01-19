@@ -6,3 +6,6 @@
 .vscode/extensions.json
 *.pyc
 .DS_Store
+
+# Credentials
+src/credentials.h
