@@ -153,8 +153,8 @@ Kanal firebase_kanal[8] = {
     {false, "00:00", 0, "00:00", 0},
     {false, "00:00", 0, "00:00", 0}}; // Končamo z definicijo Firebase kanalov
 
-volatile bool newChannelDataAvailable;
-ChannelUpdateData channelUpdate;
+// volatile bool newChannelDataAvailable;
+// ChannelUpdateData channelUpdate;
 // Kanal firebase_kanal[8]; // Polje struktur za kanale
 
 bool ssl_avtentikacija = false; // Spremenljivka za shranjevanje stanja SSL avtentikacije aClient
@@ -365,6 +365,7 @@ void streamCallback(AsyncResult &streamResult)
           {
             Firebase.printf("[STREAM] Kanal %d je spremenjen, nov končni čas: %d\n", kanalIndex, end_sec);
             firebase_kanal[kanalIndex - 1].end_sec = end_sec;
+            formatSecondsToTime(firebase_kanal[kanalIndex - 1].end, sizeof(firebase_kanal[kanalIndex - 1].end), end_sec);
             dataChanged = true;
           }
           else
@@ -377,6 +378,7 @@ void streamCallback(AsyncResult &streamResult)
           {
             Firebase.printf("[STREAM] Kanal %d je spremenjen, nov začetni čas: %d\n", kanalIndex, start_sec);
             firebase_kanal[kanalIndex - 1].start_sec = start_sec;
+            formatSecondsToTime(firebase_kanal[kanalIndex - 1].start, sizeof(firebase_kanal[kanalIndex - 1].start), start_sec);
             dataChanged = true;
           }
           else
@@ -389,10 +391,16 @@ void streamCallback(AsyncResult &streamResult)
           if (dataChanged)
           {
             // Nastavimo zastavico, da je na voljo nova posodobitev za pošiljanje na rele
-            channelUpdate.kanalIndex = kanalIndex;
-            channelUpdate.start_sec = start_sec;
-            channelUpdate.end_sec = end_sec;
-            newChannelDataAvailable = true;
+            // channelUpdate.kanalIndex = kanalIndex;
+            // channelUpdate.start_sec = start_sec;
+            // channelUpdate.end_sec = end_sec;
+            // newChannelDataAvailable = true;
+            // Pripravi podatke za posodobitev
+            pendingUpdateData.kanalIndex = kanalIndex;
+            pendingUpdateData.start_sec = start_sec;
+            pendingUpdateData.end_sec = end_sec;
+
+            firebaseUpdatePending = true; // čakamo na prosto LoRa
           }
         }
       }
@@ -415,7 +423,7 @@ void streamCallback(AsyncResult &streamResult)
 
 //----------------------------------------------------------------------------------------------------------
 // Funkcija za obdelavo posodobitev iz Firebase
-bool Firebase_handleStreamUpdate(int kanalIndex, int start_sec, int end_sec)
+/* bool Firebase_handleStreamUpdate(int kanalIndex, int start_sec, int end_sec)
 {
   int index = kanalIndex - 1;
   bool updated = false;
@@ -446,7 +454,7 @@ bool Firebase_handleStreamUpdate(int kanalIndex, int start_sec, int end_sec)
   }
 
   return updated;
-}
+} */
 
 
 //------------------------------------------------------------------------------------------------------------------------
@@ -889,16 +897,16 @@ void Firebase_loop()
       Firebase_CheckAndRetry();
 
       // 3. Preveri, ali so na voljo novi podatki iz Firebase streama
-      if (newChannelDataAvailable)
-      {
-        // Tukaj pokličite funkcijo za pošiljanje podatkov Rele modulu
-        if (Firebase_handleStreamUpdate(channelUpdate.kanalIndex, channelUpdate.start_sec, channelUpdate.end_sec))
-        {
-          firebaseUpdatePending = true; // čakamo na prosto LoRa
-        }
-        // Počisti zastavico, da ne obdelamo istih podatkov večkrat
-        newChannelDataAvailable = false;
-      }
+      // if (newChannelDataAvailable)
+      // {
+      //   // Tukaj pokličite funkcijo za pošiljanje podatkov Rele modulu
+      //   if (Firebase_handleStreamUpdate(channelUpdate.kanalIndex, channelUpdate.start_sec, channelUpdate.end_sec))
+      //   {
+      //     firebaseUpdatePending = true; // čakamo na prosto LoRa
+      //   }
+      //   // Počisti zastavico, da ne obdelamo istih podatkov večkrat
+      //   newChannelDataAvailable = false;
+      // }
     }
     // --- konec periodičnih nalog ---
 

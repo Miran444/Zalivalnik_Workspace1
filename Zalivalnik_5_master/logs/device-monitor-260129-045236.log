@@ -1,0 +1,2331 @@
+04:52:37.150 > ************************************
+04:52:37.150 > [F_HEAP] Free Heap pred RESPONSE: 204048
+04:52:37.156 > [F_RESPONSE] KLIC #6, isResult=1, isError=0, isEvent=0, isDebug=1, available=1
+04:52:37.162 > [F_RESPONSE] Debug task: getChartIntervalTask, msg: Connecting to server...
+04:52:37.167 > [F_RESPONSE] Task: getChartIntervalTask
+04:52:37.172 > [F_RESPONSE] Payload length: 1
+04:52:37.172 > [F_RESPONSE] Interval nastavljen: 3 minut ✅
+04:52:37.178 > [F_RESPONSE] Free Heap po RESPONSE: 204048
+04:52:37.183 > ************************************
+04:52:37.183 > [F_HEAP] Free Heap pred RESPONSE: 203912
+04:52:37.189 > [F_RESPONSE] KLIC #7, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:37.195 > [INIT] Uspeh pri branju intervala.
+04:52:37.200 > --- ZACENJAM INICIALIZACIJO RELE MODULA ---
+04:52:37.200 > [INIT] Korak 1: Posiljam cas...
+04:52:37.206 > Pripravljam paket za sinhronizacijo casa (CMD_SET_TIME)...
+04:52:37.211 >   Čas od polnoči: 17557 sekund
+04:52:37.211 >   Posiljam timestamp: 1769658757
+04:52:37.247 > OUT ID: 0, CMD: 1
+04:52:37.247 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:37.365 > [DISPATCH TASK] Stack left: 2384
+04:52:37.365 > [TX TASK] Stack left: 2576
+04:52:37.365 > [LORA] Paket uspesno poslan.
+04:52:37.371 > [LORA] Preklop v RX po TX uspesen.
+04:52:37.371 > -------------------------
+04:52:37.374 > 
+04:52:37.789 > [DISPATCH TASK] Stack left: 1732
+04:52:37.789 > [RX TASK] Stack left: 2408
+04:52:37.789 > [LORA RX] ID:0 CMD:103 RSSI:0 SNR:10.0
+04:52:37.795 > In ID: 0, CMD: 103
+04:52:37.795 > CRC OK.
+04:52:37.800 > Prejet odgovor na zahtevo.
+04:52:37.800 > Prejet odgovor: 17557
+04:52:37.800 > --------------------
+04:52:37.805 > [INIT] Uspeh pri čakanju na 'odgovor za čas'.
+04:52:37.805 > [INIT] Korak 3: Posiljam zahtevo za senzorje...
+04:52:37.811 > Pripravljam paket za branje senzorjev (CMD_GET_SENSORS)...
+04:52:37.817 > OUT ID: 1, CMD: 5
+04:52:37.817 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:37.966 > [DISPATCH TASK] Stack left: 1732
+04:52:37.966 > [TX TASK] Stack left: 1504
+04:52:37.966 > [LORA] Paket uspesno poslan.
+04:52:37.972 > [LORA] Preklop v RX po TX uspesen.
+04:52:37.972 > -------------------------
+04:52:37.975 > 
+04:52:38.368 > [DISPATCH TASK] Stack left: 1732
+04:52:38.368 > [RX TASK] Stack left: 1096
+04:52:38.368 > [LORA RX] ID:1 CMD:104 RSSI:0 SNR:9.5
+04:52:38.374 > In ID: 1, CMD: 104
+04:52:38.374 > CRC OK.
+04:52:38.374 > Prejet odgovor na zahtevo.
+04:52:38.379 > Prejeti podatki senzorjev:
+04:52:38.379 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+04:52:38.393 > --------------------
+04:52:38.400 > [INIT] Uspeh pri čakanju na 'odgovor za senzorje'.
+04:52:38.400 > [INIT] Posiljam zahtevo za urnik kanala 1...
+04:52:38.406 > Branje urnika za kanal 1 (CMD_GET_URNIK)...
+04:52:38.411 > OUT ID: 2, CMD: 3
+04:52:38.411 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:38.515 > ************************************
+04:52:38.515 > [F_HEAP] Free Heap pred RESPONSE: 203440
+04:52:38.520 > [F_RESPONSE] KLIC #8, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:38.526 > [F_RESPONSE] Task: updateSensorTask
+04:52:38.531 > [F_RESPONSE] Payload length: 90
+04:52:38.531 > [F_RESPONSE] Sensor data uploaded ✅
+04:52:38.537 > [F_RESPONSE] Free Heap po RESPONSE: 203440
+04:52:38.537 > ************************************
+04:52:38.542 > [F_HEAP] Free Heap pred RESPONSE: 203440
+04:52:38.548 > [F_RESPONSE] KLIC #9, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:38.559 > [DISPATCH TASK] Stack left: 1732
+04:52:38.560 > [TX TASK] Stack left: 1504
+04:52:38.560 > [LORA] Paket uspesno poslan.
+04:52:38.565 > [LORA] Preklop v RX po TX uspesen.
+04:52:38.565 > -------------------------
+04:52:38.568 > 
+04:52:38.940 > [DISPATCH TASK] Stack left: 1732
+04:52:38.940 > [RX TASK] Stack left: 1096
+04:52:38.940 > [LORA RX] ID:2 CMD:102 RSSI:0 SNR:9.2
+04:52:38.945 > In ID: 2, CMD: 102
+04:52:38.945 > CRC OK.
+04:52:38.945 > Prejet odgovor na zahtevo.
+04:52:38.951 > [INIT] Prejet urnik za kanal 1: 10:15 - 17:05 (Start sec=36900, End sec=61500)
+04:52:38.957 > --------------------
+04:52:38.962 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:38.962 > [INIT] Posiljam zahtevo za urnik kanala 2...
+04:52:38.968 > Branje urnika za kanal 2 (CMD_GET_URNIK)...
+04:52:38.973 > OUT ID: 3, CMD: 3
+04:52:38.973 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:39.117 > [DISPATCH TASK] Stack left: 1732
+04:52:39.118 > [TX TASK] Stack left: 1504
+04:52:39.118 > [LORA] Paket uspesno poslan.
+04:52:39.123 > [LORA] Preklop v RX po TX uspesen.
+04:52:39.123 > -------------------------
+04:52:39.126 > 
+04:52:39.498 > [DISPATCH TASK] Stack left: 1732
+04:52:39.498 > [RX TASK] Stack left: 1096
+04:52:39.498 > [LORA RX] ID:3 CMD:102 RSSI:0 SNR:10.0
+04:52:39.504 > In ID: 3, CMD: 102
+04:52:39.504 > CRC OK.
+04:52:39.509 > Prejet odgovor na zahtevo.
+04:52:39.509 > [INIT] Prejet urnik za kanal 2: 03:50 - 05:00 (Start sec=13800, End sec=18000)
+04:52:39.515 > --------------------
+04:52:39.520 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:39.520 > [INIT] Posiljam zahtevo za urnik kanala 3...
+04:52:39.526 > Branje urnika za kanal 3 (CMD_GET_URNIK)...
+04:52:39.532 > OUT ID: 4, CMD: 3
+04:52:39.532 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:39.684 > [DISPATCH TASK] Stack left: 1732
+04:52:39.684 > [TX TASK] Stack left: 1504
+04:52:39.684 > [LORA] Paket uspesno poslan.
+04:52:39.690 > [LORA] Preklop v RX po TX uspesen.
+04:52:39.690 > -------------------------
+04:52:39.692 > 
+04:52:40.063 > [DISPATCH TASK] Stack left: 1504
+04:52:40.064 > [RX TASK] Stack left: 1096
+04:52:40.064 > [LORA RX] ID:4 CMD:102 RSSI:0 SNR:10.5
+04:52:40.069 > In ID: 4, CMD: 102
+04:52:40.069 > CRC OK.
+04:52:40.074 > Prejet odgovor na zahtevo.
+04:52:40.075 > [INIT] Prejet urnik za kanal 3: 06:00 - 17:05 (Start sec=21600, End sec=61500)
+04:52:40.080 > --------------------
+04:52:40.086 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:40.086 > [INIT] Posiljam zahtevo za urnik kanala 4...
+04:52:40.092 > Branje urnika za kanal 4 (CMD_GET_URNIK)...
+04:52:40.097 > OUT ID: 5, CMD: 3
+04:52:40.097 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:40.250 > [DISPATCH TASK] Stack left: 1504
+04:52:40.250 > [TX TASK] Stack left: 1504
+04:52:40.250 > [LORA] Paket uspesno poslan.
+04:52:40.256 > [LORA] Preklop v RX po TX uspesen.
+04:52:40.256 > -------------------------
+04:52:40.258 > 
+04:52:40.630 > [DISPATCH TASK] Stack left: 1504
+04:52:40.630 > [RX TASK] Stack left: 1096
+04:52:41.357 > [F_STREAM] Debug task: streamTask1, msg: Connecting to server...
+04:52:41.363 > ----------------------------
+04:52:41.363 > [STREAM] task: streamTask1
+04:52:41.363 > [STREAM] event: put
+04:52:41.368 > [STREAM] path: /
+04:52:41.368 > [STREAM] data: {"kanal1":{"end":"17:05","end_sec":61500,"start":"10:15","start_sec":36900,"state":"OFF"},"kanal2":{"end":"05:00","end_sec":18000,"start":"03:50","start_sec":13800,"state":"OFF"},"kanal3":{"end":"17:05","end_sec":61500,"start":"06:00","start_sec":21600,"state":"ON"},"kanal4":{"end":"22:45","end_sec":81900,"start":"04:53","start_sec":17580,"state":"ON"},"kanal5":{"end":"12:15","end_sec":44100,"start":"06:56","start_sec":24960,"state":"OFF"},"kanal6":{"end":"22:00","end_sec":79200,"start":"04:55","start_sec":17700,"state":"ON"},"kanal7":{"end":"17:35","end_sec":63300,"start":"09:35","start_sec":34500,"state":"OFF"},"kanal8":{"end":"13:30","end_sec":48600,"start":"07:30","start_sec":27000,"state":"OFF"}}
+04:52:41.429 > [STREAM] type: 6
+04:52:41.432 > [STREAM] Payload Length: 710
+04:52:41.819 > [F_STREAM] Debug task: streamTask2, msg: Connecting to server...
+04:52:41.825 > ----------------------------
+04:52:41.825 > [STREAM] task: streamTask2
+04:52:41.825 > [STREAM] event: put
+04:52:41.831 > [STREAM] path: /
+04:52:41.831 > [STREAM] data: 3
+04:52:41.831 > [STREAM] type: 1
+04:52:41.836 > [STREAM] Payload Length: 1
+04:52:41.836 > [STREAM] Nastavljen interval branja senzorjev: 3 minut
+04:52:45.106 > [INIT] Timeout pri čakanju na 'odgovor za urnik'. Poskus 1/3...
+04:52:45.113 > [INIT] Posiljam zahtevo za urnik kanala 5...
+04:52:45.113 > Branje urnika za kanal 5 (CMD_GET_URNIK)...
+04:52:45.119 > OUT ID: 6, CMD: 3
+04:52:45.119 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:45.264 > [DISPATCH TASK] Stack left: 1504
+04:52:45.265 > [TX TASK] Stack left: 1504
+04:52:45.265 > [LORA] Paket uspesno poslan.
+04:52:45.271 > [LORA] Preklop v RX po TX uspesen.
+04:52:45.271 > -------------------------
+04:52:45.274 > 
+04:52:45.645 > [DISPATCH TASK] Stack left: 1504
+04:52:45.645 > [RX TASK] Stack left: 1096
+04:52:45.645 > [LORA RX] ID:6 CMD:102 RSSI:0 SNR:9.8
+04:52:45.651 > In ID: 6, CMD: 102
+04:52:45.651 > CRC OK.
+04:52:45.651 > Prejet odgovor na zahtevo.
+04:52:45.657 > [INIT] Prejet urnik za kanal 5: 06:56 - 12:15 (Start sec=24960, End sec=44100)
+04:52:45.662 > --------------------
+04:52:45.667 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:45.667 > [INIT] Posiljam zahtevo za urnik kanala 6...
+04:52:45.672 > Branje urnika za kanal 6 (CMD_GET_URNIK)...
+04:52:45.678 > OUT ID: 7, CMD: 3
+04:52:45.678 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:45.829 > [DISPATCH TASK] Stack left: 1504
+04:52:45.829 > [TX TASK] Stack left: 1504
+04:52:45.829 > [LORA] Paket uspesno poslan.
+04:52:45.835 > [LORA] Preklop v RX po TX uspesen.
+04:52:45.835 > -------------------------
+04:52:45.838 > 
+04:52:46.209 > [DISPATCH TASK] Stack left: 1504
+04:52:46.209 > [RX TASK] Stack left: 1096
+04:52:46.209 > [LORA RX] ID:7 CMD:102 RSSI:0 SNR:10.8
+04:52:46.214 > In ID: 7, CMD: 102
+04:52:46.214 > CRC OK.
+04:52:46.219 > Prejet odgovor na zahtevo.
+04:52:46.220 > [INIT] Prejet urnik za kanal 6: 04:55 - 22:00 (Start sec=17700, End sec=79200)
+04:52:46.226 > --------------------
+04:52:46.231 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:46.231 > [INIT] Posiljam zahtevo za urnik kanala 7...
+04:52:46.237 > Branje urnika za kanal 7 (CMD_GET_URNIK)...
+04:52:46.242 > OUT ID: 8, CMD: 3
+04:52:46.242 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:46.393 > [DISPATCH TASK] Stack left: 1504
+04:52:46.393 > [TX TASK] Stack left: 1504
+04:52:46.393 > [LORA] Paket uspesno poslan.
+04:52:46.399 > [LORA] Preklop v RX po TX uspesen.
+04:52:46.399 > -------------------------
+04:52:46.401 > 
+04:52:46.773 > [DISPATCH TASK] Stack left: 1504
+04:52:46.773 > [RX TASK] Stack left: 1096
+04:52:46.773 > [LORA RX] ID:8 CMD:102 RSSI:0 SNR:9.5
+04:52:46.779 > In ID: 8, CMD: 102
+04:52:46.779 > CRC OK.
+04:52:46.779 > Prejet odgovor na zahtevo.
+04:52:46.784 > [INIT] Prejet urnik za kanal 7: 09:35 - 17:35 (Start sec=34500, End sec=63300)
+04:52:46.791 > --------------------
+04:52:46.794 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:46.795 > [INIT] Posiljam zahtevo za urnik kanala 8...
+04:52:46.801 > Branje urnika za kanal 8 (CMD_GET_URNIK)...
+04:52:46.806 > OUT ID: 9, CMD: 3
+04:52:46.806 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:46.957 > [DISPATCH TASK] Stack left: 1504
+04:52:46.957 > [TX TASK] Stack left: 1504
+04:52:46.957 > [LORA] Paket uspesno poslan.
+04:52:46.963 > [LORA] Preklop v RX po TX uspesen.
+04:52:46.963 > -------------------------
+04:52:46.966 > 
+04:52:47.337 > [DISPATCH TASK] Stack left: 1504
+04:52:47.337 > [RX TASK] Stack left: 1096
+04:52:47.337 > [LORA RX] ID:9 CMD:102 RSSI:0 SNR:10.0
+04:52:47.343 > In ID: 9, CMD: 102
+04:52:47.343 > CRC OK.
+04:52:47.348 > Prejet odgovor na zahtevo.
+04:52:47.348 > [INIT] Prejet urnik za kanal 8: 07:30 - 13:30 (Start sec=27000, End sec=48600)
+04:52:47.354 > --------------------
+04:52:47.359 > [INIT] Uspeh pri čakanju na 'odgovor za urnik'.
+04:52:47.359 > [INIT] Vsi urniki uspesno prebrani.
+04:52:47.365 > [INIT] Branje urnika iz Firebase za kanal 1...
+04:52:47.370 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:47.470 > ************************************
+04:52:47.470 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.475 > [F_RESPONSE] KLIC #10, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:47.481 > [F_RESPONSE] Task: getUrnikTask
+04:52:47.481 > [F_RESPONSE] Payload length: 79
+04:52:47.486 > [F_RESPONSE] Prejet urnik za kanal: 0 (pričakovan: 0)
+04:52:47.492 > [F_RESPONSE] ✅ Urnik prebran: 36900 - 61500
+04:52:47.498 > [F_RESPONSE] Free Heap po RESPONSE: 185076
+04:52:47.498 > ************************************
+04:52:47.503 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.503 > [F_RESPONSE] KLIC #11, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:47.514 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:47.519 > [INIT] Branje urnika iz Firebase za kanal 2...
+04:52:47.520 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:47.614 > ************************************
+04:52:47.614 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.619 > [F_RESPONSE] KLIC #12, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:47.625 > [F_RESPONSE] Task: getUrnikTask
+04:52:47.625 > [F_RESPONSE] Payload length: 79
+04:52:47.630 > [F_RESPONSE] Prejet urnik za kanal: 1 (pričakovan: 1)
+04:52:47.636 > [F_RESPONSE] ✅ Urnik prebran: 13800 - 18000
+04:52:47.641 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:47.641 > ************************************
+04:52:47.647 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.647 > [F_RESPONSE] KLIC #13, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:47.658 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:47.664 > [INIT] Branje urnika iz Firebase za kanal 3...
+04:52:47.664 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:47.762 > ************************************
+04:52:47.762 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.767 > [F_RESPONSE] KLIC #14, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:47.772 > [F_RESPONSE] Task: getUrnikTask
+04:52:47.772 > [F_RESPONSE] Payload length: 78
+04:52:47.778 > [F_RESPONSE] Prejet urnik za kanal: 2 (pričakovan: 2)
+04:52:47.784 > [F_RESPONSE] ✅ Urnik prebran: 21600 - 61500
+04:52:47.789 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:47.789 > ************************************
+04:52:47.794 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.794 > [F_RESPONSE] KLIC #15, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:47.806 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:47.812 > [INIT] Branje urnika iz Firebase za kanal 4...
+04:52:47.812 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:47.918 > ************************************
+04:52:47.918 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.923 > [F_RESPONSE] KLIC #16, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:47.929 > [F_RESPONSE] Task: getUrnikTask
+04:52:47.929 > [F_RESPONSE] Payload length: 78
+04:52:47.935 > [F_RESPONSE] Prejet urnik za kanal: 3 (pričakovan: 3)
+04:52:47.940 > [F_RESPONSE] ✅ Urnik prebran: 17580 - 81900
+04:52:47.946 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:47.946 > ************************************
+04:52:47.951 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:47.951 > [F_RESPONSE] KLIC #17, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:47.962 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:47.968 > [INIT] Branje urnika iz Firebase za kanal 5...
+04:52:47.968 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:48.069 > ************************************
+04:52:48.069 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.075 > [F_RESPONSE] KLIC #18, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:48.080 > [F_RESPONSE] Task: getUrnikTask
+04:52:48.080 > [F_RESPONSE] Payload length: 79
+04:52:48.086 > [F_RESPONSE] Prejet urnik za kanal: 4 (pričakovan: 4)
+04:52:48.091 > [F_RESPONSE] ✅ Urnik prebran: 24960 - 44100
+04:52:48.097 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:48.097 > ************************************
+04:52:48.102 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.102 > [F_RESPONSE] KLIC #19, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:48.113 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:48.119 > [INIT] Branje urnika iz Firebase za kanal 6...
+04:52:48.119 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:48.218 > ************************************
+04:52:48.218 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.224 > [F_RESPONSE] KLIC #20, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:48.229 > [F_RESPONSE] Task: getUrnikTask
+04:52:48.229 > [F_RESPONSE] Payload length: 78
+04:52:48.235 > [F_RESPONSE] Prejet urnik za kanal: 5 (pričakovan: 5)
+04:52:48.240 > [F_RESPONSE] ✅ Urnik prebran: 17700 - 79200
+04:52:48.246 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:48.246 > ************************************
+04:52:48.251 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.251 > [F_RESPONSE] KLIC #21, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:48.262 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:48.268 > [INIT] Branje urnika iz Firebase za kanal 7...
+04:52:48.268 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:48.379 > ************************************
+04:52:48.379 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.384 > [F_RESPONSE] KLIC #22, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:48.389 > [F_RESPONSE] Task: getUrnikTask
+04:52:48.389 > [F_RESPONSE] Payload length: 79
+04:52:48.395 > [F_RESPONSE] Prejet urnik za kanal: 6 (pričakovan: 6)
+04:52:48.401 > [F_RESPONSE] ✅ Urnik prebran: 34500 - 63300
+04:52:48.406 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:48.406 > ************************************
+04:52:48.412 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.412 > [F_RESPONSE] KLIC #23, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:48.423 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:48.429 > [INIT] Branje urnika iz Firebase za kanal 8...
+04:52:48.429 > [F_GET_URNIK] Reading schedule (poskus 1/3)...
+04:52:48.530 > ************************************
+04:52:48.530 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.536 > [F_RESPONSE] KLIC #24, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:48.541 > [F_RESPONSE] Task: getUrnikTask
+04:52:48.541 > [F_RESPONSE] Payload length: 79
+04:52:48.547 > [F_RESPONSE] Prejet urnik za kanal: 7 (pričakovan: 7)
+04:52:48.552 > [F_RESPONSE] ✅ Urnik prebran: 27000 - 48600
+04:52:48.558 > [F_RESPONSE] Free Heap po RESPONSE: 185280
+04:52:48.558 > ************************************
+04:52:48.564 > [F_HEAP] Free Heap pred RESPONSE: 185280
+04:52:48.564 > [F_RESPONSE] KLIC #25, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:48.574 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:48.580 > [INIT] Vsi urniki iz Firebase uspesno prebrani.
+04:52:48.580 > [INIT] Urnik za kanal 1 je ze usklajen.
+04:52:48.586 > [INIT] Urnik za kanal 2 je ze usklajen.
+04:52:48.591 > [INIT] Urnik za kanal 3 je ze usklajen.
+04:52:48.591 > [INIT] Razlika za kanal 4. Posiljam posodobitev na Rele...
+04:52:48.597 > Posiljanje posodobitve urnika za kanal 4 (CMD_UPDATE_URNIK)...
+04:52:48.602 >   Nov urnik - Start sec: 17580, End sec: 81900
+04:52:48.607 > OUT ID: 10, CMD: 4
+04:52:48.607 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:48.754 > [DISPATCH TASK] Stack left: 1504
+04:52:48.754 > [TX TASK] Stack left: 1504
+04:52:48.754 > [LORA] Paket uspesno poslan.
+04:52:48.759 > [LORA] Preklop v RX po TX uspesen.
+04:52:48.759 > -------------------------
+04:52:48.762 > 
+04:52:49.147 > [DISPATCH TASK] Stack left: 1504
+04:52:49.148 > [RX TASK] Stack left: 1096
+04:52:49.148 > [LORA RX] ID:10 CMD:109 RSSI:0 SNR:9.8
+04:52:49.153 > In ID: 10, CMD: 109
+04:52:49.153 > CRC OK.
+04:52:49.159 > Prejet odgovor na zahtevo.
+04:52:49.159 > ACK OK za posodobitev urnika kanala 4. Posodabljam lokalno stanje.
+04:52:49.164 >   Nov urnik kanala 4: 04:53 - 22:45
+04:52:49.170 > --------------------
+04:52:49.170 > [INIT] Uspeh pri čakanju na 'odgovor update urnik'.
+04:52:49.175 > [INIT] Urnik za kanal 5 je ze usklajen.
+04:52:49.175 > [INIT] Urnik za kanal 6 je ze usklajen.
+04:52:49.180 > [INIT] Urnik za kanal 7 je ze usklajen.
+04:52:49.186 > [INIT] Urnik za kanal 8 je ze usklajen.
+04:52:49.186 > [INIT] Korak 2: Posiljam zahtevo za status relejev...
+04:52:49.191 > Preverjanje stanja relejev (CMD_GET_STATUS)...
+04:52:49.197 > OUT ID: 11, CMD: 2
+04:52:49.197 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:49.343 > [DISPATCH TASK] Stack left: 1504
+04:52:49.343 > [TX TASK] Stack left: 1504
+04:52:49.343 > [LORA] Paket uspesno poslan.
+04:52:49.349 > [LORA] Preklop v RX po TX uspesen.
+04:52:49.349 > -------------------------
+04:52:49.351 > 
+04:52:49.732 > [DISPATCH TASK] Stack left: 1504
+04:52:49.733 > [RX TASK] Stack left: 1096
+04:52:49.733 > [LORA RX] ID:11 CMD:101 RSSI:0 SNR:10.2
+04:52:49.737 > In ID: 11, CMD: 101
+04:52:49.737 > CRC OK.
+04:52:49.743 > Prejet odgovor na zahtevo.
+04:52:49.743 > Prejeto stanje relejev:
+04:52:49.743 >   Rele 1: OFF
+04:52:49.749 >   Rele 2: ON
+04:52:49.749 >   Rele 3: OFF
+04:52:49.749 >   Rele 4: OFF
+04:52:49.749 >   Rele 5: OFF
+04:52:49.749 >   Rele 6: OFF
+04:52:49.754 >   Rele 7: OFF
+04:52:49.754 >   Rele 8: OFF
+04:52:49.754 > --------------------
+04:52:49.754 > [INIT] Uspeh pri čakanju na 'odgovor za status'.
+04:52:49.760 > [INIT] Posodabljanje stanja v Firebase za kanal 1...
+04:52:49.765 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:49.866 > ************************************
+04:52:49.866 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:49.872 > [F_RESPONSE] KLIC #26, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:49.877 > [F_RESPONSE] Task: updateStateTask
+04:52:49.883 > [F_RESPONSE] Payload length: 5
+04:52:49.883 > [F_RESPONSE] State data uploaded ✅
+04:52:49.888 > [F_RESPONSE] Free Heap po RESPONSE: 185412
+04:52:49.888 > ************************************
+04:52:49.894 > [F_HEAP] Free Heap pred RESPONSE: 185412
+04:52:49.894 > [F_RESPONSE] KLIC #27, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:49.904 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:49.910 > [INIT] Posodabljanje stanja v Firebase za kanal 2...
+04:52:49.910 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.002 > ----------------------------
+04:52:50.002 > [STREAM] task: streamTask1
+04:52:50.002 > [STREAM] event: put
+04:52:50.008 > [STREAM] path: /kanal2/state
+04:52:50.008 > [STREAM] data: ON
+04:52:50.008 > [STREAM] type: 5
+04:52:50.012 > [STREAM] Payload Length: 2
+04:52:50.023 > ************************************
+04:52:50.024 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.029 > [F_RESPONSE] KLIC #28, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.035 > [F_RESPONSE] Task: updateStateTask
+04:52:50.041 > [F_RESPONSE] Payload length: 4
+04:52:50.041 > [F_RESPONSE] State data uploaded ✅
+04:52:50.046 > [F_RESPONSE] Free Heap po RESPONSE: 185400
+04:52:50.046 > ************************************
+04:52:50.051 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.051 > [F_RESPONSE] KLIC #29, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.063 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.068 > [INIT] Posodabljanje stanja v Firebase za kanal 3...
+04:52:50.068 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.154 > ----------------------------
+04:52:50.154 > [STREAM] task: streamTask1
+04:52:50.154 > [STREAM] event: put
+04:52:50.160 > [STREAM] path: /kanal3/state
+04:52:50.160 > [STREAM] data: OFF
+04:52:50.160 > [STREAM] type: 5
+04:52:50.164 > [STREAM] Payload Length: 3
+04:52:50.179 > ************************************
+04:52:50.179 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.185 > [F_RESPONSE] KLIC #30, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.190 > [F_RESPONSE] Task: updateStateTask
+04:52:50.196 > [F_RESPONSE] Payload length: 5
+04:52:50.196 > [F_RESPONSE] State data uploaded ✅
+04:52:50.201 > [F_RESPONSE] Free Heap po RESPONSE: 185400
+04:52:50.201 > ************************************
+04:52:50.207 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.207 > [F_RESPONSE] KLIC #31, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.218 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.223 > [INIT] Posodabljanje stanja v Firebase za kanal 4...
+04:52:50.223 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.310 > ----------------------------
+04:52:50.310 > [STREAM] task: streamTask1
+04:52:50.310 > [STREAM] event: put
+04:52:50.316 > [STREAM] path: /kanal4/state
+04:52:50.316 > [STREAM] data: OFF
+04:52:50.316 > [STREAM] type: 5
+04:52:50.320 > [STREAM] Payload Length: 3
+04:52:50.335 > ************************************
+04:52:50.335 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.340 > [F_RESPONSE] KLIC #32, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.346 > [F_RESPONSE] Task: updateStateTask
+04:52:50.352 > [F_RESPONSE] Payload length: 5
+04:52:50.352 > [F_RESPONSE] State data uploaded ✅
+04:52:50.357 > [F_RESPONSE] Free Heap po RESPONSE: 185400
+04:52:50.357 > ************************************
+04:52:50.363 > [F_HEAP] Free Heap pred RESPONSE: 185240
+04:52:50.363 > [F_RESPONSE] KLIC #33, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.374 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.379 > [INIT] Posodabljanje stanja v Firebase za kanal 5...
+04:52:50.379 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.477 > ************************************
+04:52:50.477 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:52:50.482 > [F_RESPONSE] KLIC #34, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.487 > [F_RESPONSE] Task: updateStateTask
+04:52:50.493 > [F_RESPONSE] Payload length: 5
+04:52:50.493 > [F_RESPONSE] State data uploaded ✅
+04:52:50.499 > [F_RESPONSE] Free Heap po RESPONSE: 185408
+04:52:50.499 > ************************************
+04:52:50.504 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:50.504 > [F_RESPONSE] KLIC #35, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.516 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.521 > [INIT] Posodabljanje stanja v Firebase za kanal 6...
+04:52:50.521 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.607 > ----------------------------
+04:52:50.607 > [STREAM] task: streamTask1
+04:52:50.607 > [STREAM] event: put
+04:52:50.612 > [STREAM] path: /kanal6/state
+04:52:50.612 > [STREAM] data: OFF
+04:52:50.612 > [STREAM] type: 5
+04:52:50.616 > [STREAM] Payload Length: 3
+04:52:50.633 > ************************************
+04:52:50.634 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:50.639 > [F_RESPONSE] KLIC #36, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.644 > [F_RESPONSE] Task: updateStateTask
+04:52:50.650 > [F_RESPONSE] Payload length: 5
+04:52:50.650 > [F_RESPONSE] State data uploaded ✅
+04:52:50.655 > [F_RESPONSE] Free Heap po RESPONSE: 185408
+04:52:50.655 > ************************************
+04:52:50.661 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:50.661 > [F_RESPONSE] KLIC #37, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.673 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.678 > [INIT] Posodabljanje stanja v Firebase za kanal 7...
+04:52:50.678 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.776 > ************************************
+04:52:50.776 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:50.782 > [F_RESPONSE] KLIC #38, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.787 > [F_RESPONSE] Task: updateStateTask
+04:52:50.793 > [F_RESPONSE] Payload length: 5
+04:52:50.793 > [F_RESPONSE] State data uploaded ✅
+04:52:50.798 > [F_RESPONSE] Free Heap po RESPONSE: 185408
+04:52:50.798 > ************************************
+04:52:50.804 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:52:50.804 > [F_RESPONSE] KLIC #39, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.816 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.821 > [INIT] Posodabljanje stanja v Firebase za kanal 8...
+04:52:50.821 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:52:50.924 > ************************************
+04:52:50.925 > [F_HEAP] Free Heap pred RESPONSE: 185412
+04:52:50.930 > [F_RESPONSE] KLIC #40, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:52:50.935 > [F_RESPONSE] Task: updateStateTask
+04:52:50.941 > [F_RESPONSE] Payload length: 5
+04:52:50.941 > [F_RESPONSE] State data uploaded ✅
+04:52:50.946 > [F_RESPONSE] Free Heap po RESPONSE: 185412
+04:52:50.946 > ************************************
+04:52:50.952 > [F_HEAP] Free Heap pred RESPONSE: 185412
+04:52:50.952 > [F_RESPONSE] KLIC #41, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:52:50.963 > [INIT] Uspeh pri čakanju na 'odgovor iz Firebase'.
+04:52:50.969 > [INIT] Vsi statusi kanalov iz Firebase uspesno posodobljeni.
+04:52:50.974 > [INIT] Obvestilo Rele modulu, da je inicializacija končana...
+04:52:50.980 > OUT ID: 12, CMD: 12
+04:52:50.980 > [LORA] Način inicializacije - brez splošnih poskusov.
+04:52:51.126 > [DISPATCH TASK] Stack left: 1504
+04:52:51.126 > [TX TASK] Stack left: 1504
+04:52:51.126 > [LORA] Paket uspesno poslan.
+04:52:51.132 > [LORA] Preklop v RX po TX uspesen.
+04:52:51.132 > -------------------------
+04:52:51.135 > 
+04:52:51.517 > [DISPATCH TASK] Stack left: 1504
+04:52:51.517 > [RX TASK] Stack left: 1096
+04:52:51.517 > [LORA RX] ID:12 CMD:107 RSSI:0 SNR:10.2
+04:52:51.523 > In ID: 12, CMD: 107
+04:52:51.523 > CRC OK.
+04:52:51.528 > Prejet odgovor na zahtevo.
+04:52:51.528 > Rele modul je potrdil, da je inicializacija končana.
+04:52:51.534 > --------------------
+04:52:51.534 > [INIT] Uspeh pri čakanju na 'odgovor za init done'.
+04:52:51.539 > [INIT] Inicializacija uspesno zakljucena.
+04:53:00.031 > [SENSORS] Prvi sinhroniziran klic ob prehodu minute.
+04:53:00.031 > ------------------------------------------
+04:53:00.036 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+04:53:00.042 > ------------------------------------------
+04:53:00.048 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+04:53:00.053 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+04:53:00.053 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+04:53:00.061 > OUT ID: 13, CMD: 5
+04:53:00.061 > [LORA] Način samo ACK - brez poskusov.
+04:53:00.209 > [DISPATCH TASK] Stack left: 1504
+04:53:00.209 > [TX TASK] Stack left: 1504
+04:53:00.209 > [LORA] Paket uspesno poslan.
+04:53:00.214 > [LORA] Preklop v RX po TX uspesen.
+04:53:00.214 > -------------------------
+04:53:00.217 > 
+04:53:00.611 > [DISPATCH TASK] Stack left: 1504
+04:53:00.611 > [RX TASK] Stack left: 1096
+04:53:00.611 > [LORA RX] ID:13 CMD:104 RSSI:0 SNR:9.5
+04:53:00.617 > In ID: 13, CMD: 104
+04:53:00.617 > CRC OK.
+04:53:00.623 > Prejet odgovor na zahtevo.
+04:53:00.623 > Prejeti podatki senzorjev:
+04:53:00.623 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+04:53:00.628 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+04:53:00.634 > --------------------
+04:53:00.730 > ************************************
+04:53:00.730 > [F_HEAP] Free Heap pred RESPONSE: 185048
+04:53:00.735 > [F_RESPONSE] KLIC #42, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:53:00.741 > [F_RESPONSE] Task: updateSensorTask
+04:53:00.746 > [F_RESPONSE] Payload length: 90
+04:53:00.746 > [F_RESPONSE] Sensor data uploaded ✅
+04:53:00.752 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+04:53:00.752 > [F_RESPONSE] Free Heap po RESPONSE: 184752
+04:53:00.757 > ************************************
+04:53:00.763 > [F_HEAP] Free Heap pred RESPONSE: 185048
+04:53:00.763 > [F_RESPONSE] KLIC #43, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:53:00.772 > [SENSOR_QUEUE] Operacija USPEŠNA.
+04:53:00.873 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+04:53:00.873 > OUT ID: 14, CMD: 13
+04:53:00.873 > [LORA] Način samo ACK - brez poskusov.
+04:53:01.021 > [DISPATCH TASK] Stack left: 1504
+04:53:01.021 > [TX TASK] Stack left: 1504
+04:53:01.021 > [LORA] Paket uspesno poslan.
+04:53:01.026 > [LORA] Preklop v RX po TX uspesen.
+04:53:01.026 > -------------------------
+04:53:01.028 > 
+04:53:01.413 > [DISPATCH TASK] Stack left: 1504
+04:53:01.413 > [RX TASK] Stack left: 1096
+04:53:01.413 > [LORA RX] ID:14 CMD:110 RSSI:0 SNR:9.2
+04:53:01.419 > In ID: 14, CMD: 110
+04:53:01.419 > CRC OK.
+04:53:01.425 > Prejet odgovor na zahtevo.
+04:53:01.425 > Prejeti podatki iz INA3221 senzorja.
+04:53:01.430 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+04:53:01.430 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+04:53:01.440 > --------------------
+04:53:01.614 > ************************************
+04:53:01.614 > [F_HEAP] Free Heap pred RESPONSE: 184232
+04:53:01.619 > [F_RESPONSE] KLIC #44, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:53:01.625 > [F_RESPONSE] Task: updateINA3221Task
+04:53:01.630 > [F_RESPONSE] Payload length: 362
+04:53:01.630 > [F_RESPONSE] INA3221 data uploaded ✅
+04:53:01.636 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+04:53:01.636 > [F_RESPONSE] Free Heap po RESPONSE: 184232
+04:53:01.641 > ************************************
+04:53:01.647 > [F_HEAP] Free Heap pred RESPONSE: 184232
+04:53:01.647 > [F_RESPONSE] KLIC #45, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:53:01.670 > [SENSOR_QUEUE] Operacija USPEŠNA.
+04:53:01.732 > [DISPATCH TASK] Stack left: 1504
+04:53:01.732 > [RX TASK] Stack left: 1096
+04:53:01.732 > [LORA RX] ID:1 CMD:202 RSSI:0 SNR:9.8
+04:53:01.737 > In ID: 1, CMD: 202
+04:53:01.737 > CRC OK.
+04:53:01.737 > Prejeta notifikacija.
+04:53:01.743 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+04:53:01.749 >   Rele 4 novo stanje: ON
+04:53:01.749 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:53:01.755 > [LORA] Način samo ACK - brez poskusov.
+04:53:01.757 > --------------------
+04:53:01.839 > ----------------------------
+04:53:01.839 > [STREAM] task: streamTask1
+04:53:01.839 > [STREAM] event: put
+04:53:01.845 > [STREAM] path: /kanal4/state
+04:53:01.845 > [STREAM] data: ON
+04:53:01.845 > [STREAM] type: 5
+04:53:01.849 > [STREAM] Payload Length: 2
+04:53:01.864 > ************************************
+04:53:01.865 > [F_HEAP] Free Heap pred RESPONSE: 185400
+04:53:01.870 > [F_RESPONSE] KLIC #46, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:53:01.875 > [F_RESPONSE] Task: updateStateTask
+04:53:01.881 > [F_RESPONSE] Payload length: 4
+04:53:01.881 > [F_RESPONSE] State data uploaded ✅
+04:53:01.886 > [F_RESPONSE] Free Heap po RESPONSE: 185408
+04:53:01.886 > ************************************
+04:53:01.892 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:53:01.892 > [F_RESPONSE] KLIC #47, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:53:01.903 > [DISPATCH TASK] Stack left: 1504
+04:53:01.903 > [TX TASK] Stack left: 1504
+04:53:01.909 > [LORA] Paket uspesno poslan.
+04:53:01.909 > [LORA] Preklop v RX po TX uspesen.
+04:53:01.913 > -------------------------
+04:53:01.913 > 
+04:53:05.945 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:53:05.951 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:53:11.843 > ----------------------------
+04:53:11.843 > [STREAM] task: streamTask2
+04:53:11.843 > [STREAM] event: keep-alive
+04:53:11.848 > [STREAM] path: 
+04:53:11.848 > [STREAM] data: null
+04:53:11.848 > [STREAM] type: 0
+04:53:31.880 > ----------------------------
+04:53:31.880 > [STREAM] task: streamTask1
+04:53:31.880 > [STREAM] event: keep-alive
+04:53:31.885 > [STREAM] path: 
+04:53:31.885 > [STREAM] data: null
+04:53:31.885 > [STREAM] type: 0
+04:53:36.096 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:53:36.102 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:53:41.836 > ----------------------------
+04:53:41.837 > [STREAM] task: streamTask2
+04:53:41.837 > [STREAM] event: keep-alive
+04:53:41.842 > [STREAM] path: 
+04:53:41.842 > [STREAM] data: null
+04:53:41.842 > [STREAM] type: 0
+04:54:02.008 > ----------------------------
+04:54:02.008 > [STREAM] task: streamTask1
+04:54:02.008 > [STREAM] event: keep-alive
+04:54:02.014 > [STREAM] path: 
+04:54:02.014 > [STREAM] data: null
+04:54:02.014 > [STREAM] type: 0
+04:54:06.246 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:54:06.251 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:54:11.839 > ----------------------------
+04:54:11.839 > [STREAM] task: streamTask2
+04:54:11.839 > [STREAM] event: keep-alive
+04:54:11.844 > [STREAM] path: 
+04:54:11.844 > [STREAM] data: null
+04:54:11.844 > [STREAM] type: 0
+04:54:15.734 > ----------------------------
+04:54:15.734 > [STREAM] task: streamTask1
+04:54:15.734 > [STREAM] event: patch
+04:54:15.739 > [STREAM] path: /
+04:54:15.739 > [STREAM] data: {"kanal2/start":"00:00","kanal2/end":"00:00","kanal2/start_sec":0,"kanal2/end_sec":0}
+04:54:15.751 > [STREAM] type: 6
+04:54:15.751 > [STREAM] Payload Length: 85
+04:54:15.751 > [STREAM] Obdelujem posodobitev urnika...
+04:54:15.756 > [STREAM] Izvlečeni podatki - Kanal: 2, Start_sec: 0, End_sec: 0
+04:54:15.762 > [STREAM] Kanal 2 je spremenjen, nov končni čas: 0
+04:54:15.767 > [STREAM] Kanal 2 je spremenjen, nov začetni čas: 0
+04:54:15.894 > [STREAM] LoRa prosta. Pošiljam posodobitev.
+04:54:15.895 > Posiljanje posodobitve urnika za kanal 2 (CMD_UPDATE_URNIK)...
+04:54:15.900 >   Nov urnik - Start sec: 0, End sec: 0
+04:54:15.906 > OUT ID: 15, CMD: 4
+04:54:15.906 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+04:54:16.052 > [DISPATCH TASK] Stack left: 1504
+04:54:16.054 > [TX TASK] Stack left: 1504
+04:54:16.054 > [LORA] Paket uspesno poslan.
+04:54:16.057 > [LORA] Preklop v RX po TX uspesen.
+04:54:16.057 > -------------------------
+04:54:16.061 > 
+04:54:16.442 > [DISPATCH TASK] Stack left: 1504
+04:54:16.442 > [RX TASK] Stack left: 1096
+04:54:16.442 > [LORA RX] ID:15 CMD:109 RSSI:0 SNR:9.5
+04:54:16.448 > [LORA RETRY] Prejet odgovor, ustavljam ponovne poskuse.
+04:54:16.453 > In ID: 15, CMD: 109
+04:54:16.453 > CRC OK.
+04:54:16.453 > Prejet odgovor na zahtevo.
+04:54:16.459 > ACK OK za posodobitev urnika kanala 2. Posodabljam lokalno stanje.
+04:54:16.464 >   Nov urnik kanala 2: 00:00 - 00:00
+04:54:16.464 > --------------------
+04:54:16.734 > [DISPATCH TASK] Stack left: 1504
+04:54:16.747 > [RX TASK] Stack left: 1096
+04:54:16.747 > [LORA RX] ID:2 CMD:202 RSSI:0 SNR:9.0
+04:54:16.747 > In ID: 2, CMD: 202
+04:54:16.747 > CRC OK.
+04:54:16.747 > Prejeta notifikacija.
+04:54:16.747 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+04:54:16.775 >   Rele 2 novo stanje: OFF
+04:54:16.775 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:54:16.775 > [LORA] Način samo ACK - brez poskusov.
+04:54:16.775 > --------------------
+04:54:16.839 > ----------------------------
+04:54:16.842 > [STREAM] task: streamTask1
+04:54:16.842 > [STREAM] event: put
+04:54:16.845 > [STREAM] path: /kanal2/state
+04:54:16.845 > [STREAM] data: OFF
+04:54:16.845 > [STREAM] type: 5
+04:54:16.849 > [STREAM] Payload Length: 3
+04:54:16.864 > ************************************
+04:54:16.865 > [F_HEAP] Free Heap pred RESPONSE: 185408
+04:54:16.871 > [F_RESPONSE] KLIC #48, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:54:16.885 > [F_RESPONSE] Task: updateStateTask
+04:54:16.885 > [F_RESPONSE] Payload length: 5
+04:54:16.885 > [F_RESPONSE] State data uploaded ✅
+04:54:16.888 > [F_RESPONSE] Free Heap po RESPONSE: 185416
+04:54:16.888 > ************************************
+04:54:16.892 > [F_HEAP] Free Heap pred RESPONSE: 185248
+04:54:16.892 > [F_RESPONSE] KLIC #49, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:54:16.906 > [DISPATCH TASK] Stack left: 1504
+04:54:16.908 > [TX TASK] Stack left: 1504
+04:54:16.908 > [LORA] Paket uspesno poslan.
+04:54:16.912 > [LORA] Preklop v RX po TX uspesen.
+04:54:16.912 > -------------------------
+04:54:16.915 > 
+04:54:36.397 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:54:36.402 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:54:42.048 > ----------------------------
+04:54:42.048 > [STREAM] task: streamTask2
+04:54:42.048 > [STREAM] event: keep-alive
+04:54:42.054 > [STREAM] path: 
+04:54:42.054 > [STREAM] data: null
+04:54:42.054 > [STREAM] type: 0
+04:54:46.963 > ----------------------------
+04:54:46.964 > [STREAM] task: streamTask1
+04:54:46.964 > [STREAM] event: keep-alive
+04:54:46.968 > [STREAM] path: 
+04:54:46.968 > [STREAM] data: null
+04:54:46.968 > [STREAM] type: 0
+04:55:01.735 > [DISPATCH TASK] Stack left: 1504
+04:55:01.735 > [RX TASK] Stack left: 1096
+04:55:01.735 > [LORA RX] ID:3 CMD:202 RSSI:0 SNR:9.2
+04:55:01.741 > In ID: 3, CMD: 202
+04:55:01.741 > CRC OK.
+04:55:01.741 > Prejeta notifikacija.
+04:55:01.747 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+04:55:01.753 >   Rele 6 novo stanje: ON
+04:55:01.753 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:55:01.762 > [LORA] Način samo ACK - brez poskusov.
+04:55:01.763 > --------------------
+04:55:01.837 > ----------------------------
+04:55:01.837 > [STREAM] task: streamTask1
+04:55:01.837 > [STREAM] event: put
+04:55:01.843 > [STREAM] path: /kanal6/state
+04:55:01.843 > [STREAM] data: ON
+04:55:01.843 > [STREAM] type: 5
+04:55:01.847 > [STREAM] Payload Length: 2
+04:55:01.862 > ************************************
+04:55:01.862 > [F_HEAP] Free Heap pred RESPONSE: 186076
+04:55:01.867 > [F_RESPONSE] KLIC #50, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:55:01.872 > [F_RESPONSE] Task: updateStateTask
+04:55:01.878 > [F_RESPONSE] Payload length: 4
+04:55:01.878 > [F_RESPONSE] State data uploaded ✅
+04:55:01.884 > [F_RESPONSE] Free Heap po RESPONSE: 186076
+04:55:01.884 > ************************************
+04:55:01.889 > [F_HEAP] Free Heap pred RESPONSE: 185912
+04:55:01.889 > [F_RESPONSE] KLIC #51, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:55:01.910 > [DISPATCH TASK] Stack left: 1504
+04:55:01.910 > [TX TASK] Stack left: 1504
+04:55:01.910 > [LORA] Paket uspesno poslan.
+04:55:01.915 > [LORA] Preklop v RX po TX uspesen.
+04:55:01.915 > -------------------------
+04:55:01.918 > 
+04:55:06.547 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:55:06.552 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:55:11.848 > ----------------------------
+04:55:11.848 > [STREAM] task: streamTask2
+04:55:11.848 > [STREAM] event: keep-alive
+04:55:11.853 > [STREAM] path: 
+04:55:11.853 > [STREAM] data: null
+04:55:11.853 > [STREAM] type: 0
+04:55:31.881 > ----------------------------
+04:55:31.882 > [STREAM] task: streamTask1
+04:55:31.882 > [STREAM] event: keep-alive
+04:55:31.887 > [STREAM] path: 
+04:55:31.887 > [STREAM] data: null
+04:55:31.887 > [STREAM] type: 0
+04:55:34.789 > ----------------------------
+04:55:34.789 > [STREAM] task: streamTask1
+04:55:34.789 > [STREAM] event: patch
+04:55:34.795 > [STREAM] path: /
+04:55:34.795 > [STREAM] data: {"kanal2/start":"03:50","kanal2/end":"05:00","kanal2/start_sec":13800,"kanal2/end_sec":18000}
+04:55:34.805 > [STREAM] type: 6
+04:55:34.805 > [STREAM] Payload Length: 93
+04:55:34.805 > [STREAM] Obdelujem posodobitev urnika...
+04:55:34.811 > [STREAM] Izvlečeni podatki - Kanal: 2, Start_sec: 13800, End_sec: 18000
+04:55:34.816 > [STREAM] Kanal 2 je spremenjen, nov končni čas: 18000
+04:55:34.822 > [STREAM] Kanal 2 je spremenjen, nov začetni čas: 13800
+04:55:34.888 > [STREAM] LoRa prosta. Pošiljam posodobitev.
+04:55:34.889 > Posiljanje posodobitve urnika za kanal 2 (CMD_UPDATE_URNIK)...
+04:55:34.894 >   Nov urnik - Start sec: 13800, End sec: 18000
+04:55:34.900 > OUT ID: 16, CMD: 4
+04:55:34.900 > [LORA] Aktiviran mehanizem za ponovne poskuse.
+04:55:35.046 > [DISPATCH TASK] Stack left: 1504
+04:55:35.047 > [TX TASK] Stack left: 1456
+04:55:35.047 > [LORA] Paket uspesno poslan.
+04:55:35.052 > [LORA] Preklop v RX po TX uspesen.
+04:55:35.052 > -------------------------
+04:55:35.055 > 
+04:55:35.446 > [DISPATCH TASK] Stack left: 1504
+04:55:35.446 > [RX TASK] Stack left: 1096
+04:55:35.446 > [LORA RX] ID:16 CMD:109 RSSI:0 SNR:9.5
+04:55:35.452 > [LORA RETRY] Prejet odgovor, ustavljam ponovne poskuse.
+04:55:35.457 > In ID: 16, CMD: 109
+04:55:35.457 > CRC OK.
+04:55:35.457 > Prejet odgovor na zahtevo.
+04:55:35.463 > ACK OK za posodobitev urnika kanala 2. Posodabljam lokalno stanje.
+04:55:35.468 >   Nov urnik kanala 2: 03:50 - 05:00
+04:55:35.468 > --------------------
+04:55:35.736 > [DISPATCH TASK] Stack left: 1504
+04:55:35.737 > [RX TASK] Stack left: 1096
+04:55:35.737 > [LORA RX] ID:4 CMD:202 RSSI:0 SNR:10.0
+04:55:35.742 > In ID: 4, CMD: 202
+04:55:35.742 > CRC OK.
+04:55:35.747 > Prejeta notifikacija.
+04:55:35.747 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+04:55:35.753 >   Rele 2 novo stanje: ON
+04:55:35.753 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+04:55:35.762 > [LORA] Način samo ACK - brez poskusov.
+04:55:35.762 > --------------------
+04:55:35.837 > ----------------------------
+04:55:35.837 > [STREAM] task: streamTask1
+04:55:35.837 > [STREAM] event: put
+04:55:35.842 > [STREAM] path: /kanal2/state
+04:55:35.842 > [STREAM] data: ON
+04:55:35.842 > [STREAM] type: 5
+04:55:35.846 > [STREAM] Payload Length: 2
+04:55:35.863 > ************************************
+04:55:35.864 > [F_HEAP] Free Heap pred RESPONSE: 186080
+04:55:35.870 > [F_RESPONSE] KLIC #52, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:55:35.875 > [F_RESPONSE] Task: updateStateTask
+04:55:35.881 > [F_RESPONSE] Payload length: 4
+04:55:35.881 > [F_RESPONSE] State data uploaded ✅
+04:55:35.886 > [F_RESPONSE] Free Heap po RESPONSE: 186080
+04:55:35.886 > ************************************
+04:55:35.892 > [F_HEAP] Free Heap pred RESPONSE: 186080
+04:55:35.892 > [F_RESPONSE] KLIC #53, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:55:35.909 > [DISPATCH TASK] Stack left: 1504
+04:55:35.909 > [TX TASK] Stack left: 1456
+04:55:35.909 > [LORA] Paket uspesno poslan.
+04:55:35.914 > [LORA] Preklop v RX po TX uspesen.
+04:55:35.914 > -------------------------
+04:55:35.917 > 
+04:55:36.701 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:55:36.706 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:55:41.851 > ----------------------------
+04:55:41.851 > [STREAM] task: streamTask2
+04:55:41.851 > [STREAM] event: keep-alive
+04:55:41.856 > [STREAM] path: 
+04:55:41.856 > [STREAM] data: null
+04:55:41.856 > [STREAM] type: 0
+04:56:00.033 > [SENSORS] Periodično branje senzorjev.
+04:56:00.033 > ------------------------------------------
+04:56:00.038 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+04:56:00.044 > ------------------------------------------
+04:56:00.044 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+04:56:00.049 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+04:56:00.121 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+04:56:00.121 > OUT ID: 17, CMD: 5
+04:56:00.125 > [LORA] Način samo ACK - brez poskusov.
+04:56:00.269 > [DISPATCH TASK] Stack left: 1504
+04:56:00.269 > [TX TASK] Stack left: 1456
+04:56:00.269 > [LORA] Paket uspesno poslan.
+04:56:00.274 > [LORA] Preklop v RX po TX uspesen.
+04:56:00.274 > -------------------------
+04:56:00.277 > 
+04:56:00.671 > [DISPATCH TASK] Stack left: 1504
+04:56:00.671 > [RX TASK] Stack left: 1096
+04:56:00.671 > [LORA RX] ID:17 CMD:104 RSSI:0 SNR:9.2
+04:56:00.677 > In ID: 17, CMD: 104
+04:56:00.677 > CRC OK.
+04:56:00.682 > Prejet odgovor na zahtevo.
+04:56:00.682 > Prejeti podatki senzorjev:
+04:56:00.682 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+04:56:00.687 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+04:56:00.695 > --------------------
+04:56:00.787 > ************************************
+04:56:00.787 > [F_HEAP] Free Heap pred RESPONSE: 185732
+04:56:00.793 > [F_RESPONSE] KLIC #54, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:56:00.798 > [F_RESPONSE] Task: updateSensorTask
+04:56:00.803 > [F_RESPONSE] Payload length: 90
+04:56:00.803 > [F_RESPONSE] Sensor data uploaded ✅
+04:56:00.809 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+04:56:00.809 > [F_RESPONSE] Free Heap po RESPONSE: 185732
+04:56:00.815 > ************************************
+04:56:00.821 > [F_HEAP] Free Heap pred RESPONSE: 185732
+04:56:00.821 > [F_RESPONSE] KLIC #55, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:56:00.830 > [SENSOR_QUEUE] Operacija USPEŠNA.
+04:56:00.930 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+04:56:00.933 > OUT ID: 18, CMD: 13
+04:56:00.933 > [LORA] Način samo ACK - brez poskusov.
+04:56:01.078 > [DISPATCH TASK] Stack left: 1504
+04:56:01.079 > [TX TASK] Stack left: 1456
+04:56:01.079 > [LORA] Paket uspesno poslan.
+04:56:01.084 > [LORA] Preklop v RX po TX uspesen.
+04:56:01.084 > -------------------------
+04:56:01.087 > 
+04:56:01.471 > [DISPATCH TASK] Stack left: 1504
+04:56:01.471 > [RX TASK] Stack left: 1096
+04:56:01.471 > [LORA RX] ID:18 CMD:110 RSSI:0 SNR:9.0
+04:56:01.477 > In ID: 18, CMD: 110
+04:56:01.477 > CRC OK.
+04:56:01.482 > Prejet odgovor na zahtevo.
+04:56:01.482 > Prejeti podatki iz INA3221 senzorja.
+04:56:01.489 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+04:56:01.489 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+04:56:01.499 > --------------------
+04:56:01.601 > ************************************
+04:56:01.601 > [F_HEAP] Free Heap pred RESPONSE: 184892
+04:56:01.607 > [F_RESPONSE] KLIC #56, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+04:56:01.612 > [F_RESPONSE] Task: updateINA3221Task
+04:56:01.618 > [F_RESPONSE] Payload length: 362
+04:56:01.618 > [F_RESPONSE] INA3221 data uploaded ✅
+04:56:01.623 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+04:56:01.623 > [F_RESPONSE] Free Heap po RESPONSE: 184892
+04:56:01.629 > ************************************
+04:56:01.635 > [F_HEAP] Free Heap pred RESPONSE: 184892
+04:56:01.635 > [F_RESPONSE] KLIC #57, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+04:56:01.645 > [SENSOR_QUEUE] Operacija USPEŠNA.
+04:56:05.838 > ----------------------------
+04:56:05.838 > [STREAM] task: streamTask1
+04:56:05.838 > [STREAM] event: keep-alive
+04:56:05.843 > [STREAM] path: 
+04:56:05.843 > [STREAM] data: null
+04:56:05.843 > [STREAM] type: 0
+04:56:06.870 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:56:06.876 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:56:12.061 > ----------------------------
+04:56:12.061 > [STREAM] task: streamTask2
+04:56:12.061 > [STREAM] event: keep-alive
+04:56:12.066 > [STREAM] path: 
+04:56:12.066 > [STREAM] data: null
+04:56:12.066 > [STREAM] type: 0
+04:56:24.656 > ----------------------------
+04:56:24.656 > [STREAM] task: streamTask2
+04:56:24.656 > [STREAM] event: put
+04:56:24.661 > [STREAM] path: /
+04:56:24.661 > [STREAM] data: 4
+04:56:24.661 > [STREAM] type: 1
+04:56:24.667 > [STREAM] Payload Length: 1
+04:56:24.667 > [STREAM] Nastavljen interval branja senzorjev: 4 minut
+04:56:28.855 > ----------------------------
+04:56:28.855 > [STREAM] task: streamTask2
+04:56:28.855 > [STREAM] event: put
+04:56:28.861 > [STREAM] path: /
+04:56:28.861 > [STREAM] data: 5
+04:56:28.861 > [STREAM] type: 1
+04:56:28.866 > [STREAM] Payload Length: 1
+04:56:28.866 > [STREAM] Nastavljen interval branja senzorjev: 5 minut
+04:56:35.920 > ----------------------------
+04:56:35.920 > [STREAM] task: streamTask1
+04:56:35.920 > [STREAM] event: keep-alive
+04:56:35.926 > [STREAM] path: 
+04:56:35.926 > [STREAM] data: null
+04:56:35.926 > [STREAM] type: 0
+04:56:37.021 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:56:37.026 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:56:59.063 > ----------------------------
+04:56:59.063 > [STREAM] task: streamTask2
+04:56:59.063 > [STREAM] event: keep-alive
+04:56:59.069 > [STREAM] path: 
+04:56:59.069 > [STREAM] data: null
+04:56:59.069 > [STREAM] type: 0
+04:57:05.924 > ----------------------------
+04:57:05.924 > [STREAM] task: streamTask1
+04:57:05.924 > [STREAM] event: keep-alive
+04:57:05.930 > [STREAM] path: 
+04:57:05.930 > [STREAM] data: null
+04:57:05.930 > [STREAM] type: 0
+04:57:07.171 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:57:07.177 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:57:28.965 > ----------------------------
+04:57:28.965 > [STREAM] task: streamTask2
+04:57:28.965 > [STREAM] event: keep-alive
+04:57:28.970 > [STREAM] path: 
+04:57:28.970 > [STREAM] data: null
+04:57:28.970 > [STREAM] type: 0
+04:57:36.033 > ----------------------------
+04:57:36.034 > [STREAM] task: streamTask1
+04:57:36.034 > [STREAM] event: keep-alive
+04:57:36.039 > [STREAM] path: 
+04:57:36.039 > [STREAM] data: null
+04:57:36.039 > [STREAM] type: 0
+04:57:37.322 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:57:37.327 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:57:58.972 > ----------------------------
+04:57:58.973 > [STREAM] task: streamTask2
+04:57:58.973 > [STREAM] event: keep-alive
+04:57:58.978 > [STREAM] path: 
+04:57:58.978 > [STREAM] data: null
+04:57:58.978 > [STREAM] type: 0
+04:58:05.931 > ----------------------------
+04:58:05.931 > [STREAM] task: streamTask1
+04:58:05.931 > [STREAM] event: keep-alive
+04:58:05.938 > [STREAM] path: 
+04:58:05.938 > [STREAM] data: null
+04:58:05.938 > [STREAM] type: 0
+04:58:07.472 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:58:07.478 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:58:28.976 > ----------------------------
+04:58:28.976 > [STREAM] task: streamTask2
+04:58:28.976 > [STREAM] event: keep-alive
+04:58:28.982 > [STREAM] path: 
+04:58:28.982 > [STREAM] data: null
+04:58:28.982 > [STREAM] type: 0
+04:58:35.944 > ----------------------------
+04:58:35.944 > [STREAM] task: streamTask1
+04:58:35.944 > [STREAM] event: keep-alive
+04:58:35.950 > [STREAM] path: 
+04:58:35.950 > [STREAM] data: null
+04:58:35.950 > [STREAM] type: 0
+04:58:37.631 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:58:37.636 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:58:58.877 > ----------------------------
+04:58:58.878 > [STREAM] task: streamTask2
+04:58:58.878 > [STREAM] event: keep-alive
+04:58:58.882 > [STREAM] path: 
+04:58:58.882 > [STREAM] data: null
+04:58:58.882 > [STREAM] type: 0
+04:59:05.940 > ----------------------------
+04:59:05.941 > [STREAM] task: streamTask1
+04:59:05.941 > [STREAM] event: keep-alive
+04:59:05.946 > [STREAM] path: 
+04:59:05.946 > [STREAM] data: null
+04:59:05.946 > [STREAM] type: 0
+04:59:07.781 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:59:07.787 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:59:28.879 > ----------------------------
+04:59:28.879 > [STREAM] task: streamTask2
+04:59:28.879 > [STREAM] event: keep-alive
+04:59:28.885 > [STREAM] path: 
+04:59:28.885 > [STREAM] data: null
+04:59:28.885 > [STREAM] type: 0
+04:59:35.944 > ----------------------------
+04:59:35.945 > [STREAM] task: streamTask1
+04:59:35.945 > [STREAM] event: keep-alive
+04:59:35.950 > [STREAM] path: 
+04:59:35.950 > [STREAM] data: null
+04:59:35.950 > [STREAM] type: 0
+04:59:37.935 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+04:59:37.940 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+04:59:58.882 > ----------------------------
+04:59:58.882 > [STREAM] task: streamTask2
+04:59:58.882 > [STREAM] event: keep-alive
+04:59:58.887 > [STREAM] path: 
+04:59:58.887 > [STREAM] data: null
+04:59:58.887 > [STREAM] type: 0
+05:00:01.744 > [DISPATCH TASK] Stack left: 1504
+05:00:01.745 > [RX TASK] Stack left: 1096
+05:00:01.749 > [LORA RX] ID:5 CMD:202 RSSI:0 SNR:9.8
+05:00:01.749 > In ID: 5, CMD: 202
+05:00:01.749 > CRC OK.
+05:00:01.755 > Prejeta notifikacija.
+05:00:01.755 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+05:00:01.761 >   Rele 2 novo stanje: OFF
+05:00:01.761 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:00:02.124 > [LORA] Način samo ACK - brez poskusov.
+05:00:02.125 > --------------------
+05:00:02.211 > ----------------------------
+05:00:02.211 > [STREAM] task: streamTask1
+05:00:02.211 > [STREAM] event: put
+05:00:02.217 > [STREAM] path: /kanal2/state
+05:00:02.217 > [STREAM] data: OFF
+05:00:02.217 > [STREAM] type: 5
+05:00:02.221 > [STREAM] Payload Length: 3
+05:00:02.236 > ************************************
+05:00:02.236 > [F_HEAP] Free Heap pred RESPONSE: 186076
+05:00:02.242 > [F_RESPONSE] KLIC #58, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:00:02.247 > [F_RESPONSE] Task: updateStateTask
+05:00:02.253 > [F_RESPONSE] Payload length: 5
+05:00:02.253 > [F_RESPONSE] State data uploaded ✅
+05:00:02.259 > [F_RESPONSE] Free Heap po RESPONSE: 186076
+05:00:02.259 > ************************************
+05:00:02.264 > [F_HEAP] Free Heap pred RESPONSE: 186076
+05:00:02.264 > [F_RESPONSE] KLIC #59, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:00:02.275 > [DISPATCH TASK] Stack left: 1504
+05:00:02.275 > [TX TASK] Stack left: 1456
+05:00:02.281 > [LORA] Paket uspesno poslan.
+05:00:02.281 > [LORA] Preklop v RX po TX uspesen.
+05:00:02.285 > -------------------------
+05:00:02.285 > 
+05:00:07.958 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:00:07.964 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:00:28.886 > ----------------------------
+05:00:28.886 > [STREAM] task: streamTask2
+05:00:28.886 > [STREAM] event: keep-alive
+05:00:28.892 > [STREAM] path: 
+05:00:28.892 > [STREAM] data: null
+05:00:28.892 > [STREAM] type: 0
+05:00:32.369 > ----------------------------
+05:00:32.370 > [STREAM] task: streamTask1
+05:00:32.370 > [STREAM] event: keep-alive
+05:00:32.375 > [STREAM] path: 
+05:00:32.375 > [STREAM] data: null
+05:00:32.375 > [STREAM] type: 0
+05:00:38.109 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:00:38.114 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:00:58.993 > ----------------------------
+05:00:58.993 > [STREAM] task: streamTask2
+05:00:58.993 > [STREAM] event: keep-alive
+05:00:58.999 > [STREAM] path: 
+05:00:58.999 > [STREAM] data: null
+05:00:58.999 > [STREAM] type: 0
+05:01:00.038 > [SENSORS] Periodično branje senzorjev.
+05:01:00.038 > ------------------------------------------
+05:01:00.043 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:01:00.049 > ------------------------------------------
+05:01:00.049 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:01:00.054 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:01:00.132 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:01:00.132 > OUT ID: 19, CMD: 5
+05:01:00.136 > [LORA] Način samo ACK - brez poskusov.
+05:01:00.280 > [DISPATCH TASK] Stack left: 1504
+05:01:00.280 > [TX TASK] Stack left: 1456
+05:01:00.280 > [LORA] Paket uspesno poslan.
+05:01:00.285 > [LORA] Preklop v RX po TX uspesen.
+05:01:00.285 > -------------------------
+05:01:00.288 > 
+05:01:00.681 > [DISPATCH TASK] Stack left: 1504
+05:01:00.681 > [RX TASK] Stack left: 1096
+05:01:00.681 > [LORA RX] ID:19 CMD:104 RSSI:0 SNR:10.2
+05:01:00.687 > In ID: 19, CMD: 104
+05:01:00.687 > CRC OK.
+05:01:00.692 > Prejet odgovor na zahtevo.
+05:01:00.692 > Prejeti podatki senzorjev:
+05:01:00.692 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:01:00.698 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:01:00.704 > --------------------
+05:01:00.812 > ************************************
+05:01:00.812 > [F_HEAP] Free Heap pred RESPONSE: 185740
+05:01:00.818 > [F_RESPONSE] KLIC #60, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:01:00.823 > [F_RESPONSE] Task: updateSensorTask
+05:01:00.829 > [F_RESPONSE] Payload length: 90
+05:01:00.829 > [F_RESPONSE] Sensor data uploaded ✅
+05:01:00.835 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:01:00.835 > [F_RESPONSE] Free Heap po RESPONSE: 185740
+05:01:00.840 > ************************************
+05:01:00.845 > [F_HEAP] Free Heap pred RESPONSE: 185740
+05:01:00.845 > [F_RESPONSE] KLIC #61, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:01:00.854 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:01:00.956 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:01:00.956 > OUT ID: 20, CMD: 13
+05:01:00.956 > [LORA] Način samo ACK - brez poskusov.
+05:01:01.104 > [DISPATCH TASK] Stack left: 1504
+05:01:01.104 > [TX TASK] Stack left: 1456
+05:01:01.104 > [LORA] Paket uspesno poslan.
+05:01:01.109 > [LORA] Preklop v RX po TX uspesen.
+05:01:01.109 > -------------------------
+05:01:01.112 > 
+05:01:01.495 > [DISPATCH TASK] Stack left: 1504
+05:01:01.495 > [RX TASK] Stack left: 1096
+05:01:01.495 > [LORA RX] ID:20 CMD:110 RSSI:0 SNR:9.2
+05:01:01.501 > In ID: 20, CMD: 110
+05:01:01.501 > CRC OK.
+05:01:01.508 > Prejet odgovor na zahtevo.
+05:01:01.508 > Prejeti podatki iz INA3221 senzorja.
+05:01:01.512 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:01:01.512 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:01:01.522 > --------------------
+05:01:01.649 > ************************************
+05:01:01.649 > [F_HEAP] Free Heap pred RESPONSE: 184928
+05:01:01.655 > [F_RESPONSE] KLIC #62, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:01:01.661 > [F_RESPONSE] Task: updateINA3221Task
+05:01:01.666 > [F_RESPONSE] Payload length: 362
+05:01:01.666 > [F_RESPONSE] INA3221 data uploaded ✅
+05:01:01.672 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:01:01.672 > [F_RESPONSE] Free Heap po RESPONSE: 184928
+05:01:01.677 > ************************************
+05:01:01.688 > [F_HEAP] Free Heap pred RESPONSE: 184928
+05:01:01.688 > [F_RESPONSE] KLIC #63, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:01:01.692 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:01:02.272 > ----------------------------
+05:01:02.272 > [STREAM] task: streamTask1
+05:01:02.272 > [STREAM] event: keep-alive
+05:01:02.278 > [STREAM] path: 
+05:01:02.278 > [STREAM] data: null
+05:01:02.278 > [STREAM] type: 0
+05:01:08.125 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:01:08.131 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:01:28.895 > ----------------------------
+05:01:28.895 > [STREAM] task: streamTask2
+05:01:28.895 > [STREAM] event: keep-alive
+05:01:28.900 > [STREAM] path: 
+05:01:28.900 > [STREAM] data: null
+05:01:28.900 > [STREAM] type: 0
+05:01:32.376 > ----------------------------
+05:01:32.377 > [STREAM] task: streamTask1
+05:01:32.377 > [STREAM] event: keep-alive
+05:01:32.382 > [STREAM] path: 
+05:01:32.382 > [STREAM] data: null
+05:01:32.382 > [STREAM] type: 0
+05:01:38.276 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:01:38.281 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:01:58.898 > ----------------------------
+05:01:58.898 > [STREAM] task: streamTask2
+05:01:58.898 > [STREAM] event: keep-alive
+05:01:58.904 > [STREAM] path: 
+05:01:58.904 > [STREAM] data: null
+05:01:58.904 > [STREAM] type: 0
+05:02:02.278 > ----------------------------
+05:02:02.278 > [STREAM] task: streamTask1
+05:02:02.278 > [STREAM] event: keep-alive
+05:02:02.283 > [STREAM] path: 
+05:02:02.283 > [STREAM] data: null
+05:02:02.283 > [STREAM] type: 0
+05:02:06.888 > ----------------------------
+05:02:06.888 > [STREAM] task: streamTask1
+05:02:06.888 > [STREAM] event: patch
+05:02:06.893 > [STREAM] path: /
+05:02:06.893 > [STREAM] data: {"kanal1/start":"04:15","kanal1/start_sec":15300}
+05:02:06.899 > [STREAM] type: 6
+05:02:06.899 > [STREAM] Payload Length: 49
+05:02:06.904 > [STREAM] Obdelujem posodobitev urnika...
+05:02:06.904 > [STREAM] Izvlečeni podatki - Kanal: 1, Start_sec: 15300, End_sec: -1
+05:02:06.909 > [STREAM] Kanal 1 končni čas ni spremenjen, ostaja: 61500
+05:02:06.915 > [STREAM] Kanal 1 je spremenjen, nov začetni čas: 15300
+05:02:07.019 > [STREAM] LoRa prosta. Pošiljam posodobitev.
+05:02:07.020 > Posiljanje posodobitve urnika za kanal 1 (CMD_UPDATE_URNIK)...
+05:02:07.025 >   Nov urnik - Start sec: 15300, End sec: 61500
+05:02:07.031 > OUT ID: 21, CMD: 4
+05:02:07.031 > [LORA] Način samo ACK - brez poskusov.
+05:02:07.177 > [DISPATCH TASK] Stack left: 1504
+05:02:07.177 > [TX TASK] Stack left: 1456
+05:02:07.177 > [LORA] Paket uspesno poslan.
+05:02:07.183 > [LORA] Preklop v RX po TX uspesen.
+05:02:07.183 > -------------------------
+05:02:07.185 > 
+05:02:07.574 > [DISPATCH TASK] Stack left: 1504
+05:02:07.575 > [RX TASK] Stack left: 1096
+05:02:07.575 > [LORA RX] ID:21 CMD:109 RSSI:0 SNR:9.5
+05:02:07.580 > In ID: 21, CMD: 109
+05:02:07.580 > CRC OK.
+05:02:07.586 > Prejet odgovor na zahtevo.
+05:02:07.586 > ACK OK za posodobitev urnika kanala 1. Posodabljam lokalno stanje.
+05:02:07.591 >   Nov urnik kanala 1: 04:15 - 17:05
+05:02:07.593 > --------------------
+05:02:07.747 > [DISPATCH TASK] Stack left: 1504
+05:02:07.747 > [RX TASK] Stack left: 1096
+05:02:08.427 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:02:08.433 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:02:12.748 > [DISPATCH TASK] Stack left: 1504
+05:02:12.748 > [RX TASK] Stack left: 1096
+05:02:12.748 > [LORA RX] ID:6 CMD:202 RSSI:0 SNR:9.5
+05:02:12.754 > In ID: 6, CMD: 202
+05:02:12.754 > CRC OK.
+05:02:12.754 > Prejeta notifikacija.
+05:02:12.760 > !!! OPOZORILO: Sprememba stanja releja na Rele enoti !!!
+05:02:12.765 >   Rele 1 novo stanje: ON
+05:02:12.765 > [F_UPDATE_RELAY] Sending relay state (poskus 1/3)...
+05:02:12.771 > [LORA] Način samo ACK - brez poskusov.
+05:02:12.774 > --------------------
+05:02:12.855 > ----------------------------
+05:02:12.863 > [STREAM] task: streamTask1
+05:02:12.863 > [STREAM] event: put
+05:02:12.863 > [STREAM] path: /kanal1/state
+05:02:12.863 > [STREAM] data: ON
+05:02:12.863 > [STREAM] type: 5
+05:02:12.864 > [STREAM] Payload Length: 2
+05:02:12.881 > ************************************
+05:02:12.881 > [F_HEAP] Free Heap pred RESPONSE: 186084
+05:02:12.886 > [F_RESPONSE] KLIC #64, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:02:12.892 > [F_RESPONSE] Task: updateStateTask
+05:02:12.897 > [F_RESPONSE] Payload length: 4
+05:02:12.897 > [F_RESPONSE] State data uploaded ✅
+05:02:12.903 > [F_RESPONSE] Free Heap po RESPONSE: 186084
+05:02:12.903 > ************************************
+05:02:12.908 > [F_HEAP] Free Heap pred RESPONSE: 186064
+05:02:12.908 > [F_RESPONSE] KLIC #65, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:02:12.919 > [DISPATCH TASK] Stack left: 1504
+05:02:12.919 > [TX TASK] Stack left: 1456
+05:02:12.924 > [LORA] Paket uspesno poslan.
+05:02:12.924 > [LORA] Preklop v RX po TX uspesen.
+05:02:12.929 > -------------------------
+05:02:12.929 > 
+05:02:28.903 > ----------------------------
+05:02:28.904 > [STREAM] task: streamTask2
+05:02:28.904 > [STREAM] event: keep-alive
+05:02:28.909 > [STREAM] path: 
+05:02:28.909 > [STREAM] data: null
+05:02:28.909 > [STREAM] type: 0
+05:02:38.577 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:02:38.582 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:02:42.932 > ----------------------------
+05:02:42.932 > [STREAM] task: streamTask1
+05:02:42.932 > [STREAM] event: keep-alive
+05:02:42.937 > [STREAM] path: 
+05:02:42.937 > [STREAM] data: null
+05:02:42.937 > [STREAM] type: 0
+05:02:59.009 > ----------------------------
+05:02:59.010 > [STREAM] task: streamTask2
+05:02:59.010 > [STREAM] event: keep-alive
+05:02:59.015 > [STREAM] path: 
+05:02:59.015 > [STREAM] data: null
+05:02:59.015 > [STREAM] type: 0
+05:03:08.728 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:03:08.733 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:03:12.936 > ----------------------------
+05:03:12.936 > [STREAM] task: streamTask1
+05:03:12.936 > [STREAM] event: keep-alive
+05:03:12.942 > [STREAM] path: 
+05:03:12.942 > [STREAM] data: null
+05:03:12.942 > [STREAM] type: 0
+05:03:28.911 > ----------------------------
+05:03:28.911 > [STREAM] task: streamTask2
+05:03:28.911 > [STREAM] event: keep-alive
+05:03:28.917 > [STREAM] path: 
+05:03:28.917 > [STREAM] data: null
+05:03:28.917 > [STREAM] type: 0
+05:03:38.878 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:03:38.884 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:03:43.043 > ----------------------------
+05:03:43.043 > [STREAM] task: streamTask1
+05:03:43.043 > [STREAM] event: keep-alive
+05:03:43.049 > [STREAM] path: 
+05:03:43.049 > [STREAM] data: null
+05:03:43.049 > [STREAM] type: 0
+05:03:58.915 > ----------------------------
+05:03:58.915 > [STREAM] task: streamTask2
+05:03:58.915 > [STREAM] event: keep-alive
+05:03:58.921 > [STREAM] path: 
+05:03:58.921 > [STREAM] data: null
+05:03:58.921 > [STREAM] type: 0
+05:04:09.028 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:04:09.035 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:04:12.945 > ----------------------------
+05:04:12.945 > [STREAM] task: streamTask1
+05:04:12.945 > [STREAM] event: keep-alive
+05:04:12.950 > [STREAM] path: 
+05:04:12.950 > [STREAM] data: null
+05:04:12.950 > [STREAM] type: 0
+05:04:28.918 > ----------------------------
+05:04:28.919 > [STREAM] task: streamTask2
+05:04:28.919 > [STREAM] event: keep-alive
+05:04:28.925 > [STREAM] path: 
+05:04:28.925 > [STREAM] data: null
+05:04:28.925 > [STREAM] type: 0
+05:04:39.181 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:04:39.187 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:04:42.948 > ----------------------------
+05:04:42.948 > [STREAM] task: streamTask1
+05:04:42.948 > [STREAM] event: keep-alive
+05:04:42.954 > [STREAM] path: 
+05:04:42.954 > [STREAM] data: null
+05:04:42.954 > [STREAM] type: 0
+05:04:59.025 > ----------------------------
+05:04:59.025 > [STREAM] task: streamTask2
+05:04:59.025 > [STREAM] event: keep-alive
+05:04:59.031 > [STREAM] path: 
+05:04:59.031 > [STREAM] data: null
+05:04:59.031 > [STREAM] type: 0
+05:05:09.332 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:05:09.337 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:05:12.951 > ----------------------------
+05:05:12.952 > [STREAM] task: streamTask1
+05:05:12.952 > [STREAM] event: keep-alive
+05:05:12.958 > [STREAM] path: 
+05:05:12.958 > [STREAM] data: null
+05:05:12.958 > [STREAM] type: 0
+05:05:28.927 > ----------------------------
+05:05:28.927 > [STREAM] task: streamTask2
+05:05:28.927 > [STREAM] event: keep-alive
+05:05:28.933 > [STREAM] path: 
+05:05:28.933 > [STREAM] data: null
+05:05:28.933 > [STREAM] type: 0
+05:05:39.482 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:05:39.488 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:05:42.957 > ----------------------------
+05:05:42.957 > [STREAM] task: streamTask1
+05:05:42.957 > [STREAM] event: keep-alive
+05:05:42.962 > [STREAM] path: 
+05:05:42.962 > [STREAM] data: null
+05:05:42.962 > [STREAM] type: 0
+05:05:58.932 > ----------------------------
+05:05:58.932 > [STREAM] task: streamTask2
+05:05:58.932 > [STREAM] event: keep-alive
+05:05:58.937 > [STREAM] path: 
+05:05:58.937 > [STREAM] data: null
+05:05:58.937 > [STREAM] type: 0
+05:06:00.043 > [SENSORS] Periodično branje senzorjev.
+05:06:00.043 > ------------------------------------------
+05:06:00.049 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:06:00.054 > ------------------------------------------
+05:06:00.054 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:06:00.060 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:06:00.066 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:06:00.071 > OUT ID: 22, CMD: 5
+05:06:00.071 > [LORA] Način samo ACK - brez poskusov.
+05:06:00.216 > [DISPATCH TASK] Stack left: 1504
+05:06:00.216 > [TX TASK] Stack left: 1456
+05:06:00.216 > [LORA] Paket uspesno poslan.
+05:06:00.221 > [LORA] Preklop v RX po TX uspesen.
+05:06:00.221 > -------------------------
+05:06:00.224 > 
+05:06:00.618 > [DISPATCH TASK] Stack left: 1504
+05:06:00.618 > [RX TASK] Stack left: 1096
+05:06:00.618 > [LORA RX] ID:22 CMD:104 RSSI:0 SNR:12.0
+05:06:00.624 > In ID: 22, CMD: 104
+05:06:00.624 > CRC OK.
+05:06:00.629 > Prejet odgovor na zahtevo.
+05:06:00.629 > Prejeti podatki senzorjev:
+05:06:00.629 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:06:00.635 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:06:01.011 > --------------------
+05:06:01.108 > ************************************
+05:06:01.108 > [F_HEAP] Free Heap pred RESPONSE: 185728
+05:06:01.114 > [F_RESPONSE] KLIC #66, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:06:01.119 > [F_RESPONSE] Task: updateSensorTask
+05:06:01.125 > [F_RESPONSE] Payload length: 90
+05:06:01.125 > [F_RESPONSE] Sensor data uploaded ✅
+05:06:01.130 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:06:01.130 > [F_RESPONSE] Free Heap po RESPONSE: 185728
+05:06:01.136 > ************************************
+05:06:01.177 > [F_HEAP] Free Heap pred RESPONSE: 185728
+05:06:01.177 > [F_RESPONSE] KLIC #67, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:06:01.177 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:06:01.251 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:06:01.253 > OUT ID: 23, CMD: 13
+05:06:01.253 > [LORA] Način samo ACK - brez poskusov.
+05:06:01.399 > [DISPATCH TASK] Stack left: 1504
+05:06:01.399 > [TX TASK] Stack left: 1456
+05:06:01.399 > [LORA] Paket uspesno poslan.
+05:06:01.404 > [LORA] Preklop v RX po TX uspesen.
+05:06:01.404 > -------------------------
+05:06:01.407 > 
+05:06:01.791 > [DISPATCH TASK] Stack left: 1504
+05:06:01.791 > [RX TASK] Stack left: 1096
+05:06:01.798 > [LORA RX] ID:23 CMD:110 RSSI:0 SNR:9.5
+05:06:01.798 > In ID: 23, CMD: 110
+05:06:01.798 > CRC OK.
+05:06:01.803 > Prejet odgovor na zahtevo.
+05:06:01.803 > Prejeti podatki iz INA3221 senzorja.
+05:06:01.809 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:06:01.814 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:06:01.820 > --------------------
+05:06:01.931 > ************************************
+05:06:01.931 > [F_HEAP] Free Heap pred RESPONSE: 184916
+05:06:01.936 > [F_RESPONSE] KLIC #68, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:06:01.942 > [F_RESPONSE] Task: updateINA3221Task
+05:06:01.947 > [F_RESPONSE] Payload length: 362
+05:06:01.947 > [F_RESPONSE] INA3221 data uploaded ✅
+05:06:01.953 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:06:01.953 > [F_RESPONSE] Free Heap po RESPONSE: 184916
+05:06:01.959 > ************************************
+05:06:01.964 > [F_HEAP] Free Heap pred RESPONSE: 184916
+05:06:01.964 > [F_RESPONSE] KLIC #69, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:06:01.976 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:06:09.665 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:06:09.671 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:06:13.268 > ----------------------------
+05:06:13.268 > [STREAM] task: streamTask1
+05:06:13.268 > [STREAM] event: keep-alive
+05:06:13.274 > [STREAM] path: 
+05:06:13.274 > [STREAM] data: null
+05:06:13.274 > [STREAM] type: 0
+05:06:28.935 > ----------------------------
+05:06:28.935 > [STREAM] task: streamTask2
+05:06:28.935 > [STREAM] event: keep-alive
+05:06:28.941 > [STREAM] path: 
+05:06:28.941 > [STREAM] data: null
+05:06:28.941 > [STREAM] type: 0
+05:06:39.816 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:06:39.822 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:06:42.964 > ----------------------------
+05:06:42.965 > [STREAM] task: streamTask1
+05:06:42.965 > [STREAM] event: keep-alive
+05:06:42.970 > [STREAM] path: 
+05:06:42.970 > [STREAM] data: null
+05:06:42.970 > [STREAM] type: 0
+05:06:58.940 > ----------------------------
+05:06:58.940 > [STREAM] task: streamTask2
+05:06:58.940 > [STREAM] event: keep-alive
+05:06:58.945 > [STREAM] path: 
+05:06:58.945 > [STREAM] data: null
+05:06:58.945 > [STREAM] type: 0
+05:07:09.967 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:07:09.973 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:07:12.969 > ----------------------------
+05:07:12.969 > [STREAM] task: streamTask1
+05:07:12.969 > [STREAM] event: keep-alive
+05:07:12.974 > [STREAM] path: 
+05:07:12.974 > [STREAM] data: null
+05:07:12.974 > [STREAM] type: 0
+05:07:29.148 > ----------------------------
+05:07:29.149 > [STREAM] task: streamTask2
+05:07:29.149 > [STREAM] event: keep-alive
+05:07:29.154 > [STREAM] path: 
+05:07:29.154 > [STREAM] data: null
+05:07:29.154 > [STREAM] type: 0
+05:07:40.117 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:07:40.123 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:07:43.179 > ----------------------------
+05:07:43.180 > [STREAM] task: streamTask1
+05:07:43.180 > [STREAM] event: keep-alive
+05:07:43.185 > [STREAM] path: 
+05:07:43.185 > [STREAM] data: null
+05:07:43.185 > [STREAM] type: 0
+05:07:58.947 > ----------------------------
+05:07:58.947 > [STREAM] task: streamTask2
+05:07:58.947 > [STREAM] event: keep-alive
+05:07:58.953 > [STREAM] path: 
+05:07:58.953 > [STREAM] data: null
+05:07:58.953 > [STREAM] type: 0
+05:08:10.268 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:08:10.273 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:08:12.874 > ----------------------------
+05:08:12.874 > [STREAM] task: streamTask1
+05:08:12.874 > [STREAM] event: keep-alive
+05:08:12.880 > [STREAM] path: 
+05:08:12.880 > [STREAM] data: null
+05:08:12.880 > [STREAM] type: 0
+05:08:28.951 > ----------------------------
+05:08:28.952 > [STREAM] task: streamTask2
+05:08:28.952 > [STREAM] event: keep-alive
+05:08:28.957 > [STREAM] path: 
+05:08:28.957 > [STREAM] data: null
+05:08:28.957 > [STREAM] type: 0
+05:08:40.422 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:08:40.428 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:08:42.981 > ----------------------------
+05:08:42.981 > [STREAM] task: streamTask1
+05:08:42.981 > [STREAM] event: keep-alive
+05:08:42.986 > [STREAM] path: 
+05:08:42.986 > [STREAM] data: null
+05:08:42.986 > [STREAM] type: 0
+05:08:58.956 > ----------------------------
+05:08:58.956 > [STREAM] task: streamTask2
+05:08:58.956 > [STREAM] event: keep-alive
+05:08:58.961 > [STREAM] path: 
+05:08:58.961 > [STREAM] data: null
+05:08:58.961 > [STREAM] type: 0
+05:09:10.573 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:09:10.578 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:09:12.889 > ----------------------------
+05:09:12.890 > [STREAM] task: streamTask1
+05:09:12.890 > [STREAM] event: keep-alive
+05:09:12.894 > [STREAM] path: 
+05:09:12.894 > [STREAM] data: null
+05:09:12.894 > [STREAM] type: 0
+05:09:28.961 > ----------------------------
+05:09:28.961 > [STREAM] task: streamTask2
+05:09:28.961 > [STREAM] event: keep-alive
+05:09:28.966 > [STREAM] path: 
+05:09:28.966 > [STREAM] data: null
+05:09:28.966 > [STREAM] type: 0
+05:09:40.723 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:09:40.730 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:09:42.994 > ----------------------------
+05:09:42.994 > [STREAM] task: streamTask1
+05:09:42.994 > [STREAM] event: keep-alive
+05:09:42.999 > [STREAM] path: 
+05:09:42.999 > [STREAM] data: null
+05:09:42.999 > [STREAM] type: 0
+05:09:59.581 > ----------------------------
+05:09:59.581 > [STREAM] task: streamTask2
+05:09:59.581 > [STREAM] event: keep-alive
+05:09:59.586 > [STREAM] path: 
+05:09:59.586 > [STREAM] data: null
+05:09:59.586 > [STREAM] type: 0
+05:10:10.874 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:10:10.880 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:10:12.892 > ----------------------------
+05:10:12.892 > [STREAM] task: streamTask1
+05:10:12.892 > [STREAM] event: keep-alive
+05:10:12.898 > [STREAM] path: 
+05:10:12.898 > [STREAM] data: null
+05:10:12.898 > [STREAM] type: 0
+05:10:28.866 > ----------------------------
+05:10:28.866 > [STREAM] task: streamTask2
+05:10:28.866 > [STREAM] event: keep-alive
+05:10:28.872 > [STREAM] path: 
+05:10:28.872 > [STREAM] data: null
+05:10:28.872 > [STREAM] type: 0
+05:10:41.025 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:10:41.030 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:10:42.997 > ----------------------------
+05:10:42.997 > [STREAM] task: streamTask1
+05:10:42.997 > [STREAM] event: keep-alive
+05:10:43.002 > [STREAM] path: 
+05:10:43.002 > [STREAM] data: null
+05:10:43.002 > [STREAM] type: 0
+05:10:58.869 > ----------------------------
+05:10:58.869 > [STREAM] task: streamTask2
+05:10:58.869 > [STREAM] event: keep-alive
+05:10:58.875 > [STREAM] path: 
+05:10:58.875 > [STREAM] data: null
+05:10:58.875 > [STREAM] type: 0
+05:11:00.048 > [SENSORS] Periodično branje senzorjev.
+05:11:00.048 > ------------------------------------------
+05:11:00.054 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:11:00.060 > ------------------------------------------
+05:11:00.060 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:11:00.065 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:11:00.108 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:11:00.108 > OUT ID: 24, CMD: 5
+05:11:00.112 > [LORA] Način samo ACK - brez poskusov.
+05:11:00.255 > [DISPATCH TASK] Stack left: 1504
+05:11:00.255 > [TX TASK] Stack left: 1456
+05:11:00.255 > [LORA] Paket uspesno poslan.
+05:11:00.260 > [LORA] Preklop v RX po TX uspesen.
+05:11:00.260 > -------------------------
+05:11:00.264 > 
+05:11:00.658 > [DISPATCH TASK] Stack left: 1504
+05:11:00.658 > [RX TASK] Stack left: 1096
+05:11:00.658 > [LORA RX] ID:24 CMD:104 RSSI:0 SNR:9.8
+05:11:00.663 > In ID: 24, CMD: 104
+05:11:00.663 > CRC OK.
+05:11:00.668 > Prejet odgovor na zahtevo.
+05:11:00.668 > Prejeti podatki senzorjev:
+05:11:00.668 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:11:00.674 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:11:01.058 > --------------------
+05:11:01.155 > ************************************
+05:11:01.156 > [F_HEAP] Free Heap pred RESPONSE: 185728
+05:11:01.161 > [F_RESPONSE] KLIC #70, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:11:01.166 > [F_RESPONSE] Task: updateSensorTask
+05:11:01.172 > [F_RESPONSE] Payload length: 90
+05:11:01.172 > [F_RESPONSE] Sensor data uploaded ✅
+05:11:01.177 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:11:01.177 > [F_RESPONSE] Free Heap po RESPONSE: 185728
+05:11:01.183 > ************************************
+05:11:01.189 > [F_HEAP] Free Heap pred RESPONSE: 185728
+05:11:01.189 > [F_RESPONSE] KLIC #71, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:11:01.197 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:11:01.299 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:11:01.299 > OUT ID: 25, CMD: 13
+05:11:01.299 > [LORA] Način samo ACK - brez poskusov.
+05:11:01.446 > [DISPATCH TASK] Stack left: 1504
+05:11:01.446 > [TX TASK] Stack left: 1456
+05:11:01.446 > [LORA] Paket uspesno poslan.
+05:11:01.451 > [LORA] Preklop v RX po TX uspesen.
+05:11:01.451 > -------------------------
+05:11:01.454 > 
+05:11:01.839 > [DISPATCH TASK] Stack left: 1504
+05:11:01.839 > [RX TASK] Stack left: 1096
+05:11:01.839 > [LORA RX] ID:25 CMD:110 RSSI:0 SNR:9.2
+05:11:01.845 > In ID: 25, CMD: 110
+05:11:01.845 > CRC OK.
+05:11:01.850 > Prejet odgovor na zahtevo.
+05:11:01.850 > Prejeti podatki iz INA3221 senzorja.
+05:11:01.855 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:11:01.855 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:11:01.867 > --------------------
+05:11:01.973 > ************************************
+05:11:01.973 > [F_HEAP] Free Heap pred RESPONSE: 184936
+05:11:01.979 > [F_RESPONSE] KLIC #72, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:11:01.984 > [F_RESPONSE] Task: updateINA3221Task
+05:11:01.990 > [F_RESPONSE] Payload length: 362
+05:11:01.990 > [F_RESPONSE] INA3221 data uploaded ✅
+05:11:01.995 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:11:01.995 > [F_RESPONSE] Free Heap po RESPONSE: 184936
+05:11:02.001 > ************************************
+05:11:02.006 > [F_HEAP] Free Heap pred RESPONSE: 184916
+05:11:02.006 > [F_RESPONSE] KLIC #73, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:11:02.016 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:11:11.119 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:11:11.124 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:11:12.900 > ----------------------------
+05:11:12.900 > [STREAM] task: streamTask1
+05:11:12.900 > [STREAM] event: keep-alive
+05:11:12.905 > [STREAM] path: 
+05:11:12.905 > [STREAM] data: null
+05:11:12.905 > [STREAM] type: 0
+05:11:28.976 > ----------------------------
+05:11:28.976 > [STREAM] task: streamTask2
+05:11:28.976 > [STREAM] event: keep-alive
+05:11:28.981 > [STREAM] path: 
+05:11:28.981 > [STREAM] data: null
+05:11:28.981 > [STREAM] type: 0
+05:11:41.269 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:11:41.275 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:11:43.007 > ----------------------------
+05:11:43.007 > [STREAM] task: streamTask1
+05:11:43.007 > [STREAM] event: keep-alive
+05:11:43.012 > [STREAM] path: 
+05:11:43.012 > [STREAM] data: null
+05:11:43.012 > [STREAM] type: 0
+05:11:58.878 > ----------------------------
+05:11:58.878 > [STREAM] task: streamTask2
+05:11:58.878 > [STREAM] event: keep-alive
+05:11:58.883 > [STREAM] path: 
+05:11:58.883 > [STREAM] data: null
+05:11:58.883 > [STREAM] type: 0
+05:12:11.420 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:12:11.425 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:12:13.009 > ----------------------------
+05:12:13.009 > [STREAM] task: streamTask1
+05:12:13.009 > [STREAM] event: keep-alive
+05:12:13.015 > [STREAM] path: 
+05:12:13.015 > [STREAM] data: null
+05:12:13.015 > [STREAM] type: 0
+05:12:28.884 > ----------------------------
+05:12:28.885 > [STREAM] task: streamTask2
+05:12:28.885 > [STREAM] event: keep-alive
+05:12:28.890 > [STREAM] path: 
+05:12:28.890 > [STREAM] data: null
+05:12:28.890 > [STREAM] type: 0
+05:12:41.570 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:12:41.576 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:12:42.911 > ----------------------------
+05:12:42.911 > [STREAM] task: streamTask1
+05:12:42.911 > [STREAM] event: keep-alive
+05:12:42.916 > [STREAM] path: 
+05:12:42.916 > [STREAM] data: null
+05:12:42.916 > [STREAM] type: 0
+05:12:59.192 > ----------------------------
+05:12:59.192 > [STREAM] task: streamTask2
+05:12:59.192 > [STREAM] event: keep-alive
+05:12:59.198 > [STREAM] path: 
+05:12:59.198 > [STREAM] data: null
+05:12:59.198 > [STREAM] type: 0
+05:13:11.721 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:13:11.727 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:13:12.915 > ----------------------------
+05:13:12.915 > [STREAM] task: streamTask1
+05:13:12.915 > [STREAM] event: keep-alive
+05:13:12.920 > [STREAM] path: 
+05:13:12.920 > [STREAM] data: null
+05:13:12.920 > [STREAM] type: 0
+05:13:28.993 > ----------------------------
+05:13:28.993 > [STREAM] task: streamTask2
+05:13:28.993 > [STREAM] event: keep-alive
+05:13:28.998 > [STREAM] path: 
+05:13:28.998 > [STREAM] data: null
+05:13:28.998 > [STREAM] type: 0
+05:13:41.871 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:13:41.877 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:13:42.919 > ----------------------------
+05:13:42.919 > [STREAM] task: streamTask1
+05:13:42.919 > [STREAM] event: keep-alive
+05:13:42.924 > [STREAM] path: 
+05:13:42.924 > [STREAM] data: null
+05:13:42.924 > [STREAM] type: 0
+05:13:59.098 > ----------------------------
+05:13:59.098 > [STREAM] task: streamTask2
+05:13:59.098 > [STREAM] event: keep-alive
+05:13:59.104 > [STREAM] path: 
+05:13:59.104 > [STREAM] data: null
+05:13:59.104 > [STREAM] type: 0
+05:14:12.022 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:14:12.028 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:14:12.926 > ----------------------------
+05:14:12.926 > [STREAM] task: streamTask1
+05:14:12.926 > [STREAM] event: keep-alive
+05:14:12.932 > [STREAM] path: 
+05:14:12.932 > [STREAM] data: null
+05:14:12.932 > [STREAM] type: 0
+05:14:29.004 > ----------------------------
+05:14:29.004 > [STREAM] task: streamTask2
+05:14:29.004 > [STREAM] event: keep-alive
+05:14:29.009 > [STREAM] path: 
+05:14:29.009 > [STREAM] data: null
+05:14:29.009 > [STREAM] type: 0
+05:14:42.173 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:14:42.178 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:14:42.930 > ----------------------------
+05:14:42.930 > [STREAM] task: streamTask1
+05:14:42.930 > [STREAM] event: keep-alive
+05:14:42.936 > [STREAM] path: 
+05:14:42.936 > [STREAM] data: null
+05:14:42.936 > [STREAM] type: 0
+05:14:58.903 > ----------------------------
+05:14:58.904 > [STREAM] task: streamTask2
+05:14:58.904 > [STREAM] event: keep-alive
+05:14:58.909 > [STREAM] path: 
+05:14:58.909 > [STREAM] data: null
+05:14:58.909 > [STREAM] type: 0
+05:15:12.323 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:15:12.329 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:15:13.033 > ----------------------------
+05:15:13.034 > [STREAM] task: streamTask1
+05:15:13.034 > [STREAM] event: keep-alive
+05:15:13.039 > [STREAM] path: 
+05:15:13.039 > [STREAM] data: null
+05:15:13.039 > [STREAM] type: 0
+05:15:29.116 > ----------------------------
+05:15:29.117 > [STREAM] task: streamTask2
+05:15:29.117 > [STREAM] event: keep-alive
+05:15:29.122 > [STREAM] path: 
+05:15:29.122 > [STREAM] data: null
+05:15:29.122 > [STREAM] type: 0
+05:15:42.474 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:15:42.479 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:15:42.937 > ----------------------------
+05:15:42.937 > [STREAM] task: streamTask1
+05:15:42.937 > [STREAM] event: keep-alive
+05:15:42.943 > [STREAM] path: 
+05:15:42.943 > [STREAM] data: null
+05:15:42.943 > [STREAM] type: 0
+05:15:58.910 > ----------------------------
+05:15:58.910 > [STREAM] task: streamTask2
+05:15:58.910 > [STREAM] event: keep-alive
+05:15:58.915 > [STREAM] path: 
+05:15:58.915 > [STREAM] data: null
+05:15:58.915 > [STREAM] type: 0
+05:16:00.053 > [SENSORS] Periodično branje senzorjev.
+05:16:00.054 > ------------------------------------------
+05:16:00.060 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:16:00.065 > ------------------------------------------
+05:16:00.065 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:16:00.070 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:16:00.149 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:16:00.149 > OUT ID: 26, CMD: 5
+05:16:00.153 > [LORA] Način samo ACK - brez poskusov.
+05:16:00.297 > [DISPATCH TASK] Stack left: 1504
+05:16:00.297 > [TX TASK] Stack left: 1456
+05:16:00.297 > [LORA] Paket uspesno poslan.
+05:16:00.303 > [LORA] Preklop v RX po TX uspesen.
+05:16:00.303 > -------------------------
+05:16:00.305 > 
+05:16:00.698 > [DISPATCH TASK] Stack left: 1504
+05:16:00.698 > [RX TASK] Stack left: 1096
+05:16:00.698 > [LORA RX] ID:26 CMD:104 RSSI:0 SNR:10.2
+05:16:00.704 > In ID: 26, CMD: 104
+05:16:00.704 > CRC OK.
+05:16:00.709 > Prejet odgovor na zahtevo.
+05:16:00.709 > Prejeti podatki senzorjev:
+05:16:00.709 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:16:00.715 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:16:01.034 > --------------------
+05:16:01.132 > ************************************
+05:16:01.132 > [F_HEAP] Free Heap pred RESPONSE: 185700
+05:16:01.137 > [F_RESPONSE] KLIC #74, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:16:01.143 > [F_RESPONSE] Task: updateSensorTask
+05:16:01.148 > [F_RESPONSE] Payload length: 90
+05:16:01.148 > [F_RESPONSE] Sensor data uploaded ✅
+05:16:01.154 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:16:01.154 > [F_RESPONSE] Free Heap po RESPONSE: 185700
+05:16:01.159 > ************************************
+05:16:01.165 > [F_HEAP] Free Heap pred RESPONSE: 185484
+05:16:01.165 > [F_RESPONSE] KLIC #75, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:16:01.174 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:16:01.275 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:16:01.275 > OUT ID: 27, CMD: 13
+05:16:01.275 > [LORA] Način samo ACK - brez poskusov.
+05:16:01.423 > [DISPATCH TASK] Stack left: 1504
+05:16:01.423 > [TX TASK] Stack left: 1456
+05:16:01.423 > [LORA] Paket uspesno poslan.
+05:16:01.428 > [LORA] Preklop v RX po TX uspesen.
+05:16:01.428 > -------------------------
+05:16:01.432 > 
+05:16:01.783 > [DISPATCH TASK] Stack left: 1504
+05:16:01.783 > [RX TASK] Stack left: 1096
+05:16:01.783 > [LORA RX] ID:27 CMD:110 RSSI:0 SNR:11.8
+05:16:01.788 > In ID: 27, CMD: 110
+05:16:01.788 > CRC OK.
+05:16:01.794 > Prejet odgovor na zahtevo.
+05:16:01.794 > Prejeti podatki iz INA3221 senzorja.
+05:16:01.799 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:16:01.799 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:16:01.811 > --------------------
+05:16:01.907 > ************************************
+05:16:01.907 > [F_HEAP] Free Heap pred RESPONSE: 184916
+05:16:01.912 > [F_RESPONSE] KLIC #76, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:16:01.918 > [F_RESPONSE] Task: updateINA3221Task
+05:16:01.924 > [F_RESPONSE] Payload length: 362
+05:16:01.924 > [F_RESPONSE] INA3221 data uploaded ✅
+05:16:01.929 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:16:01.929 > [F_RESPONSE] Free Heap po RESPONSE: 184916
+05:16:01.935 > ************************************
+05:16:01.940 > [F_HEAP] Free Heap pred RESPONSE: 184916
+05:16:01.940 > [F_RESPONSE] KLIC #77, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:16:01.973 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:16:12.497 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:16:12.503 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:16:13.248 > ----------------------------
+05:16:13.248 > [STREAM] task: streamTask1
+05:16:13.248 > [STREAM] event: keep-alive
+05:16:13.254 > [STREAM] path: 
+05:16:13.254 > [STREAM] data: null
+05:16:13.254 > [STREAM] type: 0
+05:16:28.913 > ----------------------------
+05:16:28.914 > [STREAM] task: streamTask2
+05:16:28.914 > [STREAM] event: keep-alive
+05:16:28.919 > [STREAM] path: 
+05:16:28.919 > [STREAM] data: null
+05:16:28.919 > [STREAM] type: 0
+05:16:42.648 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:16:42.654 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:16:42.943 > ----------------------------
+05:16:42.943 > [STREAM] task: streamTask1
+05:16:42.943 > [STREAM] event: keep-alive
+05:16:42.948 > [STREAM] path: 
+05:16:42.948 > [STREAM] data: null
+05:16:42.948 > [STREAM] type: 0
+05:16:59.020 > ----------------------------
+05:16:59.020 > [STREAM] task: streamTask2
+05:16:59.020 > [STREAM] event: keep-alive
+05:16:59.025 > [STREAM] path: 
+05:16:59.025 > [STREAM] data: null
+05:16:59.025 > [STREAM] type: 0
+05:17:12.798 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:17:12.804 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:17:12.953 > ----------------------------
+05:17:12.953 > [STREAM] task: streamTask1
+05:17:12.953 > [STREAM] event: keep-alive
+05:17:12.959 > [STREAM] path: 
+05:17:12.959 > [STREAM] data: null
+05:17:12.959 > [STREAM] type: 0
+05:17:28.922 > ----------------------------
+05:17:28.922 > [STREAM] task: streamTask2
+05:17:28.922 > [STREAM] event: keep-alive
+05:17:28.928 > [STREAM] path: 
+05:17:28.928 > [STREAM] data: null
+05:17:28.928 > [STREAM] type: 0
+05:17:42.949 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:17:42.954 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:17:43.053 > ----------------------------
+05:17:43.053 > [STREAM] task: streamTask1
+05:17:43.053 > [STREAM] event: keep-alive
+05:17:43.059 > [STREAM] path: 
+05:17:43.059 > [STREAM] data: null
+05:17:43.059 > [STREAM] type: 0
+05:17:58.926 > ----------------------------
+05:17:58.926 > [STREAM] task: streamTask2
+05:17:58.926 > [STREAM] event: keep-alive
+05:17:58.932 > [STREAM] path: 
+05:17:58.932 > [STREAM] data: null
+05:17:58.932 > [STREAM] type: 0
+05:18:12.957 > ----------------------------
+05:18:12.957 > [STREAM] task: streamTask1
+05:18:12.957 > [STREAM] event: keep-alive
+05:18:12.962 > [STREAM] path: 
+05:18:12.962 > [STREAM] data: null
+05:18:12.962 > [STREAM] type: 0
+05:18:13.100 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:18:13.105 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:18:28.930 > ----------------------------
+05:18:28.930 > [STREAM] task: streamTask2
+05:18:28.930 > [STREAM] event: keep-alive
+05:18:28.935 > [STREAM] path: 
+05:18:28.935 > [STREAM] data: null
+05:18:28.935 > [STREAM] type: 0
+05:18:43.062 > ----------------------------
+05:18:43.062 > [STREAM] task: streamTask1
+05:18:43.062 > [STREAM] event: keep-alive
+05:18:43.067 > [STREAM] path: 
+05:18:43.067 > [STREAM] data: null
+05:18:43.067 > [STREAM] type: 0
+05:18:43.250 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:18:43.255 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:18:58.934 > ----------------------------
+05:18:58.934 > [STREAM] task: streamTask2
+05:18:58.934 > [STREAM] event: keep-alive
+05:18:58.940 > [STREAM] path: 
+05:18:58.940 > [STREAM] data: null
+05:18:58.940 > [STREAM] type: 0
+05:19:12.965 > ----------------------------
+05:19:12.965 > [STREAM] task: streamTask1
+05:19:12.965 > [STREAM] event: keep-alive
+05:19:12.971 > [STREAM] path: 
+05:19:12.971 > [STREAM] data: null
+05:19:12.971 > [STREAM] type: 0
+05:19:13.401 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:19:13.406 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:19:28.940 > ----------------------------
+05:19:28.940 > [STREAM] task: streamTask2
+05:19:28.940 > [STREAM] event: keep-alive
+05:19:28.945 > [STREAM] path: 
+05:19:28.945 > [STREAM] data: null
+05:19:28.945 > [STREAM] type: 0
+05:19:42.967 > ----------------------------
+05:19:42.967 > [STREAM] task: streamTask1
+05:19:42.967 > [STREAM] event: keep-alive
+05:19:42.973 > [STREAM] path: 
+05:19:42.973 > [STREAM] data: null
+05:19:42.973 > [STREAM] type: 0
+05:19:43.550 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:19:43.557 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:19:59.146 > ----------------------------
+05:19:59.146 > [STREAM] task: streamTask2
+05:19:59.146 > [STREAM] event: keep-alive
+05:19:59.152 > [STREAM] path: 
+05:19:59.152 > [STREAM] data: null
+05:19:59.152 > [STREAM] type: 0
+05:20:05.049 > [DISPATCH TASK] Stack left: 1504
+05:20:05.049 > [RX TASK] Stack left: 1096
+05:20:12.971 > ----------------------------
+05:20:12.971 > [STREAM] task: streamTask1
+05:20:12.971 > [STREAM] event: keep-alive
+05:20:12.976 > [STREAM] path: 
+05:20:12.976 > [STREAM] data: null
+05:20:12.976 > [STREAM] type: 0
+05:20:13.701 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:20:13.706 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:20:28.953 > ----------------------------
+05:20:28.954 > [STREAM] task: streamTask2
+05:20:28.954 > [STREAM] event: keep-alive
+05:20:28.959 > [STREAM] path: 
+05:20:28.959 > [STREAM] data: null
+05:20:28.959 > [STREAM] type: 0
+05:20:42.976 > ----------------------------
+05:20:42.976 > [STREAM] task: streamTask1
+05:20:42.976 > [STREAM] event: keep-alive
+05:20:42.982 > [STREAM] path: 
+05:20:42.982 > [STREAM] data: null
+05:20:42.982 > [STREAM] type: 0
+05:20:43.852 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:20:43.857 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:20:58.950 > ----------------------------
+05:20:58.950 > [STREAM] task: streamTask2
+05:20:58.950 > [STREAM] event: keep-alive
+05:20:58.955 > [STREAM] path: 
+05:20:58.955 > [STREAM] data: null
+05:20:58.955 > [STREAM] type: 0
+05:21:00.059 > [SENSORS] Periodično branje senzorjev.
+05:21:00.059 > ------------------------------------------
+05:21:00.064 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:21:00.070 > ------------------------------------------
+05:21:00.070 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:21:00.075 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:21:00.087 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:21:00.087 > OUT ID: 28, CMD: 5
+05:21:00.091 > [LORA] Način samo ACK - brez poskusov.
+05:21:00.234 > [DISPATCH TASK] Stack left: 1504
+05:21:00.234 > [TX TASK] Stack left: 1456
+05:21:00.234 > [LORA] Paket uspesno poslan.
+05:21:00.239 > [LORA] Preklop v RX po TX uspesen.
+05:21:00.239 > -------------------------
+05:21:00.242 > 
+05:21:00.603 > [DISPATCH TASK] Stack left: 1504
+05:21:00.603 > [RX TASK] Stack left: 1096
+05:21:00.603 > [LORA RX] ID:28 CMD:104 RSSI:0 SNR:10.0
+05:21:00.609 > In ID: 28, CMD: 104
+05:21:00.609 > CRC OK.
+05:21:00.614 > Prejet odgovor na zahtevo.
+05:21:00.614 > Prejeti podatki senzorjev:
+05:21:00.614 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:21:00.620 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:21:00.912 > --------------------
+05:21:00.992 > ************************************
+05:21:00.992 > [F_HEAP] Free Heap pred RESPONSE: 185308
+05:21:00.998 > [F_RESPONSE] KLIC #78, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:21:01.003 > [F_RESPONSE] Task: updateSensorTask
+05:21:01.009 > [F_RESPONSE] Payload length: 90
+05:21:01.009 > [F_RESPONSE] Sensor data uploaded ✅
+05:21:01.014 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:21:01.014 > [F_RESPONSE] Free Heap po RESPONSE: 185680
+05:21:01.020 > ************************************
+05:21:01.025 > [F_HEAP] Free Heap pred RESPONSE: 185680
+05:21:01.025 > [F_RESPONSE] KLIC #79, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:21:01.034 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:21:01.135 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:21:01.135 > OUT ID: 29, CMD: 13
+05:21:01.135 > [LORA] Način samo ACK - brez poskusov.
+05:21:01.282 > [DISPATCH TASK] Stack left: 1504
+05:21:01.282 > [TX TASK] Stack left: 1456
+05:21:01.282 > [LORA] Paket uspesno poslan.
+05:21:01.287 > [LORA] Preklop v RX po TX uspesen.
+05:21:01.287 > -------------------------
+05:21:01.290 > 
+05:21:01.642 > [DISPATCH TASK] Stack left: 1504
+05:21:01.642 > [RX TASK] Stack left: 1096
+05:21:01.642 > [LORA RX] ID:29 CMD:110 RSSI:0 SNR:9.8
+05:21:01.648 > In ID: 29, CMD: 110
+05:21:01.648 > CRC OK.
+05:21:01.653 > Prejet odgovor na zahtevo.
+05:21:01.653 > Prejeti podatki iz INA3221 senzorja.
+05:21:01.659 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:21:01.659 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:21:01.670 > --------------------
+05:21:01.763 > ************************************
+05:21:01.763 > [F_HEAP] Free Heap pred RESPONSE: 184924
+05:21:01.769 > [F_RESPONSE] KLIC #80, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:21:01.774 > [F_RESPONSE] Task: updateINA3221Task
+05:21:01.780 > [F_RESPONSE] Payload length: 362
+05:21:01.780 > [F_RESPONSE] INA3221 data uploaded ✅
+05:21:01.785 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:21:01.785 > [F_RESPONSE] Free Heap po RESPONSE: 184924
+05:21:01.791 > ************************************
+05:21:01.796 > [F_HEAP] Free Heap pred RESPONSE: 184924
+05:21:01.796 > [F_RESPONSE] KLIC #81, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:21:01.832 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:21:13.184 > ----------------------------
+05:21:13.184 > [STREAM] task: streamTask1
+05:21:13.184 > [STREAM] event: keep-alive
+05:21:13.189 > [STREAM] path: 
+05:21:13.189 > [STREAM] data: null
+05:21:13.189 > [STREAM] type: 0
+05:21:13.983 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:21:13.989 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:21:29.056 > ----------------------------
+05:21:29.057 > [STREAM] task: streamTask2
+05:21:29.057 > [STREAM] event: keep-alive
+05:21:29.062 > [STREAM] path: 
+05:21:29.062 > [STREAM] data: null
+05:21:29.062 > [STREAM] type: 0
+05:21:42.983 > ----------------------------
+05:21:42.983 > [STREAM] task: streamTask1
+05:21:42.983 > [STREAM] event: keep-alive
+05:21:42.988 > [STREAM] path: 
+05:21:42.988 > [STREAM] data: null
+05:21:42.988 > [STREAM] type: 0
+05:21:44.142 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:21:44.147 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:21:58.960 > ----------------------------
+05:21:58.960 > [STREAM] task: streamTask2
+05:21:58.960 > [STREAM] event: keep-alive
+05:21:58.965 > [STREAM] path: 
+05:21:58.965 > [STREAM] data: null
+05:21:58.965 > [STREAM] type: 0
+05:22:12.988 > ----------------------------
+05:22:12.988 > [STREAM] task: streamTask1
+05:22:12.988 > [STREAM] event: keep-alive
+05:22:12.994 > [STREAM] path: 
+05:22:12.994 > [STREAM] data: null
+05:22:12.994 > [STREAM] type: 0
+05:22:14.292 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:22:14.298 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:22:29.064 > ----------------------------
+05:22:29.064 > [STREAM] task: streamTask2
+05:22:29.064 > [STREAM] event: keep-alive
+05:22:29.069 > [STREAM] path: 
+05:22:29.069 > [STREAM] data: null
+05:22:29.069 > [STREAM] type: 0
+05:22:42.888 > ----------------------------
+05:22:42.888 > [STREAM] task: streamTask1
+05:22:42.888 > [STREAM] event: keep-alive
+05:22:42.894 > [STREAM] path: 
+05:22:42.894 > [STREAM] data: null
+05:22:42.894 > [STREAM] type: 0
+05:22:44.442 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:22:44.448 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:22:58.966 > ----------------------------
+05:22:58.967 > [STREAM] task: streamTask2
+05:22:58.967 > [STREAM] event: keep-alive
+05:22:58.972 > [STREAM] path: 
+05:22:58.972 > [STREAM] data: null
+05:22:58.972 > [STREAM] type: 0
+05:23:12.894 > ----------------------------
+05:23:12.894 > [STREAM] task: streamTask1
+05:23:12.894 > [STREAM] event: keep-alive
+05:23:12.899 > [STREAM] path: 
+05:23:12.899 > [STREAM] data: null
+05:23:12.899 > [STREAM] type: 0
+05:23:14.593 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:23:14.599 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:23:29.075 > ----------------------------
+05:23:29.075 > [STREAM] task: streamTask2
+05:23:29.075 > [STREAM] event: keep-alive
+05:23:29.080 > [STREAM] path: 
+05:23:29.080 > [STREAM] data: null
+05:23:29.080 > [STREAM] type: 0
+05:23:42.896 > ----------------------------
+05:23:42.897 > [STREAM] task: streamTask1
+05:23:42.897 > [STREAM] event: keep-alive
+05:23:42.902 > [STREAM] path: 
+05:23:42.902 > [STREAM] data: null
+05:23:42.902 > [STREAM] type: 0
+05:23:44.743 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:23:44.749 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:23:59.077 > ----------------------------
+05:23:59.077 > [STREAM] task: streamTask2
+05:23:59.077 > [STREAM] event: keep-alive
+05:23:59.083 > [STREAM] path: 
+05:23:59.083 > [STREAM] data: null
+05:23:59.083 > [STREAM] type: 0
+05:24:12.902 > ----------------------------
+05:24:12.902 > [STREAM] task: streamTask1
+05:24:12.902 > [STREAM] event: keep-alive
+05:24:12.907 > [STREAM] path: 
+05:24:12.907 > [STREAM] data: null
+05:24:12.907 > [STREAM] type: 0
+05:24:14.894 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:24:14.900 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:24:28.979 > ----------------------------
+05:24:28.979 > [STREAM] task: streamTask2
+05:24:28.979 > [STREAM] event: keep-alive
+05:24:28.984 > [STREAM] path: 
+05:24:28.984 > [STREAM] data: null
+05:24:28.984 > [STREAM] type: 0
+05:24:43.315 > ----------------------------
+05:24:43.315 > [STREAM] task: streamTask1
+05:24:43.315 > [STREAM] event: keep-alive
+05:24:43.321 > [STREAM] path: 
+05:24:43.321 > [STREAM] data: null
+05:24:43.321 > [STREAM] type: 0
+05:24:45.045 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:24:45.050 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:24:58.983 > ----------------------------
+05:24:58.983 > [STREAM] task: streamTask2
+05:24:58.983 > [STREAM] event: keep-alive
+05:24:58.990 > [STREAM] path: 
+05:24:58.990 > [STREAM] data: null
+05:24:58.990 > [STREAM] type: 0
+05:25:12.909 > ----------------------------
+05:25:12.909 > [STREAM] task: streamTask1
+05:25:12.909 > [STREAM] event: keep-alive
+05:25:12.915 > [STREAM] path: 
+05:25:12.915 > [STREAM] data: null
+05:25:12.915 > [STREAM] type: 0
+05:25:15.195 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:25:15.201 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:25:28.988 > ----------------------------
+05:25:28.988 > [STREAM] task: streamTask2
+05:25:28.988 > [STREAM] event: keep-alive
+05:25:28.993 > [STREAM] path: 
+05:25:28.993 > [STREAM] data: null
+05:25:28.993 > [STREAM] type: 0
+05:25:42.913 > ----------------------------
+05:25:42.913 > [STREAM] task: streamTask1
+05:25:42.913 > [STREAM] event: keep-alive
+05:25:42.918 > [STREAM] path: 
+05:25:42.918 > [STREAM] data: null
+05:25:42.918 > [STREAM] type: 0
+05:25:45.346 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:25:45.351 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:25:58.888 > ----------------------------
+05:25:58.888 > [STREAM] task: streamTask2
+05:25:58.888 > [STREAM] event: keep-alive
+05:25:58.893 > [STREAM] path: 
+05:25:58.893 > [STREAM] data: null
+05:25:58.893 > [STREAM] type: 0
+05:26:00.064 > [SENSORS] Periodično branje senzorjev.
+05:26:00.064 > ------------------------------------------
+05:26:00.070 > [SENSOR] Čas za branje senzorjev. Dodajam v čakalno vrsto...
+05:26:00.075 > ------------------------------------------
+05:26:00.075 > [SENSOR_QUEUE] Dodana operacija tipa 0. V vrsti: 1/5
+05:26:00.081 > [SENSOR_QUEUE] Dodana operacija tipa 1. V vrsti: 2/5
+05:26:00.140 > [SENSOR_QUEUE] Izvajam: SENSORS (poskus 0/3)
+05:26:00.140 > OUT ID: 30, CMD: 5
+05:26:00.144 > [LORA] Način samo ACK - brez poskusov.
+05:26:00.288 > [DISPATCH TASK] Stack left: 1504
+05:26:00.288 > [TX TASK] Stack left: 1456
+05:26:00.288 > [LORA] Paket uspesno poslan.
+05:26:00.293 > [LORA] Preklop v RX po TX uspesen.
+05:26:00.293 > -------------------------
+05:26:00.296 > 
+05:26:00.690 > [DISPATCH TASK] Stack left: 1504
+05:26:00.690 > [RX TASK] Stack left: 1096
+05:26:00.690 > [LORA RX] ID:30 CMD:104 RSSI:0 SNR:9.0
+05:26:00.696 > In ID: 30, CMD: 104
+05:26:00.696 > CRC OK.
+05:26:00.702 > Prejet odgovor na zahtevo.
+05:26:00.702 > Prejeti podatki senzorjev:
+05:26:00.702 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:26:00.707 > [F_UPDATE_SENSOR] Sending sensor data (poskus 1/3)...
+05:26:01.023 > --------------------
+05:26:01.115 > ************************************
+05:26:01.116 > [F_HEAP] Free Heap pred RESPONSE: 185696
+05:26:01.122 > [F_RESPONSE] KLIC #82, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:01.127 > [F_RESPONSE] Task: updateSensorTask
+05:26:01.133 > [F_RESPONSE] Payload length: 90
+05:26:01.133 > [F_RESPONSE] Sensor data uploaded ✅
+05:26:01.138 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:26:01.138 > [F_RESPONSE] Free Heap po RESPONSE: 185696
+05:26:01.144 > ************************************
+05:26:01.149 > [F_HEAP] Free Heap pred RESPONSE: 185696
+05:26:01.149 > [F_RESPONSE] KLIC #83, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:01.158 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:26:01.259 > [SENSOR_QUEUE] Izvajam: INA (poskus 0/3)
+05:26:01.259 > OUT ID: 31, CMD: 13
+05:26:01.259 > [LORA] Način samo ACK - brez poskusov.
+05:26:01.407 > [DISPATCH TASK] Stack left: 1504
+05:26:01.407 > [TX TASK] Stack left: 1456
+05:26:01.407 > [LORA] Paket uspesno poslan.
+05:26:01.413 > [LORA] Preklop v RX po TX uspesen.
+05:26:01.413 > -------------------------
+05:26:01.415 > 
+05:26:01.799 > [DISPATCH TASK] Stack left: 1504
+05:26:01.799 > [RX TASK] Stack left: 1096
+05:26:01.799 > [LORA RX] ID:31 CMD:110 RSSI:0 SNR:9.2
+05:26:01.805 > In ID: 31, CMD: 110
+05:26:01.805 > CRC OK.
+05:26:01.810 > Prejet odgovor na zahtevo.
+05:26:01.810 > Prejeti podatki iz INA3221 senzorja.
+05:26:01.815 > [SENSOR_QUEUE] LoRa odgovor prejet. Čakam na Firebase...
+05:26:01.815 > [F_UPDATE_INA] Sending INA data (poskus 1/3)...
+05:26:01.827 > --------------------
+05:26:01.921 > ************************************
+05:26:01.922 > [F_HEAP] Free Heap pred RESPONSE: 184956
+05:26:01.927 > [F_RESPONSE] KLIC #84, isResult=1, isError=0, isEvent=0, isDebug=0, available=1
+05:26:01.933 > [F_RESPONSE] Task: updateINA3221Task
+05:26:01.938 > [F_RESPONSE] Payload length: 362
+05:26:01.938 > [F_RESPONSE] INA3221 data uploaded ✅
+05:26:01.944 > [SENSOR_QUEUE] Firebase uspešno posodobljen.
+05:26:01.944 > [F_RESPONSE] Free Heap po RESPONSE: 184956
+05:26:01.949 > ************************************
+05:26:01.955 > [F_HEAP] Free Heap pred RESPONSE: 184956
+05:26:01.955 > [F_RESPONSE] KLIC #85, isResult=0, isError=0, isEvent=0, isDebug=0, available=0
+05:26:01.964 > [SENSOR_QUEUE] Operacija USPEŠNA.
+05:26:13.022 > ----------------------------
+05:26:13.022 > [STREAM] task: streamTask1
+05:26:13.022 > [STREAM] event: keep-alive
+05:26:13.027 > [STREAM] path: 
+05:26:13.027 > [STREAM] data: null
+05:26:13.027 > [STREAM] type: 0
+05:26:15.500 > [F_DEBUG] Stream1 Active tasks: 1, Stream1 SSL connected: 1, Stream2 Active tasks: 1, Stream2 SSL connected: 1
+05:26:15.506 > [F_DEBUG] aClient Active tasks: 0, aClient SSL connected: 1, Auth ready: 1
+05:26:28.891 > ----------------------------
+05:26:28.891 > [STREAM] task: streamTask2
+05:26:28.891 > [STREAM] event: keep-alive
+05:26:28.897 > [STREAM] path: 
+05:26:28.897 > [STREAM] data: null
+05:26:28.897 > [STREAM] type: 0
