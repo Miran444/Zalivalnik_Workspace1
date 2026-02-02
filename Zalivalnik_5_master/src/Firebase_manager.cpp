@@ -396,7 +396,7 @@ void streamCallback(AsyncResult &streamResult)
             // channelUpdate.end_sec = end_sec;
             // newChannelDataAvailable = true;
             // Pripravi podatke za posodobitev
-            pendingUpdateData.kanalIndex = kanalIndex;
+            pendingUpdateData.kanalIndex = kanalIndex - 1; // Indeksiramo od 0
             pendingUpdateData.start_sec = start_sec;
             pendingUpdateData.end_sec = end_sec;
 
@@ -555,7 +555,7 @@ void Firebase_readKanalUrnik(uint8_t kanalIndex)
 }
 
 //------------------------------------------------------------------------------------------------------------------------
-// Funkcija za posodobitev podatkov v Firebase (eno polje kanala)
+// Funkcija za posodobitev podatkov v Firebase (string state = ON ali OFF, kanali so od 1 do 8)
 void Firebase_Update_Relay_State(uint8_t kanal, bool state)
 {
   char path_buffer[100];
@@ -564,6 +564,7 @@ void Firebase_Update_Relay_State(uint8_t kanal, bool state)
 
   Firebase.printf("[F_UPDATE_RELAY] Sending relay state (poskus %d/%d)...\n",
                   firebaseRetryCount + 1, MAX_FIREBASE_RETRIES);
+  Firebase.printf("[F_UPDATE_RELAY] Path: %s, Value: %s\n", path_buffer, state_payload);
 
   // NOVO: Shrani operacijo
   lastOperation.type = LastFirebaseOperation::Type::UPDATE_RELAY;
@@ -579,7 +580,8 @@ void Firebase_Update_Relay_State(uint8_t kanal, bool state)
     return;
   }
 
-  Database.set(aClient, path_buffer, state_payload, Firebase_processResponse, "updateStateTask");
+  // Uporabi string_t za JSON compatibility
+  Database.set<string_t>(aClient, path_buffer, string_t(state_payload), Firebase_processResponse, "updateStateTask");
 }
 
 //------------------------------------------------------------------------------------------------------------------------
@@ -772,6 +774,14 @@ void Firebase_CheckAndRetry()
     lastOperation.waiting_for_response = false;
     firebaseRetryCount = 0;
     return;
+  }
+  
+  // 5a. Preveri SSL povezavo - če ni povezana, počakaj
+  if (!ssl_client.connected()) {
+    Firebase.printf("[FB_RETRY] SSL ni povezan. Čakam na reconnect...\n");
+    // Resetiraj čas, da počaka še en timeout cikel
+    lastFirebaseOperationTime = millis();
+    return;
   }                
 
   // 6.Če smo dosegli max retry, signaliziraj neuspeh
@@ -896,37 +906,9 @@ void Firebase_loop()
       // 2. Preveri timeouts in retry
       Firebase_CheckAndRetry();
 
-      // 3. Preveri, ali so na voljo novi podatki iz Firebase streama
-      // if (newChannelDataAvailable)
-      // {
-      //   // Tukaj pokličite funkcijo za pošiljanje podatkov Rele modulu
-      //   if (Firebase_handleStreamUpdate(channelUpdate.kanalIndex, channelUpdate.start_sec, channelUpdate.end_sec))
-      //   {
-      //     firebaseUpdatePending = true; // čakamo na prosto LoRa
-      //   }
-      //   // Počisti zastavico, da ne obdelamo istih podatkov večkrat
-      //   newChannelDataAvailable = false;
-      // }
     }
     // --- konec periodičnih nalog ---
 
-
-    // if (millis() - ms > 300000)
-    // {
-    //   ms = millis();
-
-    //   JsonWriter writer;
-
-    //   object_t json, obj1, obj2;
-
-    //   writer.create(obj1, "ms", ms);
-    //   writer.create(obj2, "rand", random(10000, 30000));
-    //   writer.join(json, 2, obj1, obj2);
-
-    //   Database.set<object_t>(aClient, examplePath1, json, Firebase_processResponse, "setTask1");
-
-    //   Database.set<int>(aClient, examplePath2, random(100000, 200000), Firebase_processResponse, "setTask2");
-    // }
 
 
   }
@@ -1093,7 +1075,7 @@ void Firebase_processResponse(AsyncResult &aResult)
   strncpy(payloadBuf, aResult.c_str(), sizeof(payloadBuf) - 1);
   payloadBuf[sizeof(payloadBuf) - 1] = '\0';
 
-  // Serial.printf("[F_RESPONSE] RAW Payload: [%s]\n", payloadBuf);
+  Serial.printf("[F_RESPONSE] RAW Payload: [%s]\n", payloadBuf);
   Serial.printf("[F_RESPONSE] Payload length: %d\n", strlen(payloadBuf));
 
   // lastFirebaseActivityTime = millis();
@@ -1163,6 +1145,15 @@ void Firebase_processResponse(AsyncResult &aResult)
   // Senzorji
   else if (aResult.uid().equals("updateSensorTask"))  
   {
+    // Preveri za error v payload
+    if (strstr(payloadBuf, "\"error\"") != NULL) {
+      Firebase.printf("[F_RESPONSE] ⚠️ Sensor update FAILED - Firebase error: %s\n", payloadBuf);
+      firebase_response_received = false;
+      Sensor_OnFirebaseResponse(false);
+      // Ne resetiraj retry - naj poskusi ponovno
+      return;
+    }
+    
     Firebase.printf("[F_RESPONSE] Sensor data uploaded ✅\n");
     firebase_response_received = true;
     firebaseRetryCount = 0;
@@ -1175,6 +1166,15 @@ void Firebase_processResponse(AsyncResult &aResult)
   // INA3221
   else if (aResult.uid().equals("updateINA3221Task"))  
   {
+    // Preveri za error v payload
+    if (strstr(payloadBuf, "\"error\"") != NULL) {
+      Firebase.printf("[F_RESPONSE] ⚠️ INA update FAILED - Firebase error: %s\n", payloadBuf);
+      firebase_response_received = false;
+      Sensor_OnFirebaseResponse(false);
+      // Ne resetiraj retry - naj poskusi ponovno
+      return;
+    }
+    
     Firebase.printf("[F_RESPONSE] INA3221 data uploaded ✅\n");
     firebase_response_received = true;
     firebaseRetryCount = 0;
@@ -1188,7 +1188,17 @@ void Firebase_processResponse(AsyncResult &aResult)
   // Relay state
   else if (aResult.uid().equals("updateStateTask"))  
   {
+    // Preveri za error v payload
+    if (strstr(payloadBuf, "\"error\"") != NULL) {
+      Firebase.printf("[F_RESPONSE] ⚠️ State update FAILED - Firebase error: %s\n", payloadBuf);
+      firebase_response_received = false;
+      // Ne resetiraj retry - naj poskusi ponovno
+      return;
+    }
+    
     Firebase.printf("[F_RESPONSE] State data uploaded ✅\n");
+    // update local state
+    firebase_kanal[lastOperation.data.relay.kanal - 1].state = lastOperation.data.relay.state;
     firebase_response_received = true;
     firebaseRetryCount = 0;
     lastOperation.waiting_for_response = false;

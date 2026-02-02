@@ -219,7 +219,7 @@ void Lora_handle_received_packet(const LoRaPacket &packet)
         }
         else
         {
-          Serial.printf("NAPAKA: Neujemanje indeksa pri prejetem urniku! Pričakovan: %d, Prejet: %d\n", currentChannelInProcess, index);
+          Serial.printf("NAPAKA: Neujemanje indeksa pri prejetem urniku! Pričakovan: %d, Prejet: %d\n", currentChannelInProcess + 1, index + 1);
         }
       }
       else
@@ -264,7 +264,7 @@ void Lora_handle_received_packet(const LoRaPacket &packet)
         }
         else
         {
-          Serial.printf("NAPAKA: Neujemanje indeksa pri posodobitvi urnika! Pričakovan: %d, Prejet: %d\n", currentChannelInProcess, index);
+          Serial.printf("NAPAKA: Neujemanje indeksa pri posodobitvi urnika! Pričakovan: %d, Prejet: %d\n", currentChannelInProcess + 1, index + 1);
         }
       }
       else
@@ -372,7 +372,7 @@ void Lora_handle_received_packet(const LoRaPacket &packet)
           kanal[i].state = is_on;          
 
           // Pošlji v Firebase
-          Firebase_Update_Relay_State(i + 1, is_on);
+          Firebase_Update_Relay_State(i + 1, is_on);  // i+1 ker so kanali 1-8
         }
       }
 
